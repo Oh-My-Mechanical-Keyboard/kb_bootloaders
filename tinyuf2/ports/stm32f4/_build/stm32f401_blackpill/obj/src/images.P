@@ -1,0 +1,17 @@
+_build/stm32f401_blackpill/obj/src/images.o: \
+ D\:/PRJ/KBs/DEV/BL/tinyuf2/src/images.c \
+ d\:\softwares\kbs\qmk_msys\mingw64\lib\gcc\arm-none-eabi\10.1.0\include\stdint.h \
+ d\:\softwares\kbs\qmk_msys\mingw64\arm-none-eabi\include\stdint.h \
+ d\:\softwares\kbs\qmk_msys\mingw64\arm-none-eabi\include\machine\_default_types.h \
+ d\:\softwares\kbs\qmk_msys\mingw64\arm-none-eabi\include\sys\features.h \
+ d\:\softwares\kbs\qmk_msys\mingw64\arm-none-eabi\include\_newlib_version.h \
+ d\:\softwares\kbs\qmk_msys\mingw64\arm-none-eabi\include\sys\_intsup.h \
+ d\:\softwares\kbs\qmk_msys\mingw64\arm-none-eabi\include\sys\_stdint.h
+ D\:/PRJ/KBs/DEV/BL/tinyuf2/src/images.c :
+ d\:\softwares\kbs\qmk_msys\mingw64\lib\gcc\arm-none-eabi\10.1.0\include\stdint.h :
+ d\:\softwares\kbs\qmk_msys\mingw64\arm-none-eabi\include\stdint.h :
+ d\:\softwares\kbs\qmk_msys\mingw64\arm-none-eabi\include\machine\_default_types.h :
+ d\:\softwares\kbs\qmk_msys\mingw64\arm-none-eabi\include\sys\features.h :
+ d\:\softwares\kbs\qmk_msys\mingw64\arm-none-eabi\include\_newlib_version.h :
+ d\:\softwares\kbs\qmk_msys\mingw64\arm-none-eabi\include\sys\_intsup.h :
+ d\:\softwares\kbs\qmk_msys\mingw64\arm-none-eabi\include\sys\_stdint.h :

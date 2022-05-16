@@ -1,0 +1,1408 @@
+Archive member included to satisfy reference by file (symbol)
+
+d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
+                              _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o (__libc_init_array)
+d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_ldivmod.o)
+                              D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o (__aeabi_ldivmod)
+d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+                              D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o (__aeabi_uldivmod)
+d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                              d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_ldivmod.o) (__udivmoddi4)
+d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
+                              d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_ldivmod.o) (__aeabi_ldiv0)
+d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memcmp.o)
+                              D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o (memcmp)
+d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memcpy.o)
+                              D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o (memcpy)
+d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memmove.o)
+                              D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o (memmove)
+d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
+                              D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o (memset)
+d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-strlen.o)
+                              D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o (strlen)
+
+Discarded input sections
+
+ .text          0x0000000000000000       0x14 _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+ .data          0x0000000000000000        0x0 _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+ .bss           0x0000000000000000        0x0 _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+ .text          0x0000000000000000        0x0 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .data          0x0000000000000000        0x0 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .bss           0x0000000000000000        0x0 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .comment       0x0000000000000000       0x13 D:\softwares\KBs\QMK_MSYS\tmp\ccWFz129.debug.temp.o
+ .debug_info    0x0000000000000000      0x106 D:\softwares\KBs\QMK_MSYS\tmp\ccaW6ELA.debug.temp.o
+ .debug_abbrev  0x0000000000000000       0x68 D:\softwares\KBs\QMK_MSYS\tmp\ccaW6ELA.debug.temp.o
+ .debug_line    0x0000000000000000       0xe5 D:\softwares\KBs\QMK_MSYS\tmp\ccaW6ELA.debug.temp.o
+ .debug_str     0x0000000000000000      0x1d9 D:\softwares\KBs\QMK_MSYS\tmp\ccaW6ELA.debug.temp.o
+ .comment       0x0000000000000000       0x13 D:\softwares\KBs\QMK_MSYS\tmp\ccaW6ELA.debug.temp.o
+ .comment       0x0000000000000000       0x13 D:\softwares\KBs\QMK_MSYS\tmp\ccutVFz1.debug.temp.o
+ .comment       0x0000000000000000       0x13 D:\softwares\KBs\QMK_MSYS\tmp\ccYLT6rs.debug.temp.o
+ .debug_info    0x0000000000000000       0x72 D:\softwares\KBs\QMK_MSYS\tmp\ccS3YCnT.debug.temp.o
+ .debug_abbrev  0x0000000000000000       0x26 D:\softwares\KBs\QMK_MSYS\tmp\ccS3YCnT.debug.temp.o
+ .debug_line    0x0000000000000000       0x1e D:\softwares\KBs\QMK_MSYS\tmp\ccS3YCnT.debug.temp.o
+ .debug_str     0x0000000000000000      0x1b2 D:\softwares\KBs\QMK_MSYS\tmp\ccS3YCnT.debug.temp.o
+ .comment       0x0000000000000000       0x13 D:\softwares\KBs\QMK_MSYS\tmp\ccS3YCnT.debug.temp.o
+ .comment       0x0000000000000000       0x13 D:\softwares\KBs\QMK_MSYS\tmp\ccWkVLaj.debug.temp.o
+ .comment       0x0000000000000000       0x13 D:\softwares\KBs\QMK_MSYS\tmp\cc07Dj2I.debug.temp.o
+ .comment       0x0000000000000000       0x13 D:\softwares\KBs\QMK_MSYS\tmp\cc632WY8.debug.temp.o
+ .comment       0x0000000000000000       0x13 D:\softwares\KBs\QMK_MSYS\tmp\ccgsNS2y.debug.temp.o
+ .comment       0x0000000000000000       0x13 D:\softwares\KBs\QMK_MSYS\tmp\ccANJC8Y.debug.temp.o
+ .debug_info    0x0000000000000000       0x1d D:\softwares\KBs\QMK_MSYS\tmp\ccKf6Clp.debug.temp.o
+ .debug_abbrev  0x0000000000000000       0x10 D:\softwares\KBs\QMK_MSYS\tmp\ccKf6Clp.debug.temp.o
+ .debug_line    0x0000000000000000       0x1e D:\softwares\KBs\QMK_MSYS\tmp\ccKf6Clp.debug.temp.o
+ .debug_str     0x0000000000000000      0x137 D:\softwares\KBs\QMK_MSYS\tmp\ccKf6Clp.debug.temp.o
+ .comment       0x0000000000000000       0x13 D:\softwares\KBs\QMK_MSYS\tmp\ccKf6Clp.debug.temp.o
+ .debug_info    0x0000000000000000       0x1d D:\softwares\KBs\QMK_MSYS\tmp\ccIjV2BP.debug.temp.o
+ .debug_abbrev  0x0000000000000000       0x10 D:\softwares\KBs\QMK_MSYS\tmp\ccIjV2BP.debug.temp.o
+ .debug_line    0x0000000000000000       0x1e D:\softwares\KBs\QMK_MSYS\tmp\ccIjV2BP.debug.temp.o
+ .debug_str     0x0000000000000000      0x13a D:\softwares\KBs\QMK_MSYS\tmp\ccIjV2BP.debug.temp.o
+ .comment       0x0000000000000000       0x13 D:\softwares\KBs\QMK_MSYS\tmp\ccIjV2BP.debug.temp.o
+ .comment       0x0000000000000000       0x13 D:\softwares\KBs\QMK_MSYS\tmp\ccittbYf.debug.temp.o
+ .debug_info    0x0000000000000000       0x1d D:\softwares\KBs\QMK_MSYS\tmp\ccyWogSJ.debug.temp.o
+ .debug_abbrev  0x0000000000000000       0x10 D:\softwares\KBs\QMK_MSYS\tmp\ccyWogSJ.debug.temp.o
+ .debug_line    0x0000000000000000       0x1e D:\softwares\KBs\QMK_MSYS\tmp\ccyWogSJ.debug.temp.o
+ .debug_str     0x0000000000000000      0x139 D:\softwares\KBs\QMK_MSYS\tmp\ccyWogSJ.debug.temp.o
+ .comment       0x0000000000000000       0x13 D:\softwares\KBs\QMK_MSYS\tmp\ccyWogSJ.debug.temp.o
+ .comment       0x0000000000000000       0x13 D:\softwares\KBs\QMK_MSYS\tmp\cc8HigTd.debug.temp.o
+ .debug_info    0x0000000000000000       0x1d D:\softwares\KBs\QMK_MSYS\tmp\ccc5nuXH.debug.temp.o
+ .debug_abbrev  0x0000000000000000       0x10 D:\softwares\KBs\QMK_MSYS\tmp\ccc5nuXH.debug.temp.o
+ .debug_line    0x0000000000000000       0x1e D:\softwares\KBs\QMK_MSYS\tmp\ccc5nuXH.debug.temp.o
+ .debug_str     0x0000000000000000      0x137 D:\softwares\KBs\QMK_MSYS\tmp\ccc5nuXH.debug.temp.o
+ .comment       0x0000000000000000       0x13 D:\softwares\KBs\QMK_MSYS\tmp\ccc5nuXH.debug.temp.o
+ .debug_info    0x0000000000000000       0x1d D:\softwares\KBs\QMK_MSYS\tmp\cc85nA4b.debug.temp.o
+ .debug_abbrev  0x0000000000000000       0x10 D:\softwares\KBs\QMK_MSYS\tmp\cc85nA4b.debug.temp.o
+ .debug_line    0x0000000000000000       0x1e D:\softwares\KBs\QMK_MSYS\tmp\cc85nA4b.debug.temp.o
+ .debug_str     0x0000000000000000      0x13d D:\softwares\KBs\QMK_MSYS\tmp\cc85nA4b.debug.temp.o
+ .comment       0x0000000000000000       0x13 D:\softwares\KBs\QMK_MSYS\tmp\cc85nA4b.debug.temp.o
+ .debug_info    0x0000000000000000       0x1d D:\softwares\KBs\QMK_MSYS\tmp\cc4eQ2gG.debug.temp.o
+ .debug_abbrev  0x0000000000000000       0x10 D:\softwares\KBs\QMK_MSYS\tmp\cc4eQ2gG.debug.temp.o
+ .debug_line    0x0000000000000000       0x1e D:\softwares\KBs\QMK_MSYS\tmp\cc4eQ2gG.debug.temp.o
+ .debug_str     0x0000000000000000      0x13d D:\softwares\KBs\QMK_MSYS\tmp\cc4eQ2gG.debug.temp.o
+ .comment       0x0000000000000000       0x13 D:\softwares\KBs\QMK_MSYS\tmp\cc4eQ2gG.debug.temp.o
+ .comment       0x0000000000000000       0x13 D:\softwares\KBs\QMK_MSYS\tmp\cc0vKRya.debug.temp.o
+ .comment       0x0000000000000000       0x13 D:\softwares\KBs\QMK_MSYS\tmp\cc0cHrTE.debug.temp.o
+ .comment       0x0000000000000000       0x13 D:\softwares\KBs\QMK_MSYS\tmp\ccuH7Ti9.debug.temp.o
+ .comment       0x0000000000000000       0x13 D:\softwares\KBs\QMK_MSYS\tmp\ccmKFWBC.debug.temp.o
+ .comment       0x0000000000000000       0x13 D:\softwares\KBs\QMK_MSYS\tmp\ccEUwaZ5.debug.temp.o
+ .comment       0x0000000000000000       0x13 D:\softwares\KBs\QMK_MSYS\tmp\cc6XJUrz.debug.temp.o
+ .comment       0x0000000000000000       0x13 D:\softwares\KBs\QMK_MSYS\tmp\ccqbEV12.debug.temp.o
+ .comment       0x0000000000000000       0x13 D:\softwares\KBs\QMK_MSYS\tmp\ccSGNMCw.debug.temp.o
+ .comment       0x0000000000000000       0x13 D:\softwares\KBs\QMK_MSYS\tmp\ccWJ6Wi0.debug.temp.o
+ .debug_info    0x0000000000000000      0xeec D:\softwares\KBs\QMK_MSYS\tmp\ccIRIt3t.debug.temp.o
+ .debug_abbrev  0x0000000000000000      0x194 D:\softwares\KBs\QMK_MSYS\tmp\ccIRIt3t.debug.temp.o
+ .debug_line    0x0000000000000000      0x1e6 D:\softwares\KBs\QMK_MSYS\tmp\ccIRIt3t.debug.temp.o
+ .debug_str     0x0000000000000000      0xbce D:\softwares\KBs\QMK_MSYS\tmp\ccIRIt3t.debug.temp.o
+ .comment       0x0000000000000000       0x13 D:\softwares\KBs\QMK_MSYS\tmp\ccIRIt3t.debug.temp.o
+ .comment       0x0000000000000000       0x13 D:\softwares\KBs\QMK_MSYS\tmp\ccePJ9TX.debug.temp.o
+ .data          0x0000000000000000        0x0 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
+ .bss           0x0000000000000000        0x0 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
+ .data          0x0000000000000000        0x0 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memcmp.o)
+ .bss           0x0000000000000000        0x0 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memcmp.o)
+ .data          0x0000000000000000        0x0 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memcpy.o)
+ .bss           0x0000000000000000        0x0 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memcpy.o)
+ .data          0x0000000000000000        0x0 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memmove.o)
+ .bss           0x0000000000000000        0x0 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memmove.o)
+ .data          0x0000000000000000        0x0 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
+ .bss           0x0000000000000000        0x0 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
+ .data          0x0000000000000000        0x0 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-strlen.o)
+ .bss           0x0000000000000000        0x0 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-strlen.o)
+ .text          0x0000000000000000       0xa0 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_ldivmod.o)
+ .data          0x0000000000000000        0x0 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_ldivmod.o)
+ .bss           0x0000000000000000        0x0 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_ldivmod.o)
+ .debug_frame   0x0000000000000000       0x44 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_ldivmod.o)
+ .ARM.attributes
+                0x0000000000000000       0x1e d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_ldivmod.o)
+ .data          0x0000000000000000        0x0 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .bss           0x0000000000000000        0x0 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .text          0x0000000000000000        0x0 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .data          0x0000000000000000        0x0 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .bss           0x0000000000000000        0x0 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .ARM.extab.text.__udivmoddi4
+                0x0000000000000000        0x0 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .data          0x0000000000000000        0x0 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
+ .bss           0x0000000000000000        0x0 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+RAM              0x0000000020000000 0x000000000000fffc xrw
+FLASH            0x0000000008000000 0x0000000000007c00 xr
+CONFIG           0x0000000008007c00 0x0000000000000400 xr
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+                0x000000002000fffc                _estack = (ORIGIN (RAM) + LENGTH (RAM))
+                0x000000002000fffc                _board_dfu_dbl_tap = _estack
+                0x0000000000000200                _Min_Heap_Size = 0x200
+                0x0000000000000400                _Min_Stack_Size = 0x400
+
+.isr_vector     0x0000000008000000      0x194
+                0x0000000008000000                . = ALIGN (0x4)
+ *(.isr_vector)
+ .isr_vector    0x0000000008000000      0x194 _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+                0x0000000008000000                g_pfnVectors
+                0x0000000008000194                . = ALIGN (0x4)
+
+.text           0x00000000080001c0     0x3624
+                0x00000000080001c0                . = ALIGN (0x4)
+ *(.text)
+ .text          0x00000000080001c0       0x48 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
+                0x00000000080001c0                __libc_init_array
+ .text          0x0000000008000208       0x60 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memcmp.o)
+                0x0000000008000208                memcmp
+ .text          0x0000000008000268      0x134 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memcpy.o)
+                0x0000000008000268                memcpy
+ .text          0x000000000800039c       0xd0 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memmove.o)
+                0x000000000800039c                memmove
+ .text          0x000000000800046c       0xa0 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
+                0x000000000800046c                memset
+ *fill*         0x000000000800050c       0x34 
+ .text          0x0000000008000540       0xdc d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-strlen.o)
+                0x0000000008000540                strlen
+ .text          0x000000000800061c       0x30 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+                0x000000000800061c                __aeabi_uldivmod
+ .text          0x000000000800064c        0x4 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
+                0x000000000800064c                __aeabi_idiv0
+                0x000000000800064c                __aeabi_ldiv0
+ *(.text*)
+ .text.Reset_Handler
+                0x0000000008000650       0x50 _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+                0x0000000008000650                Reset_Handler
+ .text.Default_Handler
+                0x00000000080006a0        0x2 _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+                0x00000000080006a0                RTC_Alarm_IRQHandler
+                0x00000000080006a0                EXTI2_IRQHandler
+                0x00000000080006a0                DebugMon_Handler
+                0x00000000080006a0                SPI4_IRQHandler
+                0x00000000080006a0                TIM1_CC_IRQHandler
+                0x00000000080006a0                DMA2_Stream5_IRQHandler
+                0x00000000080006a0                HardFault_Handler
+                0x00000000080006a0                DMA1_Stream5_IRQHandler
+                0x00000000080006a0                PVD_IRQHandler
+                0x00000000080006a0                SDIO_IRQHandler
+                0x00000000080006a0                TAMP_STAMP_IRQHandler
+                0x00000000080006a0                PendSV_Handler
+                0x00000000080006a0                NMI_Handler
+                0x00000000080006a0                EXTI3_IRQHandler
+                0x00000000080006a0                TIM1_UP_TIM10_IRQHandler
+                0x00000000080006a0                I2C3_ER_IRQHandler
+                0x00000000080006a0                EXTI0_IRQHandler
+                0x00000000080006a0                I2C2_EV_IRQHandler
+                0x00000000080006a0                DMA1_Stream2_IRQHandler
+                0x00000000080006a0                FPU_IRQHandler
+                0x00000000080006a0                UsageFault_Handler
+                0x00000000080006a0                DMA2_Stream2_IRQHandler
+                0x00000000080006a0                SPI1_IRQHandler
+                0x00000000080006a0                TIM1_BRK_TIM9_IRQHandler
+                0x00000000080006a0                DMA2_Stream3_IRQHandler
+                0x00000000080006a0                USART6_IRQHandler
+                0x00000000080006a0                DMA2_Stream0_IRQHandler
+                0x00000000080006a0                TIM4_IRQHandler
+                0x00000000080006a0                I2C1_EV_IRQHandler
+                0x00000000080006a0                DMA1_Stream6_IRQHandler
+                0x00000000080006a0                DMA1_Stream1_IRQHandler
+                0x00000000080006a0                TIM3_IRQHandler
+                0x00000000080006a0                RCC_IRQHandler
+                0x00000000080006a0                Default_Handler
+                0x00000000080006a0                EXTI15_10_IRQHandler
+                0x00000000080006a0                ADC_IRQHandler
+                0x00000000080006a0                DMA1_Stream7_IRQHandler
+                0x00000000080006a0                TIM5_IRQHandler
+                0x00000000080006a0                DMA2_Stream7_IRQHandler
+                0x00000000080006a0                I2C3_EV_IRQHandler
+                0x00000000080006a0                EXTI9_5_IRQHandler
+                0x00000000080006a0                RTC_WKUP_IRQHandler
+                0x00000000080006a0                SPI2_IRQHandler
+                0x00000000080006a0                MemManage_Handler
+                0x00000000080006a0                DMA1_Stream0_IRQHandler
+                0x00000000080006a0                SVC_Handler
+                0x00000000080006a0                EXTI4_IRQHandler
+                0x00000000080006a0                WWDG_IRQHandler
+                0x00000000080006a0                TIM2_IRQHandler
+                0x00000000080006a0                OTG_FS_WKUP_IRQHandler
+                0x00000000080006a0                TIM1_TRG_COM_TIM11_IRQHandler
+                0x00000000080006a0                EXTI1_IRQHandler
+                0x00000000080006a0                USART2_IRQHandler
+                0x00000000080006a0                I2C2_ER_IRQHandler
+                0x00000000080006a0                DMA2_Stream1_IRQHandler
+                0x00000000080006a0                FLASH_IRQHandler
+                0x00000000080006a0                DMA2_Stream4_IRQHandler
+                0x00000000080006a0                BusFault_Handler
+                0x00000000080006a0                USART1_IRQHandler
+                0x00000000080006a0                SPI3_IRQHandler
+                0x00000000080006a0                DMA1_Stream4_IRQHandler
+                0x00000000080006a0                I2C1_ER_IRQHandler
+                0x00000000080006a0                DMA2_Stream6_IRQHandler
+                0x00000000080006a0                DMA1_Stream3_IRQHandler
+ *fill*         0x00000000080006a2        0x2 
+ .text.dcd_edpt_stall.isra.0
+                0x00000000080006a4       0xcc D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .text.get_driver
+                0x0000000008000770       0x40 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .text.invoke_class_control
+                0x00000000080007b0       0x10 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .text.board_timer_start
+                0x00000000080007c0       0x38 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .text.board_timer_stop
+                0x00000000080007f8        0xe D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ *fill*         0x0000000008000806        0x2 
+ .text.HAL_GPIO_Init
+                0x0000000008000808      0x194 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .text.FLASH_WaitForLastOperation
+                0x000000000800099c       0xbc D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .text.edpt_schedule_packets.constprop.0
+                0x0000000008000a58       0xf0 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .text.usbd_edpt_stall.isra.0
+                0x0000000008000b48       0x34 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .text.usbd_edpt_xfer.isra.0
+                0x0000000008000b7c       0x90 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .text.hidd_xfer_cb
+                0x0000000008000c0c       0x64 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .text.proc_write10_cmd.constprop.0.isra.0
+                0x0000000008000c70       0x6c D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .text._status_stage_xact.isra.0
+                0x0000000008000cdc       0x14 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .text.tud_control_status.isra.0
+                0x0000000008000cf0       0x24 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .text.usbd_open_edpt_pair.isra.0
+                0x0000000008000d14      0x22c D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .text.hidd_open
+                0x0000000008000f40       0xa4 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .text.mscd_open
+                0x0000000008000fe4       0x84 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .text._ff_push_const_addr
+                0x0000000008001068       0x28 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .text._ff_pull_const_addr
+                0x0000000008001090       0x2e D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ *fill*         0x00000000080010be        0x2 
+ .text._data_stage_xact.isra.0
+                0x00000000080010c0       0x54 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .text.tud_control_xfer.isra.0
+                0x0000000008001114       0x64 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .text.hidd_control_xfer_cb
+                0x0000000008001178      0x128 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .text.mscd_control_xfer_cb
+                0x00000000080012a0       0x5c D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .text.osal_queue_send.isra.0
+                0x00000000080012fc       0x9c D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .text.dcd_event_bus_signal.constprop.0
+                0x0000000008001398       0x7c D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .text.tud_mount_cb
+                0x0000000008001414       0x28 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .text.tud_umount_cb
+                0x000000000800143c       0x2c D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .text.tud_msc_write10_complete_cb
+                0x0000000008001468       0x84 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .text.dcd_event_xfer_complete.constprop.0
+                0x00000000080014ec       0x2c D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .text.usbd_reset
+                0x0000000008001518       0x60 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .text.hidd_reset
+                0x0000000008001578       0x10 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .text.hidd_init
+                0x0000000008001588        0x6 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ *fill*         0x000000000800158e        0x2 
+ .text.mscd_init
+                0x0000000008001590       0x10 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .text.mscd_reset
+                0x00000000080015a0       0x10 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .text.proc_read10_cmd.constprop.0
+                0x00000000080015b0      0x318 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .text.mscd_xfer_cb
+                0x00000000080018c8      0x6a4 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .text.startup.main
+                0x0000000008001f6c      0xe18 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+                0x0000000008001f6c                main
+ .text.board_flash_init
+                0x0000000008002d84        0x2 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+                0x0000000008002d84                _init
+ *fill*         0x0000000008002d86        0x2 
+ .text.SysTick_Handler
+                0x0000000008002d88       0x5c D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+                0x0000000008002d88                SysTick_Handler
+ .text.OTG_FS_IRQHandler
+                0x0000000008002de4      0x738 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+                0x0000000008002de4                OTG_FS_IRQHandler
+ .text.SystemInit
+                0x000000000800351c       0x1c D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+                0x000000000800351c                SystemInit
+ .text.__udivmoddi4
+                0x0000000008003538      0x2aa d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x0000000008003538                __udivmoddi4
+ *(.glue_7)
+ .glue_7        0x00000000080037e2        0x0 linker stubs
+ *(.glue_7t)
+ .glue_7t       0x00000000080037e2        0x0 linker stubs
+ *(.eh_frame)
+ *(.init)
+ *(.fini)
+                0x00000000080037e4                . = ALIGN (0x4)
+ *fill*         0x00000000080037e2        0x2 
+                0x00000000080037e4                _etext = .
+
+.vfp11_veneer   0x00000000080037e4        0x0
+ .vfp11_veneer  0x00000000080037e4        0x0 linker stubs
+
+.v4_bx          0x00000000080037e4        0x0
+ .v4_bx         0x00000000080037e4        0x0 linker stubs
+
+.iplt           0x00000000080037e4        0x0
+ .iplt          0x00000000080037e4        0x0 _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+
+.rodata         0x00000000080037e4      0x264
+                0x00000000080037e4                . = ALIGN (0x4)
+ *(.rodata)
+ .rodata        0x00000000080037e4        0x6 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ *(.rodata*)
+ .rodata.tud_msc_write10_complete_cb.str1.1
+                0x00000000080037ea        0x3 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .rodata.mscd_xfer_cb.str1.1
+                0x00000000080037ed       0x18 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .rodata.main.str1.1
+                0x0000000008003805       0x11 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .rodata.str1.1
+                0x0000000008003816       0x27 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .rodata.AHBPrescTable
+                0x000000000800383d       0x10 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .rodata.BootBlock
+                0x000000000800384d       0x3e D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .rodata.__compound_literal.0
+                0x000000000800388b        0x2 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ *fill*         0x000000000800388d        0x3 
+ .rodata._usbd_driver
+                0x0000000008003890       0x30 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .rodata.desc_configuration
+                0x00000000080038c0       0x40 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .rodata.desc_device
+                0x0000000008003900       0x12 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .rodata.desc_hid_report
+                0x0000000008003912       0x20 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .rodata.indexFile
+                0x0000000008003932       0x67 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ *fill*         0x0000000008003999        0x3 
+ .rodata.info   0x000000000800399c       0x30 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .rodata.sector_size
+                0x00000000080039cc       0x60 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .rodata.string_desc_arr
+                0x0000000008003a2c       0x1c D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+                0x0000000008003a48                . = ALIGN (0x4)
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+
+.ARM            0x0000000008003a48        0x8
+                0x0000000008003a48                __exidx_start = .
+ *(.ARM.exidx*)
+ .ARM.exidx.text.__udivmoddi4
+                0x0000000008003a48        0x8 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x0000000008003a50                __exidx_end = .
+
+.rel.dyn        0x0000000008003a50        0x0
+ .rel.iplt      0x0000000008003a50        0x0 _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+
+.preinit_array  0x0000000008003a50        0x0
+                0x0000000008003a50                PROVIDE (__preinit_array_start = .)
+ *(.preinit_array*)
+                0x0000000008003a50                PROVIDE (__preinit_array_end = .)
+
+.init_array     0x0000000008003a50        0x0
+                0x0000000008003a50                PROVIDE (__init_array_start = .)
+ *(SORT_BY_NAME(.init_array.*))
+ *(.init_array*)
+                0x0000000008003a50                PROVIDE (__init_array_end = .)
+
+.fini_array     0x0000000008003a50        0x0
+                [!provide]                        PROVIDE (__fini_array_start = .)
+ *(SORT_BY_NAME(.fini_array.*))
+ *(.fini_array*)
+                [!provide]                        PROVIDE (__fini_array_end = .)
+                0x0000000008007c00                . = ORIGIN (CONFIG)
+
+.config
+ *(.config)
+                0x0000000008003a50                _sidata = LOADADDR (.data)
+
+.data           0x0000000020000000       0xf0 load address 0x0000000008003a50
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                _sdata = .
+ *(.data)
+ *(.data*)
+ .data.SystemCoreClock
+                0x0000000020000000        0x4 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .data._usbd_qdef
+                0x0000000020000004       0x18 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .data.first_write.0
+                0x000000002000001c        0x1 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .data.infoUf2File
+                0x000000002000001d       0xcd D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ *fill*         0x00000000200000ea        0x2 
+ .data.uwTickPrio
+                0x00000000200000ec        0x4 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+                0x00000000200000f0                . = ALIGN (0x4)
+                0x00000000200000f0                _edata = .
+
+.igot.plt       0x00000000200000f0        0x0 load address 0x0000000008003b40
+ .igot.plt      0x00000000200000f0        0x0 _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+                0x00000000200000f0                . = ALIGN (0x4)
+
+.bss            0x00000000200000f0     0x1b74 load address 0x0000000008003b40
+                0x00000000200000f0                _sbss = .
+                0x00000000200000f0                __bss_start__ = _sbss
+ *(.bss)
+ *(.bss*)
+ .bss._allocated_fifo_words_tx
+                0x00000000200000f0        0x2 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ *fill*         0x00000000200000f2        0x2 
+ .bss._app_driver
+                0x00000000200000f4        0x4 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .bss._app_driver_count
+                0x00000000200000f8        0x1 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ *fill*         0x00000000200000f9        0x3 
+ .bss._ctrl_xfer
+                0x00000000200000fc       0x14 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .bss._desc_str
+                0x0000000020000110       0x42 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ *fill*         0x0000000020000152        0x2 
+ .bss._flash_size
+                0x0000000020000154        0x4 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .bss._hidd_itf
+                0x0000000020000158       0x8c D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .bss._indicator_rgb
+                0x00000000200001e4        0x3 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ *fill*         0x00000000200001e7        0x1 
+ .bss._indicator_state
+                0x00000000200001e8        0x4 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .bss._mscd_buf
+                0x00000000200001ec     0x1000 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .bss._mscd_itf
+                0x00000000200011ec       0x40 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .bss._out_ep_closed
+                0x000000002000122c        0x1 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ *fill*         0x000000002000122d        0x3 
+ .bss._setup_packet
+                0x0000000020001230        0x8 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .bss._timer_count
+                0x0000000020001238        0x4 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .bss._usbd_ctrl_buf
+                0x000000002000123c       0x40 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .bss._usbd_dev
+                0x000000002000127c       0x37 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .bss._usbd_initialized
+                0x00000000200012b3        0x1 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .bss._usbd_q   0x00000000200012b4        0x4 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .bss._usbd_qdef_buf
+                0x00000000200012b8       0xc0 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .bss._wr_state
+                0x0000000020001378      0x818 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .bss.desc_str_serial
+                0x0000000020001b90       0x11 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ *fill*         0x0000000020001ba1        0x1 
+ .bss.ep0_pending
+                0x0000000020001ba2        0x4 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .bss.erased_sectors
+                0x0000000020001ba6       0x18 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ *fill*         0x0000000020001bbe        0x2 
+ .bss.pFlash    0x0000000020001bc0       0x20 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .bss.uwTick    0x0000000020001be0        0x4 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .bss.xfer_status
+                0x0000000020001be4       0x80 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ *(COMMON)
+                0x0000000020001c64                . = ALIGN (0x4)
+                0x0000000020001c64                _ebss = .
+                0x0000000020001c64                __bss_end__ = _ebss
+
+._user_heap_stack
+                0x0000000020001c64      0x604 load address 0x0000000008003b40
+                0x0000000020001c68                . = ALIGN (0x8)
+ *fill*         0x0000000020001c64        0x4 
+                [!provide]                        PROVIDE (end = .)
+                [!provide]                        PROVIDE (_end = .)
+                0x0000000020001e68                . = (. + _Min_Heap_Size)
+ *fill*         0x0000000020001c68      0x200 
+                0x0000000020002268                . = (. + _Min_Stack_Size)
+ *fill*         0x0000000020001e68      0x400 
+                0x0000000020002268                . = ALIGN (0x8)
+
+/DISCARD/
+ libc.a(*)
+ libm.a(*)
+ libgcc.a(*)
+
+.ARM.attributes
+                0x0000000000000000       0x35
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x0000000000000000       0x21 _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+ .ARM.attributes
+                0x0000000000000021       0x32 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .ARM.attributes
+                0x0000000000000053       0x34 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
+ .ARM.attributes
+                0x0000000000000087       0x34 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memcmp.o)
+ .ARM.attributes
+                0x00000000000000bb       0x1c d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memcpy.o)
+ .ARM.attributes
+                0x00000000000000d7       0x34 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memmove.o)
+ .ARM.attributes
+                0x000000000000010b       0x34 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
+ .ARM.attributes
+                0x000000000000013f       0x1c d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-strlen.o)
+ .ARM.attributes
+                0x000000000000015b       0x1e d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .ARM.attributes
+                0x0000000000000179       0x34 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .ARM.attributes
+                0x00000000000001ad       0x1e d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
+LOAD _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+LOAD _build/stm32f401_blackpill/obj/src/ghostfat.o
+LOAD D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+LOAD D:\softwares\KBs\QMK_MSYS\tmp\ccWFz129.debug.temp.o
+LOAD D:\softwares\KBs\QMK_MSYS\tmp\ccaW6ELA.debug.temp.o
+LOAD D:\softwares\KBs\QMK_MSYS\tmp\ccutVFz1.debug.temp.o
+LOAD D:\softwares\KBs\QMK_MSYS\tmp\ccYLT6rs.debug.temp.o
+LOAD D:\softwares\KBs\QMK_MSYS\tmp\ccS3YCnT.debug.temp.o
+LOAD D:\softwares\KBs\QMK_MSYS\tmp\ccWkVLaj.debug.temp.o
+LOAD D:\softwares\KBs\QMK_MSYS\tmp\cc07Dj2I.debug.temp.o
+LOAD D:\softwares\KBs\QMK_MSYS\tmp\cc632WY8.debug.temp.o
+LOAD D:\softwares\KBs\QMK_MSYS\tmp\ccgsNS2y.debug.temp.o
+LOAD D:\softwares\KBs\QMK_MSYS\tmp\ccANJC8Y.debug.temp.o
+LOAD D:\softwares\KBs\QMK_MSYS\tmp\ccKf6Clp.debug.temp.o
+LOAD D:\softwares\KBs\QMK_MSYS\tmp\ccIjV2BP.debug.temp.o
+LOAD D:\softwares\KBs\QMK_MSYS\tmp\ccittbYf.debug.temp.o
+LOAD D:\softwares\KBs\QMK_MSYS\tmp\ccyWogSJ.debug.temp.o
+LOAD D:\softwares\KBs\QMK_MSYS\tmp\cc8HigTd.debug.temp.o
+LOAD D:\softwares\KBs\QMK_MSYS\tmp\ccc5nuXH.debug.temp.o
+LOAD D:\softwares\KBs\QMK_MSYS\tmp\cc85nA4b.debug.temp.o
+LOAD D:\softwares\KBs\QMK_MSYS\tmp\cc4eQ2gG.debug.temp.o
+LOAD D:\softwares\KBs\QMK_MSYS\tmp\cc0vKRya.debug.temp.o
+LOAD D:\softwares\KBs\QMK_MSYS\tmp\cc0cHrTE.debug.temp.o
+LOAD D:\softwares\KBs\QMK_MSYS\tmp\ccuH7Ti9.debug.temp.o
+LOAD D:\softwares\KBs\QMK_MSYS\tmp\ccmKFWBC.debug.temp.o
+LOAD D:\softwares\KBs\QMK_MSYS\tmp\ccEUwaZ5.debug.temp.o
+LOAD D:\softwares\KBs\QMK_MSYS\tmp\cc6XJUrz.debug.temp.o
+LOAD D:\softwares\KBs\QMK_MSYS\tmp\ccqbEV12.debug.temp.o
+LOAD D:\softwares\KBs\QMK_MSYS\tmp\ccSGNMCw.debug.temp.o
+LOAD D:\softwares\KBs\QMK_MSYS\tmp\ccWJ6Wi0.debug.temp.o
+LOAD D:\softwares\KBs\QMK_MSYS\tmp\ccIRIt3t.debug.temp.o
+LOAD D:\softwares\KBs\QMK_MSYS\tmp\ccePJ9TX.debug.temp.o
+LOAD _build/stm32f401_blackpill/obj/src/images.o
+LOAD _build/stm32f401_blackpill/obj/src/main.o
+LOAD _build/stm32f401_blackpill/obj/src/msc.o
+LOAD _build/stm32f401_blackpill/obj/src/screen.o
+LOAD _build/stm32f401_blackpill/obj/src/usb_descriptors.o
+LOAD _build/stm32f401_blackpill/obj/lib/tinyusb/src/tusb.o
+LOAD _build/stm32f401_blackpill/obj/lib/tinyusb/src/common/tusb_fifo.o
+LOAD _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o
+LOAD _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd_control.o
+LOAD _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/cdc/cdc_device.o
+LOAD _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/dfu/dfu_rt_device.o
+LOAD _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/hid/hid_device.o
+LOAD _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/midi/midi_device.o
+LOAD _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/msc/msc_device.o
+LOAD _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/net/net_device.o
+LOAD _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/usbtmc/usbtmc_device.o
+LOAD _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/vendor/vendor_device.o
+LOAD _build/stm32f401_blackpill/obj/ports/stm32f4/board_flash.o
+LOAD _build/stm32f401_blackpill/obj/ports/stm32f4/boards.o
+LOAD _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/system_stm32f4xx.o
+LOAD _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal.o
+LOAD _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_cortex.o
+LOAD _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_rcc.o
+LOAD _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_gpio.o
+LOAD _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_flash.o
+LOAD _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_flash_ex.o
+LOAD _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o
+LOAD _build/stm32f401_blackpill/obj/lib/tinyusb/src/portable/st/synopsys/dcd_synopsys.o
+START GROUP
+LOAD d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a
+LOAD d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a
+LOAD d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a
+LOAD d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libnosys.a
+END GROUP
+OUTPUT(_build/stm32f401_blackpill/tinyuf2-stm32f401_blackpill.elf elf32-littlearm)
+LOAD linker stubs
+LOAD d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a
+LOAD d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a
+LOAD d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a
+
+.debug_line     0x0000000000000000     0x5fa5
+ .debug_line    0x0000000000000000       0xba _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+ .debug_line    0x00000000000000ba     0x3d40 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .debug_line    0x0000000000003dfa      0x143 D:\softwares\KBs\QMK_MSYS\tmp\ccWFz129.debug.temp.o
+ .debug_line    0x0000000000003f3d      0x12f D:\softwares\KBs\QMK_MSYS\tmp\ccutVFz1.debug.temp.o
+ .debug_line    0x000000000000406c      0x137 D:\softwares\KBs\QMK_MSYS\tmp\ccYLT6rs.debug.temp.o
+ .debug_line    0x00000000000041a3      0x1a9 D:\softwares\KBs\QMK_MSYS\tmp\ccWkVLaj.debug.temp.o
+ .debug_line    0x000000000000434c       0xef D:\softwares\KBs\QMK_MSYS\tmp\cc07Dj2I.debug.temp.o
+ .debug_line    0x000000000000443b      0x11b D:\softwares\KBs\QMK_MSYS\tmp\cc632WY8.debug.temp.o
+ .debug_line    0x0000000000004556      0x1b6 D:\softwares\KBs\QMK_MSYS\tmp\ccgsNS2y.debug.temp.o
+ .debug_line    0x000000000000470c      0x15e D:\softwares\KBs\QMK_MSYS\tmp\ccANJC8Y.debug.temp.o
+ .debug_line    0x000000000000486a      0x195 D:\softwares\KBs\QMK_MSYS\tmp\ccittbYf.debug.temp.o
+ .debug_line    0x00000000000049ff      0x15a D:\softwares\KBs\QMK_MSYS\tmp\cc8HigTd.debug.temp.o
+ .debug_line    0x0000000000004b59      0x145 D:\softwares\KBs\QMK_MSYS\tmp\cc0vKRya.debug.temp.o
+ .debug_line    0x0000000000004c9e      0x2bc D:\softwares\KBs\QMK_MSYS\tmp\cc0cHrTE.debug.temp.o
+ .debug_line    0x0000000000004f5a      0x1ba D:\softwares\KBs\QMK_MSYS\tmp\ccuH7Ti9.debug.temp.o
+ .debug_line    0x0000000000005114      0x222 D:\softwares\KBs\QMK_MSYS\tmp\ccmKFWBC.debug.temp.o
+ .debug_line    0x0000000000005336      0x212 D:\softwares\KBs\QMK_MSYS\tmp\ccEUwaZ5.debug.temp.o
+ .debug_line    0x0000000000005548      0x228 D:\softwares\KBs\QMK_MSYS\tmp\cc6XJUrz.debug.temp.o
+ .debug_line    0x0000000000005770      0x1cf D:\softwares\KBs\QMK_MSYS\tmp\ccqbEV12.debug.temp.o
+ .debug_line    0x000000000000593f      0x219 D:\softwares\KBs\QMK_MSYS\tmp\ccSGNMCw.debug.temp.o
+ .debug_line    0x0000000000005b58      0x1f0 D:\softwares\KBs\QMK_MSYS\tmp\ccWJ6Wi0.debug.temp.o
+ .debug_line    0x0000000000005d48      0x25d D:\softwares\KBs\QMK_MSYS\tmp\ccePJ9TX.debug.temp.o
+
+.debug_info     0x0000000000000000    0x11781
+ .debug_info    0x0000000000000000       0x22 _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+ .debug_info    0x0000000000000022     0x5b70 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .debug_info    0x0000000000005b92      0x701 D:\softwares\KBs\QMK_MSYS\tmp\ccWFz129.debug.temp.o
+                0x0000000000005b92                ghostfat.c.badebc50
+ .debug_info    0x0000000000006293      0x2e5 D:\softwares\KBs\QMK_MSYS\tmp\ccutVFz1.debug.temp.o
+                0x0000000000006293                main.c.a8da8ee3
+ .debug_info    0x0000000000006578      0x4cb D:\softwares\KBs\QMK_MSYS\tmp\ccYLT6rs.debug.temp.o
+                0x0000000000006578                msc.c.785bf5b5
+ .debug_info    0x0000000000006a43      0x799 D:\softwares\KBs\QMK_MSYS\tmp\ccWkVLaj.debug.temp.o
+                0x0000000000006a43                usb_descriptors.c.d130264e
+ .debug_info    0x00000000000071dc       0xd8 D:\softwares\KBs\QMK_MSYS\tmp\cc07Dj2I.debug.temp.o
+                0x00000000000071dc                tusb.c.a751bbe5
+ .debug_info    0x00000000000072b4      0xc6c D:\softwares\KBs\QMK_MSYS\tmp\cc632WY8.debug.temp.o
+                0x00000000000072b4                tusb_fifo.c.9dd77587
+ .debug_info    0x0000000000007f20     0x1985 D:\softwares\KBs\QMK_MSYS\tmp\ccgsNS2y.debug.temp.o
+                0x0000000000007f20                usbd.c.c6d6b3ba
+ .debug_info    0x00000000000098a5      0x4e3 D:\softwares\KBs\QMK_MSYS\tmp\ccANJC8Y.debug.temp.o
+                0x00000000000098a5                usbd_control.c.70836d1f
+ .debug_info    0x0000000000009d88      0xc3f D:\softwares\KBs\QMK_MSYS\tmp\ccittbYf.debug.temp.o
+                0x0000000000009d88                hid_device.c.e031e796
+ .debug_info    0x000000000000a9c7     0x10a4 D:\softwares\KBs\QMK_MSYS\tmp\cc8HigTd.debug.temp.o
+                0x000000000000a9c7                msc_device.c.7cd7a3d3
+ .debug_info    0x000000000000ba6b      0x2eb D:\softwares\KBs\QMK_MSYS\tmp\cc0vKRya.debug.temp.o
+                0x000000000000ba6b                board_flash.c.e98e1f85
+ .debug_info    0x000000000000bd56     0x124f D:\softwares\KBs\QMK_MSYS\tmp\cc0cHrTE.debug.temp.o
+                0x000000000000bd56                boards.c.328a56e4
+ .debug_info    0x000000000000cfa5      0x507 D:\softwares\KBs\QMK_MSYS\tmp\ccuH7Ti9.debug.temp.o
+                0x000000000000cfa5                system_stm32f4xx.c.dc6b4748
+ .debug_info    0x000000000000d4ac      0x778 D:\softwares\KBs\QMK_MSYS\tmp\ccmKFWBC.debug.temp.o
+                0x000000000000d4ac                stm32f4xx_hal.c.70bcf397
+ .debug_info    0x000000000000dc24      0xb2e D:\softwares\KBs\QMK_MSYS\tmp\ccEUwaZ5.debug.temp.o
+                0x000000000000dc24                stm32f4xx_hal_cortex.c.d7226580
+ .debug_info    0x000000000000e752      0x856 D:\softwares\KBs\QMK_MSYS\tmp\cc6XJUrz.debug.temp.o
+                0x000000000000e752                stm32f4xx_hal_rcc.c.3c8207a2
+ .debug_info    0x000000000000efa8      0x6d1 D:\softwares\KBs\QMK_MSYS\tmp\ccqbEV12.debug.temp.o
+                0x000000000000efa8                stm32f4xx_hal_gpio.c.c43aa19a
+ .debug_info    0x000000000000f679      0x495 D:\softwares\KBs\QMK_MSYS\tmp\ccSGNMCw.debug.temp.o
+                0x000000000000f679                stm32f4xx_hal_flash.c.ee14b0c1
+ .debug_info    0x000000000000fb0e      0x6d3 D:\softwares\KBs\QMK_MSYS\tmp\ccWJ6Wi0.debug.temp.o
+                0x000000000000fb0e                stm32f4xx_hal_flash_ex.c.1742dc49
+ .debug_info    0x00000000000101e1     0x15a0 D:\softwares\KBs\QMK_MSYS\tmp\ccePJ9TX.debug.temp.o
+                0x00000000000101e1                dcd_synopsys.c.3fc67c19
+
+.debug_abbrev   0x0000000000000000     0x25f4
+ .debug_abbrev  0x0000000000000000       0x12 _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+ .debug_abbrev  0x0000000000000012      0x344 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .debug_abbrev  0x0000000000000356      0x199 D:\softwares\KBs\QMK_MSYS\tmp\ccWFz129.debug.temp.o
+ .debug_abbrev  0x00000000000004ef      0x148 D:\softwares\KBs\QMK_MSYS\tmp\ccutVFz1.debug.temp.o
+ .debug_abbrev  0x0000000000000637      0x118 D:\softwares\KBs\QMK_MSYS\tmp\ccYLT6rs.debug.temp.o
+ .debug_abbrev  0x000000000000074f      0x13f D:\softwares\KBs\QMK_MSYS\tmp\ccWkVLaj.debug.temp.o
+ .debug_abbrev  0x000000000000088e       0x7d D:\softwares\KBs\QMK_MSYS\tmp\cc07Dj2I.debug.temp.o
+ .debug_abbrev  0x000000000000090b      0x1a7 D:\softwares\KBs\QMK_MSYS\tmp\cc632WY8.debug.temp.o
+ .debug_abbrev  0x0000000000000ab2      0x2b9 D:\softwares\KBs\QMK_MSYS\tmp\ccgsNS2y.debug.temp.o
+ .debug_abbrev  0x0000000000000d6b      0x1d7 D:\softwares\KBs\QMK_MSYS\tmp\ccANJC8Y.debug.temp.o
+ .debug_abbrev  0x0000000000000f42      0x25b D:\softwares\KBs\QMK_MSYS\tmp\ccittbYf.debug.temp.o
+ .debug_abbrev  0x000000000000119d      0x2ac D:\softwares\KBs\QMK_MSYS\tmp\cc8HigTd.debug.temp.o
+ .debug_abbrev  0x0000000000001449      0x13a D:\softwares\KBs\QMK_MSYS\tmp\cc0vKRya.debug.temp.o
+ .debug_abbrev  0x0000000000001583      0x2ad D:\softwares\KBs\QMK_MSYS\tmp\cc0cHrTE.debug.temp.o
+ .debug_abbrev  0x0000000000001830       0xf7 D:\softwares\KBs\QMK_MSYS\tmp\ccuH7Ti9.debug.temp.o
+ .debug_abbrev  0x0000000000001927      0x1bd D:\softwares\KBs\QMK_MSYS\tmp\ccmKFWBC.debug.temp.o
+ .debug_abbrev  0x0000000000001ae4      0x23d D:\softwares\KBs\QMK_MSYS\tmp\ccEUwaZ5.debug.temp.o
+ .debug_abbrev  0x0000000000001d21      0x1c3 D:\softwares\KBs\QMK_MSYS\tmp\cc6XJUrz.debug.temp.o
+ .debug_abbrev  0x0000000000001ee4      0x178 D:\softwares\KBs\QMK_MSYS\tmp\ccqbEV12.debug.temp.o
+ .debug_abbrev  0x000000000000205c      0x17e D:\softwares\KBs\QMK_MSYS\tmp\ccSGNMCw.debug.temp.o
+ .debug_abbrev  0x00000000000021da      0x19c D:\softwares\KBs\QMK_MSYS\tmp\ccWJ6Wi0.debug.temp.o
+ .debug_abbrev  0x0000000000002376      0x27e D:\softwares\KBs\QMK_MSYS\tmp\ccePJ9TX.debug.temp.o
+
+.debug_aranges  0x0000000000000000      0x188
+ .debug_aranges
+                0x0000000000000000       0x28 _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+ .debug_aranges
+                0x0000000000000028      0x160 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+
+.debug_str      0x0000000000000000     0x5b75
+ .debug_str     0x0000000000000000       0x90 _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+ .debug_str     0x0000000000000090      0x2f1 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+                                        0x334 (size before relaxing)
+ .debug_str     0x0000000000000381      0x4c6 D:\softwares\KBs\QMK_MSYS\tmp\ccWFz129.debug.temp.o
+                                        0x583 (size before relaxing)
+ .debug_str     0x0000000000000847      0x23e D:\softwares\KBs\QMK_MSYS\tmp\ccutVFz1.debug.temp.o
+                                        0x416 (size before relaxing)
+ .debug_str     0x0000000000000a85      0x3b4 D:\softwares\KBs\QMK_MSYS\tmp\ccYLT6rs.debug.temp.o
+                                        0x642 (size before relaxing)
+ .debug_str     0x0000000000000e39      0xd6b D:\softwares\KBs\QMK_MSYS\tmp\ccWkVLaj.debug.temp.o
+                                        0xf28 (size before relaxing)
+ .debug_str     0x0000000000001ba4       0x47 D:\softwares\KBs\QMK_MSYS\tmp\cc07Dj2I.debug.temp.o
+                                        0x1f9 (size before relaxing)
+ .debug_str     0x0000000000001beb      0x41c D:\softwares\KBs\QMK_MSYS\tmp\cc632WY8.debug.temp.o
+                                        0x6c3 (size before relaxing)
+ .debug_str     0x0000000000002007      0xc80 D:\softwares\KBs\QMK_MSYS\tmp\ccgsNS2y.debug.temp.o
+                                       0x122c (size before relaxing)
+ .debug_str     0x0000000000002c87      0x172 D:\softwares\KBs\QMK_MSYS\tmp\ccANJC8Y.debug.temp.o
+                                        0x4c9 (size before relaxing)
+ .debug_str     0x0000000000002df9      0x39b D:\softwares\KBs\QMK_MSYS\tmp\ccittbYf.debug.temp.o
+                                        0xc9f (size before relaxing)
+ .debug_str     0x0000000000003194      0x5e1 D:\softwares\KBs\QMK_MSYS\tmp\cc8HigTd.debug.temp.o
+                                       0x1035 (size before relaxing)
+ .debug_str     0x0000000000003775      0x12b D:\softwares\KBs\QMK_MSYS\tmp\cc0vKRya.debug.temp.o
+                                        0x31a (size before relaxing)
+ .debug_str     0x00000000000038a0      0xcbd D:\softwares\KBs\QMK_MSYS\tmp\cc0cHrTE.debug.temp.o
+                                        0xf11 (size before relaxing)
+ .debug_str     0x000000000000455d       0xad D:\softwares\KBs\QMK_MSYS\tmp\ccuH7Ti9.debug.temp.o
+                                        0x3bf (size before relaxing)
+ .debug_str     0x000000000000460a      0x34b D:\softwares\KBs\QMK_MSYS\tmp\ccmKFWBC.debug.temp.o
+                                        0x9e9 (size before relaxing)
+ .debug_str     0x0000000000004955      0x41e D:\softwares\KBs\QMK_MSYS\tmp\ccEUwaZ5.debug.temp.o
+                                        0xaef (size before relaxing)
+ .debug_str     0x0000000000004d73      0x1c4 D:\softwares\KBs\QMK_MSYS\tmp\cc6XJUrz.debug.temp.o
+                                        0x704 (size before relaxing)
+ .debug_str     0x0000000000004f37      0x181 D:\softwares\KBs\QMK_MSYS\tmp\ccqbEV12.debug.temp.o
+                                        0x516 (size before relaxing)
+ .debug_str     0x00000000000050b8      0x2a6 D:\softwares\KBs\QMK_MSYS\tmp\ccSGNMCw.debug.temp.o
+                                        0x53d (size before relaxing)
+ .debug_str     0x000000000000535e      0x338 D:\softwares\KBs\QMK_MSYS\tmp\ccWJ6Wi0.debug.temp.o
+                                        0x676 (size before relaxing)
+ .debug_str     0x0000000000005696      0x4df D:\softwares\KBs\QMK_MSYS\tmp\ccePJ9TX.debug.temp.o
+                                        0xf25 (size before relaxing)
+
+.debug_ranges   0x0000000000000000     0x1730
+ .debug_ranges  0x0000000000000000       0x20 _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+ .debug_ranges  0x0000000000000020     0x1710 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+
+.debug_loc      0x0000000000000000     0x73b8
+ .debug_loc     0x0000000000000000     0x73b8 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+
+.comment        0x0000000000000000       0x12
+ .comment       0x0000000000000000       0x12 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+                                         0x13 (size before relaxing)
+
+.debug_frame    0x0000000000000000      0x5f8
+ .debug_frame   0x0000000000000000      0x4b8 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+ .debug_frame   0x00000000000004b8       0x2c d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
+ .debug_frame   0x00000000000004e4       0x38 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memcmp.o)
+ .debug_frame   0x000000000000051c       0x40 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memmove.o)
+ .debug_frame   0x000000000000055c       0x38 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
+ .debug_frame   0x0000000000000594       0x2c d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x00000000000005c0       0x38 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+
+Cross Reference Table
+
+Symbol                                            File
+ADC_IRQHandler                                    _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+AHBPrescTable                                     _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/system_stm32f4xx.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_rcc.o (symbol from plugin)
+APBPrescTable                                     _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/system_stm32f4xx.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_rcc.o (symbol from plugin)
+BusFault_Handler                                  _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+DMA1_Stream0_IRQHandler                           _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+DMA1_Stream1_IRQHandler                           _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+DMA1_Stream2_IRQHandler                           _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+DMA1_Stream3_IRQHandler                           _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+DMA1_Stream4_IRQHandler                           _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+DMA1_Stream5_IRQHandler                           _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+DMA1_Stream6_IRQHandler                           _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+DMA1_Stream7_IRQHandler                           _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+DMA2_Stream0_IRQHandler                           _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+DMA2_Stream1_IRQHandler                           _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+DMA2_Stream2_IRQHandler                           _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+DMA2_Stream3_IRQHandler                           _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+DMA2_Stream4_IRQHandler                           _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+DMA2_Stream5_IRQHandler                           _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+DMA2_Stream6_IRQHandler                           _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+DMA2_Stream7_IRQHandler                           _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+DebugMon_Handler                                  _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+Default_Handler                                   _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+EXTI0_IRQHandler                                  _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+EXTI15_10_IRQHandler                              _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+EXTI1_IRQHandler                                  _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+EXTI2_IRQHandler                                  _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+EXTI3_IRQHandler                                  _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+EXTI4_IRQHandler                                  _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+EXTI9_5_IRQHandler                                _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+FLASH_Erase_Sector                                _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_flash_ex.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_flash.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/ports/stm32f4/board_flash.o (symbol from plugin)
+FLASH_FlushCaches                                 _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_flash_ex.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_flash.o (symbol from plugin)
+FLASH_IRQHandler                                  _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+FLASH_WaitForLastOperation                        _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_flash.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_flash_ex.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/ports/stm32f4/board_flash.o (symbol from plugin)
+FPU_IRQHandler                                    _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+HAL_DBGMCU_DisableDBGSleepMode                    _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal.o (symbol from plugin)
+HAL_DBGMCU_DisableDBGStandbyMode                  _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal.o (symbol from plugin)
+HAL_DBGMCU_DisableDBGStopMode                     _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal.o (symbol from plugin)
+HAL_DBGMCU_EnableDBGSleepMode                     _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal.o (symbol from plugin)
+HAL_DBGMCU_EnableDBGStandbyMode                   _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal.o (symbol from plugin)
+HAL_DBGMCU_EnableDBGStopMode                      _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal.o (symbol from plugin)
+HAL_DMA_Abort                                     _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_DMA_Abort_IT                                  _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_DMA_GetError                                  _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_DMA_Start_IT                                  _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_DeInit                                        _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal.o (symbol from plugin)
+HAL_Delay                                         _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal.o (symbol from plugin)
+HAL_DisableCompensationCell                       _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal.o (symbol from plugin)
+HAL_EnableCompensationCell                        _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal.o (symbol from plugin)
+HAL_FLASHEx_AdvOBGetConfig                        _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_flash_ex.o (symbol from plugin)
+HAL_FLASHEx_AdvOBProgram                          _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_flash_ex.o (symbol from plugin)
+HAL_FLASHEx_Erase                                 _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_flash_ex.o (symbol from plugin)
+HAL_FLASHEx_Erase_IT                              _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_flash_ex.o (symbol from plugin)
+HAL_FLASHEx_OBGetConfig                           _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_flash_ex.o (symbol from plugin)
+HAL_FLASHEx_OBProgram                             _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_flash_ex.o (symbol from plugin)
+HAL_FLASHEx_OB_DeSelectPCROP                      _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_flash_ex.o (symbol from plugin)
+HAL_FLASHEx_OB_SelectPCROP                        _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_flash_ex.o (symbol from plugin)
+HAL_FLASH_EndOfOperationCallback                  _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_flash.o (symbol from plugin)
+HAL_FLASH_GetError                                _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_flash.o (symbol from plugin)
+HAL_FLASH_IRQHandler                              _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_flash.o (symbol from plugin)
+HAL_FLASH_Lock                                    _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_flash.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/ports/stm32f4/board_flash.o (symbol from plugin)
+HAL_FLASH_OB_Launch                               _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_flash.o (symbol from plugin)
+HAL_FLASH_OB_Lock                                 _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_flash.o (symbol from plugin)
+HAL_FLASH_OB_Unlock                               _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_flash.o (symbol from plugin)
+HAL_FLASH_OperationErrorCallback                  _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_flash.o (symbol from plugin)
+HAL_FLASH_Program                                 _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_flash.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/ports/stm32f4/board_flash.o (symbol from plugin)
+HAL_FLASH_Program_IT                              _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_flash.o (symbol from plugin)
+HAL_FLASH_Unlock                                  _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_flash.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/ports/stm32f4/board_flash.o (symbol from plugin)
+HAL_GPIO_DeInit                                   _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_gpio.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/ports/stm32f4/boards.o (symbol from plugin)
+HAL_GPIO_EXTI_Callback                            _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_gpio.o (symbol from plugin)
+HAL_GPIO_EXTI_IRQHandler                          _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_gpio.o (symbol from plugin)
+HAL_GPIO_Init                                     _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_gpio.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_rcc.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/ports/stm32f4/boards.o (symbol from plugin)
+HAL_GPIO_LockPin                                  _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_gpio.o (symbol from plugin)
+HAL_GPIO_ReadPin                                  _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_gpio.o (symbol from plugin)
+HAL_GPIO_TogglePin                                _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_gpio.o (symbol from plugin)
+HAL_GPIO_WritePin                                 _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_gpio.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/ports/stm32f4/boards.o (symbol from plugin)
+HAL_GetDEVID                                      _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal.o (symbol from plugin)
+HAL_GetHalVersion                                 _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal.o (symbol from plugin)
+HAL_GetREVID                                      _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal.o (symbol from plugin)
+HAL_GetTick                                       _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_flash.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_rcc.o (symbol from plugin)
+HAL_GetTickFreq                                   _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal.o (symbol from plugin)
+HAL_GetTickPrio                                   _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal.o (symbol from plugin)
+HAL_GetUIDw0                                      _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal.o (symbol from plugin)
+HAL_GetUIDw1                                      _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal.o (symbol from plugin)
+HAL_GetUIDw2                                      _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal.o (symbol from plugin)
+HAL_HalfDuplex_EnableReceiver                     _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_HalfDuplex_EnableTransmitter                  _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_HalfDuplex_Init                               _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_IncTick                                       _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal.o (symbol from plugin)
+HAL_Init                                          _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal.o (symbol from plugin)
+HAL_InitTick                                      _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_rcc.o (symbol from plugin)
+HAL_LIN_Init                                      _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_LIN_SendBreak                                 _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_MPU_ConfigRegion                              _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_cortex.o (symbol from plugin)
+HAL_MPU_Disable                                   _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_cortex.o (symbol from plugin)
+HAL_MPU_Enable                                    _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_cortex.o (symbol from plugin)
+HAL_MspDeInit                                     _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal.o (symbol from plugin)
+HAL_MspInit                                       _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal.o (symbol from plugin)
+HAL_MultiProcessor_EnterMuteMode                  _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_MultiProcessor_ExitMuteMode                   _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_MultiProcessor_Init                           _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_NVIC_ClearPendingIRQ                          _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_cortex.o (symbol from plugin)
+HAL_NVIC_DisableIRQ                               _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_cortex.o (symbol from plugin)
+HAL_NVIC_EnableIRQ                                _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_cortex.o (symbol from plugin)
+HAL_NVIC_GetActive                                _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_cortex.o (symbol from plugin)
+HAL_NVIC_GetPendingIRQ                            _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_cortex.o (symbol from plugin)
+HAL_NVIC_GetPriority                              _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_cortex.o (symbol from plugin)
+HAL_NVIC_GetPriorityGrouping                      _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_cortex.o (symbol from plugin)
+HAL_NVIC_SetPendingIRQ                            _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_cortex.o (symbol from plugin)
+HAL_NVIC_SetPriority                              _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_cortex.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal.o (symbol from plugin)
+HAL_NVIC_SetPriorityGrouping                      _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_cortex.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal.o (symbol from plugin)
+HAL_NVIC_SystemReset                              _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_cortex.o (symbol from plugin)
+HAL_RCC_CSSCallback                               _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_rcc.o (symbol from plugin)
+HAL_RCC_ClockConfig                               _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_rcc.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/ports/stm32f4/boards.o (symbol from plugin)
+HAL_RCC_DeInit                                    _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_rcc.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/ports/stm32f4/boards.o (symbol from plugin)
+HAL_RCC_DisableCSS                                _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_rcc.o (symbol from plugin)
+HAL_RCC_EnableCSS                                 _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_rcc.o (symbol from plugin)
+HAL_RCC_GetClockConfig                            _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_rcc.o (symbol from plugin)
+HAL_RCC_GetHCLKFreq                               _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_rcc.o (symbol from plugin)
+HAL_RCC_GetOscConfig                              _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_rcc.o (symbol from plugin)
+HAL_RCC_GetPCLK1Freq                              _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_rcc.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_RCC_GetPCLK2Freq                              _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_rcc.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_RCC_GetSysClockFreq                           _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_rcc.o (symbol from plugin)
+HAL_RCC_MCOConfig                                 _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_rcc.o (symbol from plugin)
+HAL_RCC_NMI_IRQHandler                            _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_rcc.o (symbol from plugin)
+HAL_RCC_OscConfig                                 _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_rcc.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/ports/stm32f4/boards.o (symbol from plugin)
+HAL_ResumeTick                                    _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal.o (symbol from plugin)
+HAL_SYSTICK_CLKSourceConfig                       _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_cortex.o (symbol from plugin)
+HAL_SYSTICK_Callback                              _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_cortex.o (symbol from plugin)
+HAL_SYSTICK_Config                                _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_cortex.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal.o (symbol from plugin)
+HAL_SYSTICK_IRQHandler                            _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_cortex.o (symbol from plugin)
+HAL_SetTickFreq                                   _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal.o (symbol from plugin)
+HAL_SuspendTick                                   _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal.o (symbol from plugin)
+HAL_UART_Abort                                    _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_UART_AbortCpltCallback                        _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_UART_AbortReceive                             _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_UART_AbortReceiveCpltCallback                 _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_UART_AbortReceive_IT                          _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_UART_AbortTransmit                            _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_UART_AbortTransmitCpltCallback                _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_UART_AbortTransmit_IT                         _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_UART_Abort_IT                                 _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_UART_DMAPause                                 _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_UART_DMAResume                                _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_UART_DMAStop                                  _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_UART_DeInit                                   _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_UART_ErrorCallback                            _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_UART_GetError                                 _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_UART_GetState                                 _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_UART_IRQHandler                               _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_UART_Init                                     _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_UART_MspDeInit                                _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_UART_MspInit                                  _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_UART_Receive                                  _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_UART_Receive_DMA                              _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_UART_Receive_IT                               _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_UART_RxCpltCallback                           _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_UART_RxHalfCpltCallback                       _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_UART_Transmit                                 _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_UART_Transmit_DMA                             _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_UART_Transmit_IT                              _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_UART_TxCpltCallback                           _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HAL_UART_TxHalfCpltCallback                       _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_uart.o (symbol from plugin)
+HardFault_Handler                                 _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+I2C1_ER_IRQHandler                                _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+I2C1_EV_IRQHandler                                _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+I2C2_ER_IRQHandler                                _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+I2C2_EV_IRQHandler                                _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+I2C3_ER_IRQHandler                                _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+I2C3_EV_IRQHandler                                _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+MemManage_Handler                                 _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+NMI_Handler                                       _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+OTG_FS_IRQHandler                                 D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+                                                  _build/stm32f401_blackpill/obj/ports/stm32f4/boards.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+OTG_FS_WKUP_IRQHandler                            _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+PVD_IRQHandler                                    _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+PendSV_Handler                                    _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+RCC_IRQHandler                                    _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+RGB_DOUBLE_TAP                                    _build/stm32f401_blackpill/obj/src/main.o (symbol from plugin)
+RGB_OFF                                           _build/stm32f401_blackpill/obj/src/main.o (symbol from plugin)
+RGB_UNKNOWN                                       _build/stm32f401_blackpill/obj/src/main.o (symbol from plugin)
+RGB_USB_MOUNTED                                   _build/stm32f401_blackpill/obj/src/main.o (symbol from plugin)
+RGB_USB_UNMOUNTED                                 _build/stm32f401_blackpill/obj/src/main.o (symbol from plugin)
+RGB_WRITING                                       _build/stm32f401_blackpill/obj/src/main.o (symbol from plugin)
+RTC_Alarm_IRQHandler                              _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+RTC_WKUP_IRQHandler                               _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+Reset_Handler                                     _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+SDIO_IRQHandler                                   _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+SPI1_IRQHandler                                   _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+SPI2_IRQHandler                                   _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+SPI3_IRQHandler                                   _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+SPI4_IRQHandler                                   _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+SVC_Handler                                       _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+SysTick_Handler                                   D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+                                                  _build/stm32f401_blackpill/obj/ports/stm32f4/boards.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+SystemCoreClock                                   _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/system_stm32f4xx.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/portable/st/synopsys/dcd_synopsys.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_rcc.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/ports/stm32f4/boards.o (symbol from plugin)
+SystemCoreClockUpdate                             _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/system_stm32f4xx.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/ports/stm32f4/boards.o (symbol from plugin)
+SystemInit                                        D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+                                                  _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/system_stm32f4xx.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+TAMP_STAMP_IRQHandler                             _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+TIM1_BRK_TIM9_IRQHandler                          _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+TIM1_CC_IRQHandler                                _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+TIM1_TRG_COM_TIM11_IRQHandler                     _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+TIM1_UP_TIM10_IRQHandler                          _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+TIM2_IRQHandler                                   _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+TIM3_IRQHandler                                   _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+TIM4_IRQHandler                                   _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+TIM5_IRQHandler                                   _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+USART1_IRQHandler                                 _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+USART2_IRQHandler                                 _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+USART6_IRQHandler                                 _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+UartHandle                                        _build/stm32f401_blackpill/obj/ports/stm32f4/boards.o (symbol from plugin)
+UsageFault_Handler                                _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+WWDG_IRQHandler                                   _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+__aeabi_idiv0                                     d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
+__aeabi_ldiv0                                     d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
+                                                  d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+                                                  d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_ldivmod.o)
+__aeabi_ldivmod                                   d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_ldivmod.o)
+                                                  D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+__aeabi_uldivmod                                  d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+                                                  D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+__init_array_end                                  d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
+__init_array_start                                d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
+__libc_init_array                                 d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
+                                                  _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+__preinit_array_end                               d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
+__preinit_array_start                             d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
+__udivmoddi4                                      d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                                                  d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+                                                  d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_ldivmod.o)
+_board_dfu_dbl_tap                                D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+                                                  _build/stm32f401_blackpill/obj/src/main.o (symbol from plugin)
+_ebss                                             _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+_edata                                            _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+_estack                                           _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+_init                                             D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+                                                  _build/stm32f401_blackpill/obj/ports/stm32f4/boards.o (symbol from plugin)
+                                                  d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
+_sbss                                             _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+_sdata                                            _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+_sidata                                           _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+_usbd_qdef                                        _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+_usbd_qdef_buf                                    _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+arrowLogo                                         _build/stm32f401_blackpill/obj/src/images.o (symbol from plugin)
+board_app_jump                                    _build/stm32f401_blackpill/obj/ports/stm32f4/boards.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/src/main.o (symbol from plugin)
+board_app_valid                                   _build/stm32f401_blackpill/obj/ports/stm32f4/boards.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/src/main.o (symbol from plugin)
+board_dfu_complete                                _build/stm32f401_blackpill/obj/ports/stm32f4/boards.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/src/msc.o (symbol from plugin)
+board_dfu_init                                    _build/stm32f401_blackpill/obj/ports/stm32f4/boards.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/src/main.o (symbol from plugin)
+board_flash.c.e98e1f85                            D:\softwares\KBs\QMK_MSYS\tmp\cc0vKRya.debug.temp.o
+                                                  D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+board_flash_erase_app                             _build/stm32f401_blackpill/obj/ports/stm32f4/board_flash.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/src/main.o (symbol from plugin)
+board_flash_flush                                 _build/stm32f401_blackpill/obj/ports/stm32f4/board_flash.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/src/ghostfat.o (symbol from plugin)
+board_flash_init                                  _build/stm32f401_blackpill/obj/ports/stm32f4/board_flash.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/src/main.o (symbol from plugin)
+board_flash_read                                  _build/stm32f401_blackpill/obj/ports/stm32f4/board_flash.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/src/ghostfat.o (symbol from plugin)
+board_flash_size                                  _build/stm32f401_blackpill/obj/ports/stm32f4/board_flash.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/src/ghostfat.o (symbol from plugin)
+board_flash_write                                 _build/stm32f401_blackpill/obj/ports/stm32f4/board_flash.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/src/ghostfat.o (symbol from plugin)
+board_init                                        _build/stm32f401_blackpill/obj/ports/stm32f4/boards.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/src/main.o (symbol from plugin)
+board_led_write                                   _build/stm32f401_blackpill/obj/ports/stm32f4/boards.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/src/main.o (symbol from plugin)
+board_reset                                       _build/stm32f401_blackpill/obj/ports/stm32f4/boards.o (symbol from plugin)
+board_rgb_write                                   _build/stm32f401_blackpill/obj/ports/stm32f4/boards.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/src/main.o (symbol from plugin)
+board_timer_handler                               _build/stm32f401_blackpill/obj/src/main.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/ports/stm32f4/boards.o (symbol from plugin)
+board_timer_start                                 _build/stm32f401_blackpill/obj/ports/stm32f4/boards.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/src/main.o (symbol from plugin)
+board_timer_stop                                  _build/stm32f401_blackpill/obj/ports/stm32f4/boards.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/src/main.o (symbol from plugin)
+board_uart_write                                  _build/stm32f401_blackpill/obj/ports/stm32f4/boards.o (symbol from plugin)
+board_usb_get_serial                              _build/stm32f401_blackpill/obj/ports/stm32f4/boards.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/src/usb_descriptors.o (symbol from plugin)
+boards.c.328a56e4                                 D:\softwares\KBs\QMK_MSYS\tmp\cc0cHrTE.debug.temp.o
+                                                  D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+cdc_device.c.6306df54                             D:\softwares\KBs\QMK_MSYS\tmp\ccKf6Clp.debug.temp.o
+dcd_connect                                       _build/stm32f401_blackpill/obj/lib/tinyusb/src/portable/st/synopsys/dcd_synopsys.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+dcd_disconnect                                    _build/stm32f401_blackpill/obj/lib/tinyusb/src/portable/st/synopsys/dcd_synopsys.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+dcd_edpt0_status_complete                         D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd_control.o (symbol from plugin)
+dcd_edpt_clear_stall                              _build/stm32f401_blackpill/obj/lib/tinyusb/src/portable/st/synopsys/dcd_synopsys.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+dcd_edpt_close                                    _build/stm32f401_blackpill/obj/lib/tinyusb/src/portable/st/synopsys/dcd_synopsys.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+dcd_edpt_open                                     _build/stm32f401_blackpill/obj/lib/tinyusb/src/portable/st/synopsys/dcd_synopsys.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+dcd_edpt_stall                                    _build/stm32f401_blackpill/obj/lib/tinyusb/src/portable/st/synopsys/dcd_synopsys.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd_control.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+dcd_edpt_xfer                                     _build/stm32f401_blackpill/obj/lib/tinyusb/src/portable/st/synopsys/dcd_synopsys.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+dcd_edpt_xfer_fifo                                _build/stm32f401_blackpill/obj/lib/tinyusb/src/portable/st/synopsys/dcd_synopsys.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+dcd_event_bus_reset                               _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/portable/st/synopsys/dcd_synopsys.o (symbol from plugin)
+dcd_event_bus_signal                              _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/portable/st/synopsys/dcd_synopsys.o (symbol from plugin)
+dcd_event_handler                                 _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+dcd_event_setup_received                          _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/portable/st/synopsys/dcd_synopsys.o (symbol from plugin)
+dcd_event_xfer_complete                           _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/portable/st/synopsys/dcd_synopsys.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/msc/msc_device.o (symbol from plugin)
+dcd_init                                          _build/stm32f401_blackpill/obj/lib/tinyusb/src/portable/st/synopsys/dcd_synopsys.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+dcd_int_disable                                   _build/stm32f401_blackpill/obj/lib/tinyusb/src/portable/st/synopsys/dcd_synopsys.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+dcd_int_enable                                    _build/stm32f401_blackpill/obj/lib/tinyusb/src/portable/st/synopsys/dcd_synopsys.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+dcd_int_handler                                   _build/stm32f401_blackpill/obj/lib/tinyusb/src/portable/st/synopsys/dcd_synopsys.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/ports/stm32f4/boards.o (symbol from plugin)
+dcd_remote_wakeup                                 _build/stm32f401_blackpill/obj/lib/tinyusb/src/portable/st/synopsys/dcd_synopsys.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+dcd_set_address                                   _build/stm32f401_blackpill/obj/lib/tinyusb/src/portable/st/synopsys/dcd_synopsys.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+dcd_synopsys.c.3fc67c19                           D:\softwares\KBs\QMK_MSYS\tmp\ccePJ9TX.debug.temp.o
+                                                  D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+desc_configuration                                _build/stm32f401_blackpill/obj/src/usb_descriptors.o (symbol from plugin)
+desc_device                                       _build/stm32f401_blackpill/obj/src/usb_descriptors.o (symbol from plugin)
+desc_hid_report                                   _build/stm32f401_blackpill/obj/src/usb_descriptors.o (symbol from plugin)
+dfu_rt_device.c.2fba84d5                          D:\softwares\KBs\QMK_MSYS\tmp\ccIjV2BP.debug.temp.o
+fileLogo                                          _build/stm32f401_blackpill/obj/src/images.o (symbol from plugin)
+font8                                             _build/stm32f401_blackpill/obj/src/images.o (symbol from plugin)
+g_pfnVectors                                      _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+ghostfat.c.badebc50                               D:\softwares\KBs\QMK_MSYS\tmp\ccWFz129.debug.temp.o
+                                                  D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+hid_device.c.e031e796                             D:\softwares\KBs\QMK_MSYS\tmp\ccittbYf.debug.temp.o
+                                                  D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+hidd_control_xfer_cb                              _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/hid/hid_device.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+hidd_init                                         _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/hid/hid_device.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+hidd_open                                         _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/hid/hid_device.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+hidd_reset                                        _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/hid/hid_device.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+hidd_xfer_cb                                      _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/hid/hid_device.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+images.c.42bdda69                                 D:\softwares\KBs\QMK_MSYS\tmp\ccaW6ELA.debug.temp.o
+indexFile                                         _build/stm32f401_blackpill/obj/src/ghostfat.o (symbol from plugin)
+indicator_set                                     _build/stm32f401_blackpill/obj/src/main.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/src/msc.o (symbol from plugin)
+infoUf2File                                       _build/stm32f401_blackpill/obj/src/ghostfat.o (symbol from plugin)
+main                                              D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+                                                  _build/stm32f401_blackpill/obj/src/main.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/st/cmsis_device_f4/Source/Templates/gcc/startup_stm32f401xc.o
+main.c.a8da8ee3                                   D:\softwares\KBs\QMK_MSYS\tmp\ccutVFz1.debug.temp.o
+                                                  D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+memcmp                                            d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memcmp.o)
+                                                  D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+memcpy                                            d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memcpy.o)
+                                                  D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+memmove                                           d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memmove.o)
+                                                  D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+memset                                            d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
+                                                  D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+midi_device.c.d877c612                            D:\softwares\KBs\QMK_MSYS\tmp\ccyWogSJ.debug.temp.o
+msc.c.785bf5b5                                    D:\softwares\KBs\QMK_MSYS\tmp\ccYLT6rs.debug.temp.o
+                                                  D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+msc_device.c.7cd7a3d3                             D:\softwares\KBs\QMK_MSYS\tmp\cc8HigTd.debug.temp.o
+                                                  D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+mscd_control_xfer_cb                              _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/msc/msc_device.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+mscd_init                                         _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/msc/msc_device.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+mscd_open                                         _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/msc/msc_device.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+mscd_reset                                        _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/msc/msc_device.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+mscd_xfer_cb                                      _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/msc/msc_device.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+net_device.c.c25fd04c                             D:\softwares\KBs\QMK_MSYS\tmp\ccc5nuXH.debug.temp.o
+pFlash                                            _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_flash.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_flash_ex.o (symbol from plugin)
+padded_memcpy                                     _build/stm32f401_blackpill/obj/src/ghostfat.o (symbol from plugin)
+pendriveLogo                                      _build/stm32f401_blackpill/obj/src/images.o (symbol from plugin)
+screen.c.432ad66d                                 D:\softwares\KBs\QMK_MSYS\tmp\ccS3YCnT.debug.temp.o
+stm32f4xx_hal.c.70bcf397                          D:\softwares\KBs\QMK_MSYS\tmp\ccmKFWBC.debug.temp.o
+                                                  D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+stm32f4xx_hal_cortex.c.d7226580                   D:\softwares\KBs\QMK_MSYS\tmp\ccEUwaZ5.debug.temp.o
+                                                  D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+stm32f4xx_hal_flash.c.ee14b0c1                    D:\softwares\KBs\QMK_MSYS\tmp\ccSGNMCw.debug.temp.o
+                                                  D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+stm32f4xx_hal_flash_ex.c.1742dc49                 D:\softwares\KBs\QMK_MSYS\tmp\ccWJ6Wi0.debug.temp.o
+                                                  D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+stm32f4xx_hal_gpio.c.c43aa19a                     D:\softwares\KBs\QMK_MSYS\tmp\ccqbEV12.debug.temp.o
+                                                  D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+stm32f4xx_hal_rcc.c.3c8207a2                      D:\softwares\KBs\QMK_MSYS\tmp\cc6XJUrz.debug.temp.o
+                                                  D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+stm32f4xx_hal_uart.c.c06db79d                     D:\softwares\KBs\QMK_MSYS\tmp\ccIRIt3t.debug.temp.o
+string_desc_arr                                   _build/stm32f401_blackpill/obj/src/usb_descriptors.o (symbol from plugin)
+strlen                                            d:/softwares/kbs/qmk_msys/mingw64/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-strlen.o)
+                                                  D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+system_stm32f4xx.c.dc6b4748                       D:\softwares\KBs\QMK_MSYS\tmp\ccuH7Ti9.debug.temp.o
+                                                  D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+tu_fifo_advance_read_pointer                      _build/stm32f401_blackpill/obj/lib/tinyusb/src/common/tusb_fifo.o (symbol from plugin)
+tu_fifo_advance_write_pointer                     _build/stm32f401_blackpill/obj/lib/tinyusb/src/common/tusb_fifo.o (symbol from plugin)
+tu_fifo_clear                                     _build/stm32f401_blackpill/obj/lib/tinyusb/src/common/tusb_fifo.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+tu_fifo_config                                    _build/stm32f401_blackpill/obj/lib/tinyusb/src/common/tusb_fifo.o (symbol from plugin)
+tu_fifo_correct_read_pointer                      _build/stm32f401_blackpill/obj/lib/tinyusb/src/common/tusb_fifo.o (symbol from plugin)
+tu_fifo_count                                     _build/stm32f401_blackpill/obj/lib/tinyusb/src/common/tusb_fifo.o (symbol from plugin)
+tu_fifo_empty                                     _build/stm32f401_blackpill/obj/lib/tinyusb/src/common/tusb_fifo.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+tu_fifo_full                                      _build/stm32f401_blackpill/obj/lib/tinyusb/src/common/tusb_fifo.o (symbol from plugin)
+tu_fifo_get_read_info                             _build/stm32f401_blackpill/obj/lib/tinyusb/src/common/tusb_fifo.o (symbol from plugin)
+tu_fifo_get_write_info                            _build/stm32f401_blackpill/obj/lib/tinyusb/src/common/tusb_fifo.o (symbol from plugin)
+tu_fifo_overflowed                                _build/stm32f401_blackpill/obj/lib/tinyusb/src/common/tusb_fifo.o (symbol from plugin)
+tu_fifo_peek                                      _build/stm32f401_blackpill/obj/lib/tinyusb/src/common/tusb_fifo.o (symbol from plugin)
+tu_fifo_peek_n                                    _build/stm32f401_blackpill/obj/lib/tinyusb/src/common/tusb_fifo.o (symbol from plugin)
+tu_fifo_read                                      _build/stm32f401_blackpill/obj/lib/tinyusb/src/common/tusb_fifo.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+tu_fifo_read_n                                    _build/stm32f401_blackpill/obj/lib/tinyusb/src/common/tusb_fifo.o (symbol from plugin)
+tu_fifo_read_n_const_addr_full_words              _build/stm32f401_blackpill/obj/lib/tinyusb/src/common/tusb_fifo.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/portable/st/synopsys/dcd_synopsys.o (symbol from plugin)
+tu_fifo_remaining                                 _build/stm32f401_blackpill/obj/lib/tinyusb/src/common/tusb_fifo.o (symbol from plugin)
+tu_fifo_set_overwritable                          _build/stm32f401_blackpill/obj/lib/tinyusb/src/common/tusb_fifo.o (symbol from plugin)
+tu_fifo_write                                     _build/stm32f401_blackpill/obj/lib/tinyusb/src/common/tusb_fifo.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+tu_fifo_write_n                                   _build/stm32f401_blackpill/obj/lib/tinyusb/src/common/tusb_fifo.o (symbol from plugin)
+tu_fifo_write_n_const_addr_full_words             _build/stm32f401_blackpill/obj/lib/tinyusb/src/common/tusb_fifo.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/portable/st/synopsys/dcd_synopsys.o (symbol from plugin)
+tud_connect                                       _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+tud_connected                                     _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+tud_control_status                                _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd_control.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/msc/msc_device.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/hid/hid_device.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+tud_control_xfer                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd_control.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/msc/msc_device.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/hid/hid_device.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+tud_descriptor_bos_cb                             D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+tud_descriptor_configuration_cb                   _build/stm32f401_blackpill/obj/src/usb_descriptors.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+tud_descriptor_device_cb                          _build/stm32f401_blackpill/obj/src/usb_descriptors.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+tud_descriptor_device_qualifier_cb                D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+tud_descriptor_string_cb                          _build/stm32f401_blackpill/obj/src/usb_descriptors.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+tud_disconnect                                    _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+tud_hid_descriptor_report_cb                      _build/stm32f401_blackpill/obj/src/usb_descriptors.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/hid/hid_device.o (symbol from plugin)
+tud_hid_get_report_cb                             _build/stm32f401_blackpill/obj/src/main.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/hid/hid_device.o (symbol from plugin)
+tud_hid_n_gamepad_report                          _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/hid/hid_device.o (symbol from plugin)
+tud_hid_n_get_protocol                            _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/hid/hid_device.o (symbol from plugin)
+tud_hid_n_interface_protocol                      _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/hid/hid_device.o (symbol from plugin)
+tud_hid_n_keyboard_report                         _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/hid/hid_device.o (symbol from plugin)
+tud_hid_n_mouse_report                            _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/hid/hid_device.o (symbol from plugin)
+tud_hid_n_ready                                   _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/hid/hid_device.o (symbol from plugin)
+tud_hid_n_report                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/hid/hid_device.o (symbol from plugin)
+tud_hid_report_complete_cb                        D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/hid/hid_device.o (symbol from plugin)
+tud_hid_set_idle_cb                               D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/hid/hid_device.o (symbol from plugin)
+tud_hid_set_protocol_cb                           D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/hid/hid_device.o (symbol from plugin)
+tud_hid_set_report_cb                             _build/stm32f401_blackpill/obj/src/main.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/hid/hid_device.o (symbol from plugin)
+tud_init                                          _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/tusb.o (symbol from plugin)
+tud_inited                                        _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/tusb.o (symbol from plugin)
+tud_mount_cb                                      _build/stm32f401_blackpill/obj/src/main.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+tud_mounted                                       _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/hid/hid_device.o (symbol from plugin)
+tud_msc_capacity_cb                               _build/stm32f401_blackpill/obj/src/msc.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/msc/msc_device.o (symbol from plugin)
+tud_msc_get_maxlun_cb                             D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/msc/msc_device.o (symbol from plugin)
+tud_msc_inquiry_cb                                _build/stm32f401_blackpill/obj/src/msc.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/msc/msc_device.o (symbol from plugin)
+tud_msc_is_writable_cb                            D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/msc/msc_device.o (symbol from plugin)
+tud_msc_read10_cb                                 _build/stm32f401_blackpill/obj/src/msc.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/msc/msc_device.o (symbol from plugin)
+tud_msc_read10_complete_cb                        D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/msc/msc_device.o (symbol from plugin)
+tud_msc_scsi_cb                                   _build/stm32f401_blackpill/obj/src/msc.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/msc/msc_device.o (symbol from plugin)
+tud_msc_scsi_complete_cb                          D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/msc/msc_device.o (symbol from plugin)
+tud_msc_set_sense                                 _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/msc/msc_device.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/src/msc.o (symbol from plugin)
+tud_msc_start_stop_cb                             _build/stm32f401_blackpill/obj/src/msc.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/msc/msc_device.o (symbol from plugin)
+tud_msc_test_unit_ready_cb                        _build/stm32f401_blackpill/obj/src/msc.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/msc/msc_device.o (symbol from plugin)
+tud_msc_write10_cb                                _build/stm32f401_blackpill/obj/src/msc.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/msc/msc_device.o (symbol from plugin)
+tud_msc_write10_complete_cb                       _build/stm32f401_blackpill/obj/src/msc.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/msc/msc_device.o (symbol from plugin)
+tud_remote_wakeup                                 _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+tud_resume_cb                                     D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+tud_speed_get                                     _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+tud_suspend_cb                                    D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+tud_suspended                                     _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/hid/hid_device.o (symbol from plugin)
+tud_task                                          _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/src/main.o (symbol from plugin)
+tud_task_event_ready                              _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+tud_umount_cb                                     _build/stm32f401_blackpill/obj/src/main.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+tud_vendor_control_xfer_cb                        D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+tusb.c.a751bbe5                                   D:\softwares\KBs\QMK_MSYS\tmp\cc07Dj2I.debug.temp.o
+                                                  D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+tusb_fifo.c.9dd77587                              D:\softwares\KBs\QMK_MSYS\tmp\cc632WY8.debug.temp.o
+                                                  D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+tusb_init                                         _build/stm32f401_blackpill/obj/lib/tinyusb/src/tusb.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/src/main.o (symbol from plugin)
+tusb_inited                                       _build/stm32f401_blackpill/obj/lib/tinyusb/src/tusb.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+uf2_init                                          _build/stm32f401_blackpill/obj/src/ghostfat.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/src/main.o (symbol from plugin)
+uf2_read_block                                    _build/stm32f401_blackpill/obj/src/ghostfat.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/src/msc.o (symbol from plugin)
+uf2_write_block                                   _build/stm32f401_blackpill/obj/src/ghostfat.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/src/msc.o (symbol from plugin)
+usb_descriptors.c.d130264e                        D:\softwares\KBs\QMK_MSYS\tmp\ccWkVLaj.debug.temp.o
+                                                  D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+usbd.c.c6d6b3ba                                   D:\softwares\KBs\QMK_MSYS\tmp\ccgsNS2y.debug.temp.o
+                                                  D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+usbd_app_driver_get_cb                            D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+usbd_control.c.70836d1f                           D:\softwares\KBs\QMK_MSYS\tmp\ccANJC8Y.debug.temp.o
+                                                  D:\softwares\KBs\QMK_MSYS\tmp\tinyuf2-stm32f401_blackpill.elf.osGsOr.ltrans0.ltrans.o
+usbd_control_reset                                _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd_control.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+usbd_control_set_complete_callback                _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd_control.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+usbd_control_set_request                          _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd_control.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+usbd_control_xfer_cb                              _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd_control.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+usbd_defer_func                                   _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+usbd_edpt_busy                                    _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/hid/hid_device.o (symbol from plugin)
+usbd_edpt_claim                                   _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/hid/hid_device.o (symbol from plugin)
+usbd_edpt_clear_stall                             _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+usbd_edpt_close                                   _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+usbd_edpt_open                                    _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+usbd_edpt_release                                 _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+usbd_edpt_stall                                   _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/msc/msc_device.o (symbol from plugin)
+usbd_edpt_stalled                                 _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/msc/msc_device.o (symbol from plugin)
+usbd_edpt_xfer                                    _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/msc/msc_device.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/hid/hid_device.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd_control.o (symbol from plugin)
+usbd_edpt_xfer_fifo                               _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+usbd_open_edpt_pair                               _build/stm32f401_blackpill/obj/lib/tinyusb/src/device/usbd.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/msc/msc_device.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/tinyusb/src/class/hid/hid_device.o (symbol from plugin)
+usbtmc_device.c.125a42c4                          D:\softwares\KBs\QMK_MSYS\tmp\cc85nA4b.debug.temp.o
+uwTick                                            _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal.o (symbol from plugin)
+uwTickFreq                                        _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal.o (symbol from plugin)
+uwTickPrio                                        _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal.o (symbol from plugin)
+                                                  _build/stm32f401_blackpill/obj/lib/st/stm32f4xx_hal_driver/Src/stm32f4xx_hal_rcc.o (symbol from plugin)
+vendor_device.c.7978010a                          D:\softwares\KBs\QMK_MSYS\tmp\cc4eQ2gG.debug.temp.o
+xfer_status                                       _build/stm32f401_blackpill/obj/lib/tinyusb/src/portable/st/synopsys/dcd_synopsys.o (symbol from plugin)

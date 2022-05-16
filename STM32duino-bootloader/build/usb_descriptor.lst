@@ -1,0 +1,243 @@
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 4
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"usb_descriptor.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.global	usbStringDescriptor
+  16              		.global	u8_usbStringInterface
+  17              		.global	u8_usbStringAlt2
+  18              		.global	u8_usbStringAlt1
+  19              		.global	u8_usbStringAlt0
+  20              		.global	u8_usbStringSerial
+  21              		.global	u8_usbStringProduct
+  22              		.global	u8_usbStringVendor
+  23              		.global	u8_usbStringLangId
+  24              		.global	usbConfigDescriptorDFU
+  25              		.global	u8_usbConfigDescriptorDFU
+  26              		.global	usbFunctionalDescriptor
+  27              		.global	u8_usbFunctionalDescriptor
+  28              		.global	usbDeviceDescriptorDFU
+  29              		.global	u8_usbDeviceDescriptorDFU
+  30              		.section	.bss.u8_usbStringInterface,"aw",%nobits
+  33              	u8_usbStringInterface:
+  34 0000 00       		.space	1
+  35              		.section	.data.u8_usbConfigDescriptorDFU,"aw"
+  38              	u8_usbConfigDescriptorDFU:
+  39 0000 09022D00 		.ascii	"\011\002-\000\001\001\000\2002\011\004\000\000\000\376"
+  39      01010080 
+  39      32090400 
+  39      0000FE
+  40 000f 01020409 		.ascii	"\001\002\004\011\004\000\001\000\376\001\002\005\011"
+  40      04000100 
+  40      FE010205 
+  40      09
+  41 001c 04000200 		.ascii	"\004\000\002\000\376\001\002\006\011!\003\377\000\000"
+  41      FE010206 
+  41      092103FF 
+  41      0000
+  42 002a 081001   		.ascii	"\010\020\001"
+  43              		.section	.data.u8_usbDeviceDescriptorDFU,"aw"
+  46              	u8_usbDeviceDescriptorDFU:
+  47 0000 12010001 		.ascii	"\022\001\000\001\000\000\000@\257\036\003\000\001\002"
+  47      00000040 
+  47      AF1E0300 
+  47      0102
+  48 000e 01020301 		.ascii	"\001\002\003\001"
+  49              		.section	.data.u8_usbFunctionalDescriptor,"aw"
+  52              	u8_usbFunctionalDescriptor:
+  53 0000 092103FF 		.ascii	"\011!\003\377\000\000\010\020\001"
+  53      00000810 
+  53      01
+  54              		.section	.data.u8_usbStringAlt0,"aw"
+  57              	u8_usbStringAlt0:
+  58 0000 80035300 		.ascii	"\200\003S\000T\000M\0003\0002\000d\000u\000i\000n\000"
+  58      54004D00 
+  58      33003200 
+  58      64007500 
+  58      69006E00 
+  59 0014 6F002000 		.ascii	"o\000 \000b\000o\000o\000t\000l\000o\000a\000d\000e"
+  59      62006F00 
+  59      6F007400 
+  59      6C006F00 
+  59      61006400 
+  60 0029 00720020 		.ascii	"\000r\000 \000v\0001\000.\0000\000 \000 \000E\000R\000"
+  60      00760031 
+  60      002E0030 
+  60      00200020 
+  60      00450052 
+  61 003e 52004F00 		.ascii	"R\000O\000R\000.\000 \000U\000p\000l\000o\000a\000d"
+  61      52002E00 
+  61      20005500 
+  61      70006C00 
+  61      6F006100 
+  62 0053 00200074 		.ascii	"\000 \000t\000o\000 \000R\000A\000M\000 \000n\000o\000"
+  62      006F0020 
+  62      00520041 
+  62      004D0020 
+  62      006E006F 
+  63 0068 74002000 		.ascii	"t\000 \000s\000u\000p\000p\000o\000r\000t\000e\000d"
+  63      73007500 
+  63      70007000 
+  63      6F007200 
+  63      74006500 
+  64 007d 002E00   		.ascii	"\000.\000"
+  65              		.section	.data.u8_usbStringAlt1,"aw"
+  68              	u8_usbStringAlt1:
+  69 0000 6C035300 		.ascii	"l\003S\000T\000M\0003\0002\000d\000u\000i\000n\000o"
+  69      54004D00 
+  69      33003200 
+  69      64007500 
+  69      69006E00 
+  70 0015 00200062 		.ascii	"\000 \000b\000o\000o\000t\000l\000o\000a\000d\000e\000"
+  70      006F006F 
+  70      0074006C 
+  70      006F0061 
+  70      00640065 
+  71 002a 72002000 		.ascii	"r\000 \000v\0001\000.\0000\000 \000 \000U\000p\000l"
+  71      76003100 
+  71      2E003000 
+  71      20002000 
+  71      55007000 
+  72 003f 006F0061 		.ascii	"\000o\000a\000d\000 \000t\000o\000 \000F\000l\000a\000"
+  72      00640020 
+  72      0074006F 
+  72      00200046 
+  72      006C0061 
+  73 0054 73006800 		.ascii	"s\000h\000 \0000\000x\0008\0000\0000\0005\0000\0000"
+  73      20003000 
+  73      78003800 
+  73      30003000 
+  73      35003000 
+  74 0069 003000   		.ascii	"\0000\000"
+  75              		.section	.data.u8_usbStringAlt2,"aw"
+  78              	u8_usbStringAlt2:
+  79 0000 6C035300 		.ascii	"l\003S\000T\000M\0003\0002\000d\000u\000i\000n\000o"
+  79      54004D00 
+  79      33003200 
+  79      64007500 
+  79      69006E00 
+  80 0015 00200062 		.ascii	"\000 \000b\000o\000o\000t\000l\000o\000a\000d\000e\000"
+  80      006F006F 
+  80      0074006C 
+  80      006F0061 
+  80      00640065 
+  81 002a 72002000 		.ascii	"r\000 \000v\0001\000.\0000\000 \000 \000U\000p\000l"
+  81      76003100 
+  81      2E003000 
+  81      20002000 
+  81      55007000 
+  82 003f 006F0061 		.ascii	"\000o\000a\000d\000 \000t\000o\000 \000F\000l\000a\000"
+  82      00640020 
+  82      0074006F 
+  82      00200046 
+  82      006C0061 
+  83 0054 73006800 		.ascii	"s\000h\000 \0000\000x\0008\0000\0000\0002\0000\0000"
+  83      20003000 
+  83      78003800 
+  83      30003000 
+  83      32003000 
+  84 0069 003000   		.ascii	"\0000\000"
+  85              		.section	.data.u8_usbStringLangId,"aw"
+  88              	u8_usbStringLangId:
+  89 0000 04030904 		.ascii	"\004\003\011\004"
+  90              		.section	.data.u8_usbStringProduct,"aw"
+  93              	u8_usbStringProduct:
+  94 0000 14034D00 		.ascii	"\024\003M\000a\000p\000l\000e\000 \0000\0000\0003\000"
+  94      61007000 
+  94      6C006500 
+  94      20003000 
+  94      30003300 
+  95              		.section	.data.u8_usbStringSerial,"aw"
+  98              	u8_usbStringSerial:
+  99 0000 10034C00 		.ascii	"\020\003L\000L\000M\000 \0000\0000\0003\000"
+  99      4C004D00 
+  99      20003000 
+  99      30003300 
+ 100              		.section	.data.u8_usbStringVendor,"aw"
+ 103              	u8_usbStringVendor:
+ 104 0000 12034C00 		.ascii	"\022\003L\000e\000a\000f\000L\000a\000b\000s\000"
+ 104      65006100 
+ 104      66004C00 
+ 104      61006200 
+ 104      7300
+ 105              		.section	.data.usbConfigDescriptorDFU,"aw"
+ 106              		.align	2
+ 109              	usbConfigDescriptorDFU:
+ 110 0000 00000000 		.word	u8_usbConfigDescriptorDFU
+ 111 0004 2D00     		.short	45
+ 112 0006 0000     		.space	2
+ 113              		.section	.data.usbDeviceDescriptorDFU,"aw"
+ 114              		.align	2
+ 117              	usbDeviceDescriptorDFU:
+ 118 0000 00000000 		.word	u8_usbDeviceDescriptorDFU
+ 119 0004 1200     		.short	18
+ 120 0006 0000     		.space	2
+ 121              		.section	.data.usbFunctionalDescriptor,"aw"
+ 122              		.align	2
+ 125              	usbFunctionalDescriptor:
+ 126 0000 00000000 		.word	u8_usbFunctionalDescriptor
+ 127 0004 0900     		.short	9
+ 128 0006 0000     		.space	2
+ 129              		.section	.data.usbStringDescriptor,"aw"
+ 130              		.align	2
+ 133              	usbStringDescriptor:
+ 134 0000 00000000 		.word	u8_usbStringLangId
+ 135 0004 0400     		.short	4
+ 136 0006 0000     		.space	2
+ 137 0008 00000000 		.word	u8_usbStringVendor
+ 138 000c 1200     		.short	18
+ 139 000e 0000     		.space	2
+ 140 0010 00000000 		.word	u8_usbStringProduct
+ 141 0014 1400     		.short	20
+ 142 0016 0000     		.space	2
+ 143 0018 00000000 		.word	u8_usbStringSerial
+ 144 001c 1000     		.short	16
+ 145 001e 0000     		.space	2
+ 146 0020 00000000 		.word	u8_usbStringAlt0
+ 147 0024 8000     		.short	128
+ 148 0026 0000     		.space	2
+ 149 0028 00000000 		.word	u8_usbStringAlt1
+ 150 002c 6C00     		.short	108
+ 151 002e 0000     		.space	2
+ 152 0030 00000000 		.word	u8_usbStringAlt2
+ 153 0034 6C00     		.short	108
+ 154 0036 0000     		.space	2
+ 155              		.text
+ 156              	.Letext0:
+ 157              		.file 1 "./stm32_lib/stm32f10x_type.h"
+ 158              		.file 2 "./usb_lib/usb_core.h"
+ 159              		.file 3 "usb_descriptor.h"
+ 160              		.file 4 "usb_descriptor.c"
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 usb_descriptor.c
+D:\QMK_MSYS\tmp\ccwD2WhV.s:133    .data.usbStringDescriptor:0000000000000000 usbStringDescriptor
+D:\QMK_MSYS\tmp\ccwD2WhV.s:33     .bss.u8_usbStringInterface:0000000000000000 u8_usbStringInterface
+D:\QMK_MSYS\tmp\ccwD2WhV.s:78     .data.u8_usbStringAlt2:0000000000000000 u8_usbStringAlt2
+D:\QMK_MSYS\tmp\ccwD2WhV.s:68     .data.u8_usbStringAlt1:0000000000000000 u8_usbStringAlt1
+D:\QMK_MSYS\tmp\ccwD2WhV.s:57     .data.u8_usbStringAlt0:0000000000000000 u8_usbStringAlt0
+D:\QMK_MSYS\tmp\ccwD2WhV.s:98     .data.u8_usbStringSerial:0000000000000000 u8_usbStringSerial
+D:\QMK_MSYS\tmp\ccwD2WhV.s:93     .data.u8_usbStringProduct:0000000000000000 u8_usbStringProduct
+D:\QMK_MSYS\tmp\ccwD2WhV.s:103    .data.u8_usbStringVendor:0000000000000000 u8_usbStringVendor
+D:\QMK_MSYS\tmp\ccwD2WhV.s:88     .data.u8_usbStringLangId:0000000000000000 u8_usbStringLangId
+D:\QMK_MSYS\tmp\ccwD2WhV.s:109    .data.usbConfigDescriptorDFU:0000000000000000 usbConfigDescriptorDFU
+D:\QMK_MSYS\tmp\ccwD2WhV.s:38     .data.u8_usbConfigDescriptorDFU:0000000000000000 u8_usbConfigDescriptorDFU
+D:\QMK_MSYS\tmp\ccwD2WhV.s:125    .data.usbFunctionalDescriptor:0000000000000000 usbFunctionalDescriptor
+D:\QMK_MSYS\tmp\ccwD2WhV.s:52     .data.u8_usbFunctionalDescriptor:0000000000000000 u8_usbFunctionalDescriptor
+D:\QMK_MSYS\tmp\ccwD2WhV.s:117    .data.usbDeviceDescriptorDFU:0000000000000000 usbDeviceDescriptorDFU
+D:\QMK_MSYS\tmp\ccwD2WhV.s:46     .data.u8_usbDeviceDescriptorDFU:0000000000000000 u8_usbDeviceDescriptorDFU
+D:\QMK_MSYS\tmp\ccwD2WhV.s:34     .bss.u8_usbStringInterface:0000000000000000 $d
+D:\QMK_MSYS\tmp\ccwD2WhV.s:106    .data.usbConfigDescriptorDFU:0000000000000000 $d
+D:\QMK_MSYS\tmp\ccwD2WhV.s:114    .data.usbDeviceDescriptorDFU:0000000000000000 $d
+D:\QMK_MSYS\tmp\ccwD2WhV.s:122    .data.usbFunctionalDescriptor:0000000000000000 $d
+D:\QMK_MSYS\tmp\ccwD2WhV.s:130    .data.usbStringDescriptor:0000000000000000 $d
+
+NO UNDEFINED SYMBOLS

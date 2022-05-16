@@ -1,0 +1,2037 @@
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 4
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"hardware.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.gpio_write_bit,"ax",%progbits
+  16              		.align	1
+  17              		.global	gpio_write_bit
+  18              		.arch armv7-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	gpio_write_bit:
+  25              	.LVL0:
+  26              	.LFB0:
+  27              		.file 1 "hardware.c"
+   1:hardware.c    **** /* *****************************************************************************
+   2:hardware.c    ****  * The MIT License
+   3:hardware.c    ****  *
+   4:hardware.c    ****  * Copyright (c) 2010 LeafLabs LLC.
+   5:hardware.c    ****  *
+   6:hardware.c    ****  * Permission is hereby granted, free of charge, to any person obtaining a copy
+   7:hardware.c    ****  * of this software and associated documentation files (the "Software"), to deal
+   8:hardware.c    ****  * in the Software without restriction, including without limitation the rights
+   9:hardware.c    ****  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  10:hardware.c    ****  * copies of the Software, and to permit persons to whom the Software is
+  11:hardware.c    ****  * furnished to do so, subject to the following conditions:
+  12:hardware.c    ****  *
+  13:hardware.c    ****  * The above copyright notice and this permission notice shall be included in
+  14:hardware.c    ****  * all copies or substantial portions of the Software.
+  15:hardware.c    ****  *
+  16:hardware.c    ****  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  17:hardware.c    ****  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  18:hardware.c    ****  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  19:hardware.c    ****  * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  20:hardware.c    ****  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  21:hardware.c    ****  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  22:hardware.c    ****  * THE SOFTWARE.
+  23:hardware.c    ****  * ****************************************************************************/
+  24:hardware.c    **** 
+  25:hardware.c    **** /**
+  26:hardware.c    ****  *  @file hardware.c
+  27:hardware.c    ****  *
+  28:hardware.c    ****  *  @brief init routines to setup clocks, interrupts, also destructor functions.
+  29:hardware.c    ****  *  does not include USB stuff. EEPROM read/write functions.
+  30:hardware.c    ****  *
+  31:hardware.c    ****  */
+  32:hardware.c    **** #include "common.h"
+  33:hardware.c    **** #include "hardware.h"
+  34:hardware.c    **** /*
+  35:hardware.c    **** void setPin(u32 bank, u8 pin) {
+  36:hardware.c    ****     u32 pinMask = 0x1 << (pin);
+  37:hardware.c    ****     SET_REG(GPIO_BSRR(bank), pinMask);
+  38:hardware.c    **** }
+  39:hardware.c    **** 
+  40:hardware.c    **** void resetPin(u32 bank, u8 pin) {
+  41:hardware.c    ****     u32 pinMask = 0x1 << (16 + pin);
+  42:hardware.c    ****     SET_REG(GPIO_BSRR(bank), pinMask);
+  43:hardware.c    **** }
+  44:hardware.c    **** */
+  45:hardware.c    **** void gpio_write_bit(u32 bank, u8 pin, u8 val) {
+  28              		.loc 1 45 47 view -0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  46:hardware.c    ****     val = !val;          // "set" bits are lower than "reset" bits
+  33              		.loc 1 46 5 view .LVU1
+  47:hardware.c    ****     SET_REG(GPIO_BSRR(bank), (1U << pin) << (16 * val));
+  34              		.loc 1 47 5 view .LVU2
+  35              		.loc 1 47 5 view .LVU3
+  46:hardware.c    ****     val = !val;          // "set" bits are lower than "reset" bits
+  36              		.loc 1 46 11 is_stmt 0 view .LVU4
+  37 0000 B2FA82F2 		clz	r2, r2
+  38              	.LVL1:
+  39              		.loc 1 47 5 view .LVU5
+  40 0004 0123     		movs	r3, #1
+  46:hardware.c    ****     val = !val;          // "set" bits are lower than "reset" bits
+  41              		.loc 1 46 11 view .LVU6
+  42 0006 5209     		lsrs	r2, r2, #5
+  43              		.loc 1 47 5 view .LVU7
+  44 0008 8B40     		lsls	r3, r3, r1
+  45 000a 1201     		lsls	r2, r2, #4
+  46 000c 03FA02F2 		lsl	r2, r3, r2
+  47 0010 0261     		str	r2, [r0, #16]
+  48              		.loc 1 47 5 is_stmt 1 view .LVU8
+  48:hardware.c    **** }
+  49              		.loc 1 48 1 is_stmt 0 view .LVU9
+  50 0012 7047     		bx	lr
+  51              		.cfi_endproc
+  52              	.LFE0:
+  54              		.section	.text.readPin,"ax",%progbits
+  55              		.align	1
+  56              		.global	readPin
+  57              		.syntax unified
+  58              		.thumb
+  59              		.thumb_func
+  60              		.fpu softvfp
+  62              	readPin:
+  63              	.LVL2:
+  64              	.LFB1:
+  49:hardware.c    **** 
+  50:hardware.c    **** bool readPin(u32 bank, u8 pin) {
+  65              		.loc 1 50 32 is_stmt 1 view -0
+  66              		.cfi_startproc
+  67              		@ args = 0, pretend = 0, frame = 0
+  68              		@ frame_needed = 0, uses_anonymous_args = 0
+  69              		@ link register save eliminated.
+  51:hardware.c    ****     // todo, implement read
+  52:hardware.c    ****     if (GET_REG(GPIO_IDR(bank)) & (0x01 << pin)) {
+  70              		.loc 1 52 5 view .LVU11
+  71              		.loc 1 52 41 is_stmt 0 view .LVU12
+  72 0000 0123     		movs	r3, #1
+  73              		.loc 1 52 9 view .LVU13
+  74 0002 8268     		ldr	r2, [r0, #8]
+  75              		.loc 1 52 41 view .LVU14
+  76 0004 8B40     		lsls	r3, r3, r1
+  77              		.loc 1 52 8 view .LVU15
+  78 0006 1342     		tst	r3, r2
+  53:hardware.c    ****         return TRUE;
+  54:hardware.c    ****     } else {
+  55:hardware.c    ****         return FALSE;
+  56:hardware.c    ****     }
+  57:hardware.c    **** }
+  79              		.loc 1 57 1 view .LVU16
+  80 0008 14BF     		ite	ne
+  81 000a 0120     		movne	r0, #1
+  82              	.LVL3:
+  83              		.loc 1 57 1 view .LVU17
+  84 000c 0020     		moveq	r0, #0
+  85 000e 7047     		bx	lr
+  86              		.cfi_endproc
+  87              	.LFE1:
+  89              		.section	.text.readButtonState,"ax",%progbits
+  90              		.align	1
+  91              		.global	readButtonState
+  92              		.syntax unified
+  93              		.thumb
+  94              		.thumb_func
+  95              		.fpu softvfp
+  97              	readButtonState:
+  98              	.LFB2:
+  58:hardware.c    **** 
+  59:hardware.c    **** bool readButtonState() {
+  99              		.loc 1 59 24 is_stmt 1 view -0
+ 100              		.cfi_startproc
+ 101              		@ args = 0, pretend = 0, frame = 0
+ 102              		@ frame_needed = 0, uses_anonymous_args = 0
+ 103              		@ link register save eliminated.
+  60:hardware.c    ****     // todo, implement read
+  61:hardware.c    ****     bool state=FALSE;
+ 104              		.loc 1 61 5 view .LVU19
+ 105              	.LVL4:
+  62:hardware.c    **** #if defined(BUTTON_BANK) && defined (BUTTON_PIN) && defined (BUTTON_PRESSED_STATE)
+  63:hardware.c    ****     if (GET_REG(GPIO_IDR(BUTTON_BANK)) & (0x01 << BUTTON_PIN))
+  64:hardware.c    ****     {
+  65:hardware.c    ****         state = TRUE;
+  66:hardware.c    ****     }
+  67:hardware.c    **** 
+  68:hardware.c    ****     if (BUTTON_PRESSED_STATE==0)
+  69:hardware.c    ****     {
+  70:hardware.c    ****         state=!state;
+  71:hardware.c    ****     }
+  72:hardware.c    **** #endif
+  73:hardware.c    ****     return state;
+ 106              		.loc 1 73 5 view .LVU20
+  74:hardware.c    **** }
+ 107              		.loc 1 74 1 is_stmt 0 view .LVU21
+ 108 0000 0020     		movs	r0, #0
+ 109 0002 7047     		bx	lr
+ 110              		.cfi_endproc
+ 111              	.LFE2:
+ 113              		.section	.text.strobePin,"ax",%progbits
+ 114              		.align	1
+ 115              		.global	strobePin
+ 116              		.syntax unified
+ 117              		.thumb
+ 118              		.thumb_func
+ 119              		.fpu softvfp
+ 121              	strobePin:
+ 122              	.LVL5:
+ 123              	.LFB3:
+  75:hardware.c    **** 
+  76:hardware.c    **** void strobePin(u32 bank, u8 pin, u8 count, u32 rate,u8 onState)
+  77:hardware.c    **** {
+ 124              		.loc 1 77 1 is_stmt 1 view -0
+ 125              		.cfi_startproc
+ 126              		@ args = 4, pretend = 0, frame = 0
+ 127              		@ frame_needed = 0, uses_anonymous_args = 0
+  78:hardware.c    ****     gpio_write_bit( bank,pin,1-onState);
+ 128              		.loc 1 78 5 view .LVU23
+  77:hardware.c    ****     gpio_write_bit( bank,pin,1-onState);
+ 129              		.loc 1 77 1 is_stmt 0 view .LVU24
+ 130 0000 2DE9F843 		push	{r3, r4, r5, r6, r7, r8, r9, lr}
+ 131              		.cfi_def_cfa_offset 32
+ 132              		.cfi_offset 3, -32
+ 133              		.cfi_offset 4, -28
+ 134              		.cfi_offset 5, -24
+ 135              		.cfi_offset 6, -20
+ 136              		.cfi_offset 7, -16
+ 137              		.cfi_offset 8, -12
+ 138              		.cfi_offset 9, -8
+ 139              		.cfi_offset 14, -4
+  77:hardware.c    ****     gpio_write_bit( bank,pin,1-onState);
+ 140              		.loc 1 77 1 view .LVU25
+ 141 0004 9DF82090 		ldrb	r9, [sp, #32]	@ zero_extendqisi2
+ 142 0008 1446     		mov	r4, r2
+ 143              		.loc 1 78 5 view .LVU26
+ 144 000a C9F10105 		rsb	r5, r9, #1
+ 145 000e EDB2     		uxtb	r5, r5
+ 146 0010 2A46     		mov	r2, r5
+ 147              	.LVL6:
+  77:hardware.c    ****     gpio_write_bit( bank,pin,1-onState);
+ 148              		.loc 1 77 1 view .LVU27
+ 149 0012 0646     		mov	r6, r0
+ 150 0014 0F46     		mov	r7, r1
+ 151 0016 9846     		mov	r8, r3
+ 152              		.loc 1 78 5 view .LVU28
+ 153 0018 FFF7FEFF 		bl	gpio_write_bit
+ 154              	.LVL7:
+  79:hardware.c    **** 
+  80:hardware.c    ****     u32 c;
+ 155              		.loc 1 80 5 is_stmt 1 view .LVU29
+  81:hardware.c    ****     while (count-- > 0)
+ 156              		.loc 1 81 5 view .LVU30
+ 157              	.L5:
+ 158              		.loc 1 81 11 view .LVU31
+ 159              		.loc 1 81 11 is_stmt 0 view .LVU32
+ 160 001c A4B9     		cbnz	r4, .L10
+  82:hardware.c    ****     {
+  83:hardware.c    ****         for (c = rate; c > 0; c--)
+  84:hardware.c    ****         {
+  85:hardware.c    ****             asm volatile("nop");
+  86:hardware.c    ****         }
+  87:hardware.c    **** 
+  88:hardware.c    ****         gpio_write_bit( bank,pin,onState);
+  89:hardware.c    **** 
+  90:hardware.c    ****         for (c = rate; c > 0; c--)
+  91:hardware.c    ****         {
+  92:hardware.c    ****             asm volatile("nop");
+  93:hardware.c    ****         }
+  94:hardware.c    ****         gpio_write_bit( bank,pin,1-onState);
+  95:hardware.c    ****     }
+  96:hardware.c    **** }
+ 161              		.loc 1 96 1 view .LVU33
+ 162 001e BDE8F883 		pop	{r3, r4, r5, r6, r7, r8, r9, pc}
+ 163              	.LVL8:
+ 164              	.L6:
+  85:hardware.c    ****         }
+ 165              		.loc 1 85 13 is_stmt 1 discriminator 3 view .LVU34
+ 166              		.syntax unified
+ 167              	@ 85 "hardware.c" 1
+ 168 0022 00BF     		nop
+ 169              	@ 0 "" 2
+  83:hardware.c    ****         {
+ 170              		.loc 1 83 31 discriminator 3 view .LVU35
+  83:hardware.c    ****         {
+ 171              		.loc 1 83 32 is_stmt 0 discriminator 3 view .LVU36
+ 172              		.thumb
+ 173              		.syntax unified
+ 174 0024 013B     		subs	r3, r3, #1
+ 175              	.LVL9:
+ 176              	.L9:
+  83:hardware.c    ****         {
+ 177              		.loc 1 83 24 is_stmt 1 discriminator 1 view .LVU37
+  83:hardware.c    ****         {
+ 178              		.loc 1 83 9 is_stmt 0 discriminator 1 view .LVU38
+ 179 0026 002B     		cmp	r3, #0
+ 180 0028 FBD1     		bne	.L6
+  88:hardware.c    **** 
+ 181              		.loc 1 88 9 is_stmt 1 view .LVU39
+ 182 002a 4A46     		mov	r2, r9
+ 183 002c 3946     		mov	r1, r7
+ 184 002e 3046     		mov	r0, r6
+ 185              	.LVL10:
+  88:hardware.c    **** 
+ 186              		.loc 1 88 9 is_stmt 0 view .LVU40
+ 187 0030 FFF7FEFF 		bl	gpio_write_bit
+ 188              	.LVL11:
+  90:hardware.c    ****         {
+ 189              		.loc 1 90 9 is_stmt 1 view .LVU41
+  90:hardware.c    ****         {
+ 190              		.loc 1 90 16 is_stmt 0 view .LVU42
+ 191 0034 4346     		mov	r3, r8
+ 192              	.LVL12:
+ 193              	.L7:
+  90:hardware.c    ****         {
+ 194              		.loc 1 90 24 is_stmt 1 discriminator 1 view .LVU43
+  90:hardware.c    ****         {
+ 195              		.loc 1 90 9 is_stmt 0 discriminator 1 view .LVU44
+ 196 0036 4BB9     		cbnz	r3, .L8
+  94:hardware.c    ****     }
+ 197              		.loc 1 94 9 is_stmt 1 view .LVU45
+ 198 0038 2A46     		mov	r2, r5
+ 199 003a 3946     		mov	r1, r7
+ 200 003c 3046     		mov	r0, r6
+ 201              	.LVL13:
+  94:hardware.c    ****     }
+ 202              		.loc 1 94 9 is_stmt 0 view .LVU46
+ 203 003e 013C     		subs	r4, r4, #1
+ 204              	.LVL14:
+  94:hardware.c    ****     }
+ 205              		.loc 1 94 9 view .LVU47
+ 206 0040 FFF7FEFF 		bl	gpio_write_bit
+ 207              	.LVL15:
+  94:hardware.c    ****     }
+ 208              		.loc 1 94 9 view .LVU48
+ 209 0044 E4B2     		uxtb	r4, r4
+ 210 0046 E9E7     		b	.L5
+ 211              	.LVL16:
+ 212              	.L10:
+  83:hardware.c    ****         {
+ 213              		.loc 1 83 16 view .LVU49
+ 214 0048 4346     		mov	r3, r8
+ 215 004a ECE7     		b	.L9
+ 216              	.LVL17:
+ 217              	.L8:
+  92:hardware.c    ****         }
+ 218              		.loc 1 92 13 is_stmt 1 discriminator 3 view .LVU50
+ 219              		.syntax unified
+ 220              	@ 92 "hardware.c" 1
+ 221 004c 00BF     		nop
+ 222              	@ 0 "" 2
+  90:hardware.c    ****         {
+ 223              		.loc 1 90 31 discriminator 3 view .LVU51
+  90:hardware.c    ****         {
+ 224              		.loc 1 90 32 is_stmt 0 discriminator 3 view .LVU52
+ 225              		.thumb
+ 226              		.syntax unified
+ 227 004e 013B     		subs	r3, r3, #1
+ 228              	.LVL18:
+  90:hardware.c    ****         {
+ 229              		.loc 1 90 32 discriminator 3 view .LVU53
+ 230 0050 F1E7     		b	.L7
+ 231              		.cfi_endproc
+ 232              	.LFE3:
+ 234              		.section	.text.systemReset,"ax",%progbits
+ 235              		.align	1
+ 236              		.global	systemReset
+ 237              		.syntax unified
+ 238              		.thumb
+ 239              		.thumb_func
+ 240              		.fpu softvfp
+ 242              	systemReset:
+ 243              	.LFB4:
+  97:hardware.c    **** 
+  98:hardware.c    **** void systemReset(void) {
+ 244              		.loc 1 98 24 is_stmt 1 view -0
+ 245              		.cfi_startproc
+ 246              		@ args = 0, pretend = 0, frame = 0
+ 247              		@ frame_needed = 0, uses_anonymous_args = 0
+ 248              		@ link register save eliminated.
+  99:hardware.c    ****     SET_REG(RCC_CR, GET_REG(RCC_CR)     | 0x00000001);
+ 249              		.loc 1 99 5 view .LVU55
+ 250              		.loc 1 99 5 view .LVU56
+ 251 0000 0C4B     		ldr	r3, .L12
+ 252 0002 1A68     		ldr	r2, [r3]
+ 253 0004 42F00102 		orr	r2, r2, #1
+ 254 0008 1A60     		str	r2, [r3]
+ 255              		.loc 1 99 5 view .LVU57
+ 100:hardware.c    ****     SET_REG(RCC_CFGR, GET_REG(RCC_CFGR) & 0xF8FF0000);
+ 256              		.loc 1 100 5 view .LVU58
+ 257              		.loc 1 100 5 view .LVU59
+ 258 000a 5968     		ldr	r1, [r3, #4]
+ 259 000c 0A4A     		ldr	r2, .L12+4
+ 260 000e 0A40     		ands	r2, r2, r1
+ 261 0010 5A60     		str	r2, [r3, #4]
+ 262              		.loc 1 100 5 view .LVU60
+ 101:hardware.c    ****     SET_REG(RCC_CR, GET_REG(RCC_CR)     & 0xFEF6FFFF);
+ 263              		.loc 1 101 5 view .LVU61
+ 264              		.loc 1 101 5 view .LVU62
+ 265 0012 1A68     		ldr	r2, [r3]
+ 266 0014 22F08472 		bic	r2, r2, #17301504
+ 267 0018 22F48032 		bic	r2, r2, #65536
+ 268 001c 1A60     		str	r2, [r3]
+ 269              		.loc 1 101 5 view .LVU63
+ 102:hardware.c    ****     SET_REG(RCC_CR, GET_REG(RCC_CR)     & 0xFFFBFFFF);
+ 270              		.loc 1 102 5 view .LVU64
+ 271              		.loc 1 102 5 view .LVU65
+ 272 001e 1A68     		ldr	r2, [r3]
+ 273 0020 22F48022 		bic	r2, r2, #262144
+ 274 0024 1A60     		str	r2, [r3]
+ 275              		.loc 1 102 5 view .LVU66
+ 103:hardware.c    ****     SET_REG(RCC_CFGR, GET_REG(RCC_CFGR) & 0xFF80FFFF);
+ 276              		.loc 1 103 5 view .LVU67
+ 277              		.loc 1 103 5 view .LVU68
+ 278 0026 5A68     		ldr	r2, [r3, #4]
+ 279 0028 22F4FE02 		bic	r2, r2, #8323072
+ 280 002c 5A60     		str	r2, [r3, #4]
+ 281              		.loc 1 103 5 view .LVU69
+ 104:hardware.c    **** 
+ 105:hardware.c    ****     SET_REG(RCC_CIR, 0x00000000);  /* disable all RCC interrupts */
+ 282              		.loc 1 105 5 view .LVU70
+ 283              		.loc 1 105 5 view .LVU71
+ 284 002e 0022     		movs	r2, #0
+ 285 0030 9A60     		str	r2, [r3, #8]
+ 286              		.loc 1 105 5 view .LVU72
+ 106:hardware.c    **** }
+ 287              		.loc 1 106 1 is_stmt 0 view .LVU73
+ 288 0032 7047     		bx	lr
+ 289              	.L13:
+ 290              		.align	2
+ 291              	.L12:
+ 292 0034 00100240 		.word	1073876992
+ 293 0038 0000FFF8 		.word	-117506048
+ 294              		.cfi_endproc
+ 295              	.LFE4:
+ 297              		.section	.text.setupCLK,"ax",%progbits
+ 298              		.align	1
+ 299              		.global	setupCLK
+ 300              		.syntax unified
+ 301              		.thumb
+ 302              		.thumb_func
+ 303              		.fpu softvfp
+ 305              	setupCLK:
+ 306              	.LFB5:
+ 107:hardware.c    **** 
+ 108:hardware.c    **** void setupCLK(void) {
+ 307              		.loc 1 108 21 is_stmt 1 view -0
+ 308              		.cfi_startproc
+ 309              		@ args = 0, pretend = 0, frame = 0
+ 310              		@ frame_needed = 0, uses_anonymous_args = 0
+ 311              		@ link register save eliminated.
+ 109:hardware.c    ****     unsigned int StartUpCounter=0;
+ 312              		.loc 1 109 5 view .LVU75
+ 313              	.LVL19:
+ 110:hardware.c    ****     /* enable HSE */
+ 111:hardware.c    ****     SET_REG(RCC_CR, GET_REG(RCC_CR) | 0x00010001);
+ 314              		.loc 1 111 5 view .LVU76
+ 315              		.loc 1 111 5 view .LVU77
+ 316 0000 144B     		ldr	r3, .L24
+ 317 0002 1A68     		ldr	r2, [r3]
+ 318 0004 42F00112 		orr	r2, r2, #65537
+ 319 0008 1A60     		str	r2, [r3]
+ 320              		.loc 1 111 5 view .LVU78
+ 112:hardware.c    ****     while ((GET_REG(RCC_CR) & 0x00020000) == 0); /* for it to come on */
+ 321              		.loc 1 112 5 view .LVU79
+ 322              	.L15:
+ 323              		.loc 1 112 48 discriminator 1 view .LVU80
+ 324              		.loc 1 112 11 discriminator 1 view .LVU81
+ 325              		.loc 1 112 13 is_stmt 0 discriminator 1 view .LVU82
+ 326 000a 1A68     		ldr	r2, [r3]
+ 327              		.loc 1 112 11 discriminator 1 view .LVU83
+ 328 000c 9103     		lsls	r1, r2, #14
+ 329 000e FCD5     		bpl	.L15
+ 113:hardware.c    **** 
+ 114:hardware.c    ****     /* enable flash prefetch buffer */
+ 115:hardware.c    ****     SET_REG(FLASH_ACR, 0x00000012);
+ 330              		.loc 1 115 5 is_stmt 1 view .LVU84
+ 331              		.loc 1 115 5 view .LVU85
+ 332 0010 1221     		movs	r1, #18
+ 333 0012 114A     		ldr	r2, .L24+4
+ 334 0014 1160     		str	r1, [r2]
+ 335              		.loc 1 115 5 view .LVU86
+ 116:hardware.c    **** 
+ 117:hardware.c    ****     /* Configure PLL */
+ 118:hardware.c    **** #if defined XTAL16M
+ 119:hardware.c    ****     // 16 MHz crystal  (using the Bit 17 PLLXTPRE=1 => HSE clock divided by 2 before PLL entry)
+ 120:hardware.c    ****     SET_REG(RCC_CFGR, GET_REG(RCC_CFGR) | 0x001F0400); /* pll=72Mhz(x9/2),APB1=36Mhz,AHB=72Mhz */
+ 336              		.loc 1 120 5 view .LVU87
+ 337              		.loc 1 120 5 view .LVU88
+ 338 0016 5A68     		ldr	r2, [r3, #4]
+ 339 0018 42F4F812 		orr	r2, r2, #2031616
+ 340 001c 42F48062 		orr	r2, r2, #1024
+ 341 0020 5A60     		str	r2, [r3, #4]
+ 342              		.loc 1 120 5 view .LVU89
+ 121:hardware.c    **** #elif defined XTAL12M
+ 122:hardware.c    ****     // 12 MHz crystal
+ 123:hardware.c    ****     SET_REG(RCC_CFGR, GET_REG(RCC_CFGR) | 0x00110400); /* pll=72Mhz(x6),APB1=36Mhz,AHB=72Mhz */
+ 124:hardware.c    **** #else
+ 125:hardware.c    ****     // 8 MHz crystal default
+ 126:hardware.c    ****     SET_REG(RCC_CFGR, GET_REG(RCC_CFGR) | 0x001D0400); /* pll=72Mhz(x9),APB1=36Mhz,AHB=72Mhz */
+ 127:hardware.c    **** #endif
+ 128:hardware.c    **** 
+ 129:hardware.c    ****     SET_REG(RCC_CR, GET_REG(RCC_CR)     | 0x01000000); /* enable the pll */
+ 343              		.loc 1 129 5 view .LVU90
+ 344              		.loc 1 129 5 view .LVU91
+ 345 0022 1A68     		ldr	r2, [r3]
+ 346 0024 42F08072 		orr	r2, r2, #16777216
+ 347 0028 1A60     		str	r2, [r3]
+ 348              		.loc 1 129 5 view .LVU92
+ 130:hardware.c    **** 
+ 131:hardware.c    **** 
+ 132:hardware.c    **** #if !defined  (HSE_STARTUP_TIMEOUT)
+ 133:hardware.c    **** #define HSE_STARTUP_TIMEOUT    ((unsigned int)0x0500)   /*!< Time out for HSE start up */
+ 134:hardware.c    **** #endif /* HSE_STARTUP_TIMEOUT */
+ 135:hardware.c    **** 
+ 136:hardware.c    ****     while ((GET_REG(RCC_CR) & 0x03000000) == 0 && StartUpCounter < HSE_STARTUP_TIMEOUT)
+ 349              		.loc 1 136 5 view .LVU93
+ 350              	.L16:
+ 137:hardware.c    ****     {
+ 138:hardware.c    **** //      StartUpCounter++; // This is commented out, so other changes can be committed. It will be u
+ 139:hardware.c    ****     }   /* wait for it to come on */
+ 351              		.loc 1 139 5 discriminator 2 view .LVU94
+ 136:hardware.c    ****     {
+ 352              		.loc 1 136 11 discriminator 2 view .LVU95
+ 136:hardware.c    ****     {
+ 353              		.loc 1 136 13 is_stmt 0 discriminator 2 view .LVU96
+ 354 002a 1A68     		ldr	r2, [r3]
+ 136:hardware.c    ****     {
+ 355              		.loc 1 136 11 discriminator 2 view .LVU97
+ 356 002c 12F0407F 		tst	r2, #50331648
+ 357 0030 FBD0     		beq	.L16
+ 140:hardware.c    **** 
+ 141:hardware.c    ****     if (StartUpCounter>=HSE_STARTUP_TIMEOUT)
+ 358              		.loc 1 141 5 is_stmt 1 view .LVU98
+ 142:hardware.c    ****     {
+ 143:hardware.c    ****         // HSE has not started. Try restarting the processor
+ 144:hardware.c    ****         systemHardReset();
+ 145:hardware.c    ****     }
+ 146:hardware.c    **** 
+ 147:hardware.c    ****     /* Set SYSCLK as PLL */
+ 148:hardware.c    ****     SET_REG(RCC_CFGR, GET_REG(RCC_CFGR) | 0x00000002);
+ 359              		.loc 1 148 5 view .LVU99
+ 360              		.loc 1 148 5 view .LVU100
+ 361 0032 5A68     		ldr	r2, [r3, #4]
+ 362 0034 42F00202 		orr	r2, r2, #2
+ 363 0038 5A60     		str	r2, [r3, #4]
+ 364              		.loc 1 148 5 view .LVU101
+ 149:hardware.c    ****     while ((GET_REG(RCC_CFGR) & 0x00000008) == 0); /* wait for it to come on */
+ 365              		.loc 1 149 5 view .LVU102
+ 366              	.L17:
+ 367              		.loc 1 149 50 discriminator 1 view .LVU103
+ 368              		.loc 1 149 11 discriminator 1 view .LVU104
+ 369              		.loc 1 149 13 is_stmt 0 discriminator 1 view .LVU105
+ 370 003a 5A68     		ldr	r2, [r3, #4]
+ 371              		.loc 1 149 11 discriminator 1 view .LVU106
+ 372 003c 1207     		lsls	r2, r2, #28
+ 373 003e FCD5     		bpl	.L17
+ 150:hardware.c    **** 
+ 151:hardware.c    ****     pRCC->APB2ENR |= 0B111111100;// Enable All GPIO channels (A to G)
+ 374              		.loc 1 151 5 is_stmt 1 view .LVU107
+ 375              		.loc 1 151 19 is_stmt 0 view .LVU108
+ 376 0040 9A69     		ldr	r2, [r3, #24]
+ 377 0042 42F4FE72 		orr	r2, r2, #508
+ 378 0046 9A61     		str	r2, [r3, #24]
+ 152:hardware.c    ****     pRCC->APB1ENR |= RCC_APB1ENR_USB_CLK;
+ 379              		.loc 1 152 5 is_stmt 1 view .LVU109
+ 380              		.loc 1 152 19 is_stmt 0 view .LVU110
+ 381 0048 DA69     		ldr	r2, [r3, #28]
+ 382 004a 42F40002 		orr	r2, r2, #8388608
+ 383 004e DA61     		str	r2, [r3, #28]
+ 153:hardware.c    **** }
+ 384              		.loc 1 153 1 view .LVU111
+ 385 0050 7047     		bx	lr
+ 386              	.L25:
+ 387 0052 00BF     		.align	2
+ 388              	.L24:
+ 389 0054 00100240 		.word	1073876992
+ 390 0058 00200240 		.word	1073881088
+ 391              		.cfi_endproc
+ 392              	.LFE5:
+ 394              		.section	.text.setupLEDAndButton,"ax",%progbits
+ 395              		.align	1
+ 396              		.global	setupLEDAndButton
+ 397              		.syntax unified
+ 398              		.thumb
+ 399              		.thumb_func
+ 400              		.fpu softvfp
+ 402              	setupLEDAndButton:
+ 403              	.LFB6:
+ 154:hardware.c    **** 
+ 155:hardware.c    **** 
+ 156:hardware.c    **** void setupLEDAndButton (void) {
+ 404              		.loc 1 156 31 is_stmt 1 view -0
+ 405              		.cfi_startproc
+ 406              		@ args = 0, pretend = 0, frame = 0
+ 407              		@ frame_needed = 0, uses_anonymous_args = 0
+ 408              		@ link register save eliminated.
+ 157:hardware.c    ****     // SET_REG(AFIO_MAPR,(GET_REG(AFIO_MAPR) & ~AFIO_MAPR_SWJ_CFG) | AFIO_MAPR_SWJ_CFG_NO_JTAG_NO_S
+ 158:hardware.c    **** 
+ 159:hardware.c    **** #if defined(BUTTON_BANK) && defined (BUTTON_PIN) && defined (BUTTON_PRESSED_STATE)
+ 160:hardware.c    ****     SET_REG(GPIO_CR(BUTTON_BANK,BUTTON_PIN),(GET_REG(GPIO_CR(BUTTON_BANK,BUTTON_PIN)) & crMask(BUTT
+ 161:hardware.c    **** 
+ 162:hardware.c    ****     gpio_write_bit(BUTTON_BANK, BUTTON_PIN,1-BUTTON_PRESSED_STATE);// set pulldown resistor in case
+ 163:hardware.c    **** #endif
+ 164:hardware.c    **** #if defined(LED_BANK) && defined(LED_PIN) && defined(LED_ON_STATE)
+ 165:hardware.c    ****     SET_REG(GPIO_CR(LED_BANK,LED_PIN),(GET_REG(GPIO_CR(LED_BANK,LED_PIN)) & crMask(LED_PIN)) | CR_O
+ 166:hardware.c    **** #endif
+ 167:hardware.c    **** }
+ 409              		.loc 1 167 1 view .LVU113
+ 410 0000 7047     		bx	lr
+ 411              		.cfi_endproc
+ 412              	.LFE6:
+ 414              		.section	.text.setupFLASH,"ax",%progbits
+ 415              		.align	1
+ 416              		.global	setupFLASH
+ 417              		.syntax unified
+ 418              		.thumb
+ 419              		.thumb_func
+ 420              		.fpu softvfp
+ 422              	setupFLASH:
+ 423              	.LFB7:
+ 168:hardware.c    **** 
+ 169:hardware.c    **** void setupFLASH() {
+ 424              		.loc 1 169 19 view -0
+ 425              		.cfi_startproc
+ 426              		@ args = 0, pretend = 0, frame = 0
+ 427              		@ frame_needed = 0, uses_anonymous_args = 0
+ 428              		@ link register save eliminated.
+ 170:hardware.c    ****     /* configure the HSI oscillator */
+ 171:hardware.c    ****     if ((pRCC->CR & 0x01) == 0x00) {
+ 429              		.loc 1 171 5 view .LVU115
+ 430              		.loc 1 171 14 is_stmt 0 view .LVU116
+ 431 0000 054B     		ldr	r3, .L32
+ 432 0002 1A68     		ldr	r2, [r3]
+ 433              		.loc 1 171 8 view .LVU117
+ 434 0004 D107     		lsls	r1, r2, #31
+ 435              	.LBB4:
+ 172:hardware.c    ****         u32 rwmVal = pRCC->CR;
+ 436              		.loc 1 172 9 is_stmt 1 view .LVU118
+ 437              		.loc 1 172 13 is_stmt 0 view .LVU119
+ 438 0006 5EBF     		ittt	pl
+ 439 0008 1A68     		ldrpl	r2, [r3]
+ 440              	.LVL20:
+ 173:hardware.c    ****         rwmVal |= 0x01;
+ 441              		.loc 1 173 9 is_stmt 1 view .LVU120
+ 442              		.loc 1 173 16 is_stmt 0 view .LVU121
+ 443 000a 42F00102 		orrpl	r2, r2, #1
+ 444              	.LVL21:
+ 174:hardware.c    ****         pRCC->CR = rwmVal;
+ 445              		.loc 1 174 9 is_stmt 1 view .LVU122
+ 446              		.loc 1 174 18 is_stmt 0 view .LVU123
+ 447 000e 1A60     		strpl	r2, [r3]
+ 448              	.LVL22:
+ 449              	.L29:
+ 450              		.loc 1 174 18 view .LVU124
+ 451              	.LBE4:
+ 175:hardware.c    ****     }
+ 176:hardware.c    **** 
+ 177:hardware.c    ****     /* wait for it to come on */
+ 178:hardware.c    ****     while ((pRCC->CR & 0x02) == 0x00) {}
+ 452              		.loc 1 178 40 is_stmt 1 discriminator 1 view .LVU125
+ 453              		.loc 1 178 11 discriminator 1 view .LVU126
+ 454              		.loc 1 178 17 is_stmt 0 discriminator 1 view .LVU127
+ 455 0010 1A68     		ldr	r2, [r3]
+ 456              		.loc 1 178 11 discriminator 1 view .LVU128
+ 457 0012 9207     		lsls	r2, r2, #30
+ 458 0014 FCD5     		bpl	.L29
+ 179:hardware.c    **** }
+ 459              		.loc 1 179 1 view .LVU129
+ 460 0016 7047     		bx	lr
+ 461              	.L33:
+ 462              		.align	2
+ 463              	.L32:
+ 464 0018 00100240 		.word	1073876992
+ 465              		.cfi_endproc
+ 466              	.LFE7:
+ 468              		.section	.text.checkUserCode,"ax",%progbits
+ 469              		.align	1
+ 470              		.global	checkUserCode
+ 471              		.syntax unified
+ 472              		.thumb
+ 473              		.thumb_func
+ 474              		.fpu softvfp
+ 476              	checkUserCode:
+ 477              	.LVL23:
+ 478              	.LFB8:
+ 180:hardware.c    **** 
+ 181:hardware.c    **** bool checkUserCode(u32 usrAddr) {
+ 479              		.loc 1 181 33 is_stmt 1 view -0
+ 480              		.cfi_startproc
+ 481              		@ args = 0, pretend = 0, frame = 0
+ 482              		@ frame_needed = 0, uses_anonymous_args = 0
+ 483              		@ link register save eliminated.
+ 182:hardware.c    ****     u32 sp = *(vu32 *) usrAddr;
+ 484              		.loc 1 182 5 view .LVU131
+ 485              		.loc 1 182 9 is_stmt 0 view .LVU132
+ 486 0000 0368     		ldr	r3, [r0]
+ 487              	.LVL24:
+ 183:hardware.c    **** 
+ 184:hardware.c    ****     if ((sp & 0x2FFE0000) == 0x20000000) {
+ 488              		.loc 1 184 5 is_stmt 1 view .LVU133
+ 489              		.loc 1 184 13 is_stmt 0 view .LVU134
+ 490 0002 0348     		ldr	r0, .L35
+ 491              	.LVL25:
+ 492              		.loc 1 184 13 view .LVU135
+ 493 0004 1840     		ands	r0, r0, r3
+ 185:hardware.c    ****         return (TRUE);
+ 186:hardware.c    ****     } else {
+ 187:hardware.c    ****         return (FALSE);
+ 188:hardware.c    ****     }
+ 189:hardware.c    **** }
+ 494              		.loc 1 189 1 view .LVU136
+ 495 0006 00F16043 		add	r3, r0, #-536870912
+ 496              	.LVL26:
+ 497              		.loc 1 189 1 view .LVU137
+ 498 000a 5842     		rsbs	r0, r3, #0
+ 499 000c 5841     		adcs	r0, r0, r3
+ 500 000e 7047     		bx	lr
+ 501              	.L36:
+ 502              		.align	2
+ 503              	.L35:
+ 504 0010 0000FE2F 		.word	805175296
+ 505              		.cfi_endproc
+ 506              	.LFE8:
+ 508              		.section	.text.setMspAndJump,"ax",%progbits
+ 509              		.align	1
+ 510              		.global	setMspAndJump
+ 511              		.syntax unified
+ 512              		.thumb
+ 513              		.thumb_func
+ 514              		.fpu softvfp
+ 516              	setMspAndJump:
+ 517              	.LVL27:
+ 518              	.LFB9:
+ 190:hardware.c    **** 
+ 191:hardware.c    **** void setMspAndJump(u32 usrAddr) {
+ 519              		.loc 1 191 33 is_stmt 1 view -0
+ 520              		.cfi_startproc
+ 521              		@ args = 0, pretend = 0, frame = 0
+ 522              		@ frame_needed = 0, uses_anonymous_args = 0
+ 523              		@ link register save eliminated.
+ 192:hardware.c    ****     // Dedicated function with no call to any function (appart the last call)
+ 193:hardware.c    ****     // This way, there is no manipulation of the stack here, ensuring that GGC
+ 194:hardware.c    ****     // didn't insert any pop from the SP after having set the MSP.
+ 195:hardware.c    ****     typedef void (*funcPtr)(void);
+ 524              		.loc 1 195 5 view .LVU139
+ 196:hardware.c    ****     u32 jumpAddr = *(vu32 *)(usrAddr + 0x04); /* reset ptr in vector table */
+ 525              		.loc 1 196 5 view .LVU140
+ 197:hardware.c    **** 
+ 198:hardware.c    ****     funcPtr usrMain = (funcPtr) jumpAddr;
+ 199:hardware.c    **** 
+ 200:hardware.c    ****     SET_REG(SCB_VTOR, (vu32) (usrAddr));
+ 526              		.loc 1 200 5 is_stmt 0 view .LVU141
+ 527 0000 4FF0E022 		mov	r2, #-536813568
+ 196:hardware.c    ****     u32 jumpAddr = *(vu32 *)(usrAddr + 0x04); /* reset ptr in vector table */
+ 528              		.loc 1 196 9 view .LVU142
+ 529 0004 4368     		ldr	r3, [r0, #4]
+ 530              	.LVL28:
+ 198:hardware.c    **** 
+ 531              		.loc 1 198 5 is_stmt 1 view .LVU143
+ 532              		.loc 1 200 5 view .LVU144
+ 533              		.loc 1 200 5 view .LVU145
+ 534 0006 C2F8080D 		str	r0, [r2, #3336]
+ 535              		.loc 1 200 5 view .LVU146
+ 201:hardware.c    **** 
+ 202:hardware.c    ****     asm volatile("msr msp, %0"::"g"(*(volatile u32 *)usrAddr));
+ 536              		.loc 1 202 5 view .LVU147
+ 537              		.loc 1 202 37 is_stmt 0 view .LVU148
+ 538 000a 0268     		ldr	r2, [r0]
+ 539              		.loc 1 202 5 view .LVU149
+ 540              		.syntax unified
+ 541              	@ 202 "hardware.c" 1
+ 542 000c 82F30888 		msr msp, r2
+ 543              	@ 0 "" 2
+ 203:hardware.c    **** 
+ 204:hardware.c    ****     usrMain();                                /* go! */
+ 544              		.loc 1 204 5 is_stmt 1 view .LVU150
+ 545              		.thumb
+ 546              		.syntax unified
+ 547 0010 1847     		bx	r3	@ indirect register sibling call
+ 548              	.LVL29:
+ 549              		.loc 1 204 5 is_stmt 0 view .LVU151
+ 550              		.cfi_endproc
+ 551              	.LFE9:
+ 553              		.section	.text.bkp10Write,"ax",%progbits
+ 554              		.align	1
+ 555              		.global	bkp10Write
+ 556              		.syntax unified
+ 557              		.thumb
+ 558              		.thumb_func
+ 559              		.fpu softvfp
+ 561              	bkp10Write:
+ 562              	.LVL30:
+ 563              	.LFB11:
+ 205:hardware.c    **** }
+ 206:hardware.c    **** 
+ 207:hardware.c    **** 
+ 208:hardware.c    **** void jumpToUser(u32 usrAddr) {
+ 209:hardware.c    **** 
+ 210:hardware.c    ****     /* tear down all the dfu related setup */
+ 211:hardware.c    ****     // disable usb interrupts, clear them, turn off usb, set the disc pin
+ 212:hardware.c    ****     // todo pick exactly what we want to do here, now its just a conservative
+ 213:hardware.c    ****     flashLock();
+ 214:hardware.c    ****     usbDsbISR();
+ 215:hardware.c    ****     nvicDisableInterrupts();
+ 216:hardware.c    **** 
+ 217:hardware.c    **** #ifndef HAS_MAPLE_HARDWARE
+ 218:hardware.c    ****     usbDsbBus();
+ 219:hardware.c    **** #endif
+ 220:hardware.c    **** 
+ 221:hardware.c    **** // Does nothing, as PC12 is not connected on teh Maple mini according to the schemmatic     setPin(
+ 222:hardware.c    ****     systemReset(); // resets clocks and periphs, not core regs
+ 223:hardware.c    **** 
+ 224:hardware.c    ****     setMspAndJump(usrAddr);
+ 225:hardware.c    **** }
+ 226:hardware.c    **** 
+ 227:hardware.c    **** void bkp10Write(u16 value)
+ 228:hardware.c    **** {
+ 564              		.loc 1 228 1 is_stmt 1 view -0
+ 565              		.cfi_startproc
+ 566              		@ args = 0, pretend = 0, frame = 0
+ 567              		@ frame_needed = 0, uses_anonymous_args = 0
+ 568              		@ link register save eliminated.
+ 229:hardware.c    ****         // Enable clocks for the backup domain registers
+ 230:hardware.c    ****         pRCC->APB1ENR |= (RCC_APB1ENR_PWR_CLK | RCC_APB1ENR_BKP_CLK);
+ 569              		.loc 1 230 9 view .LVU153
+ 570              		.loc 1 230 23 is_stmt 0 view .LVU154
+ 571 0000 084A     		ldr	r2, .L39
+ 572 0002 D369     		ldr	r3, [r2, #28]
+ 573 0004 43F0C053 		orr	r3, r3, #402653184
+ 574 0008 D361     		str	r3, [r2, #28]
+ 231:hardware.c    **** 
+ 232:hardware.c    ****         // Disable backup register write protection
+ 233:hardware.c    ****         pPWR->CR |= PWR_CR_DBP;
+ 575              		.loc 1 233 9 is_stmt 1 view .LVU155
+ 576              		.loc 1 233 18 is_stmt 0 view .LVU156
+ 577 000a 074B     		ldr	r3, .L39+4
+ 578 000c 1A68     		ldr	r2, [r3]
+ 579 000e 42F48072 		orr	r2, r2, #256
+ 580 0012 1A60     		str	r2, [r3]
+ 234:hardware.c    **** 
+ 235:hardware.c    ****         // store value in pBK DR10
+ 236:hardware.c    ****         pBKP->DR10 = value;
+ 581              		.loc 1 236 9 is_stmt 1 view .LVU157
+ 582              		.loc 1 236 20 is_stmt 0 view .LVU158
+ 583 0014 054A     		ldr	r2, .L39+8
+ 584 0016 1085     		strh	r0, [r2, #40]	@ movhi
+ 237:hardware.c    **** 
+ 238:hardware.c    ****         // Re-enable backup register write protection
+ 239:hardware.c    ****         pPWR->CR &=~ PWR_CR_DBP;
+ 585              		.loc 1 239 9 is_stmt 1 view .LVU159
+ 586              		.loc 1 239 18 is_stmt 0 view .LVU160
+ 587 0018 1A68     		ldr	r2, [r3]
+ 588 001a 22F48072 		bic	r2, r2, #256
+ 589 001e 1A60     		str	r2, [r3]
+ 240:hardware.c    **** }
+ 590              		.loc 1 240 1 view .LVU161
+ 591 0020 7047     		bx	lr
+ 592              	.L40:
+ 593 0022 00BF     		.align	2
+ 594              	.L39:
+ 595 0024 00100240 		.word	1073876992
+ 596 0028 00700040 		.word	1073770496
+ 597 002c 006C0040 		.word	1073769472
+ 598              		.cfi_endproc
+ 599              	.LFE11:
+ 601              		.section	.text.checkAndClearBootloaderFlag,"ax",%progbits
+ 602              		.align	1
+ 603              		.global	checkAndClearBootloaderFlag
+ 604              		.syntax unified
+ 605              		.thumb
+ 606              		.thumb_func
+ 607              		.fpu softvfp
+ 609              	checkAndClearBootloaderFlag:
+ 610              	.LFB12:
+ 241:hardware.c    **** 
+ 242:hardware.c    **** int checkAndClearBootloaderFlag()
+ 243:hardware.c    **** {
+ 611              		.loc 1 243 1 is_stmt 1 view -0
+ 612              		.cfi_startproc
+ 613              		@ args = 0, pretend = 0, frame = 0
+ 614              		@ frame_needed = 0, uses_anonymous_args = 0
+ 244:hardware.c    ****     bool flagSet = 0x00;// Flag not used
+ 615              		.loc 1 244 5 view .LVU163
+ 616              	.LVL31:
+ 245:hardware.c    **** 
+ 246:hardware.c    ****     // Enable clocks for the backup domain registers
+ 247:hardware.c    ****     pRCC->APB1ENR |= (RCC_APB1ENR_PWR_CLK | RCC_APB1ENR_BKP_CLK);
+ 617              		.loc 1 247 5 view .LVU164
+ 248:hardware.c    **** 
+ 249:hardware.c    ****     switch (pBKP->DR10)
+ 618              		.loc 1 249 5 is_stmt 0 view .LVU165
+ 619 0000 44F24C22 		movw	r2, #16972
+ 247:hardware.c    **** 
+ 620              		.loc 1 247 19 view .LVU166
+ 621 0004 0E49     		ldr	r1, .L46
+ 243:hardware.c    ****     bool flagSet = 0x00;// Flag not used
+ 622              		.loc 1 243 1 view .LVU167
+ 623 0006 10B5     		push	{r4, lr}
+ 624              		.cfi_def_cfa_offset 8
+ 625              		.cfi_offset 4, -8
+ 626              		.cfi_offset 14, -4
+ 247:hardware.c    **** 
+ 627              		.loc 1 247 19 view .LVU168
+ 628 0008 CB69     		ldr	r3, [r1, #28]
+ 629 000a 43F0C053 		orr	r3, r3, #402653184
+ 630 000e CB61     		str	r3, [r1, #28]
+ 631              		.loc 1 249 5 is_stmt 1 view .LVU169
+ 632              		.loc 1 249 17 is_stmt 0 view .LVU170
+ 633 0010 0C4B     		ldr	r3, .L46+4
+ 634 0012 1B8D     		ldrh	r3, [r3, #40]
+ 635 0014 9BB2     		uxth	r3, r3
+ 636              		.loc 1 249 5 view .LVU171
+ 637 0016 9342     		cmp	r3, r2
+ 638 0018 0DD0     		beq	.L44
+ 639 001a 44F24D22 		movw	r2, #16973
+ 640 001e 9342     		cmp	r3, r2
+ 641 0020 0BD1     		bne	.L45
+ 250:hardware.c    ****     {
+ 251:hardware.c    ****         case RTC_BOOTLOADER_FLAG:
+ 252:hardware.c    ****             flagSet = 0x01;
+ 253:hardware.c    ****             break;
+ 254:hardware.c    ****         case RTC_BOOTLOADER_JUST_UPLOADED:
+ 255:hardware.c    ****             flagSet = 0x02;
+ 642              		.loc 1 255 21 view .LVU172
+ 643 0022 0224     		movs	r4, #2
+ 644              	.L42:
+ 645              	.LVL32:
+ 256:hardware.c    ****             break;
+ 257:hardware.c    ****     }
+ 258:hardware.c    **** 
+ 259:hardware.c    ****     if (flagSet!=0x00)
+ 260:hardware.c    ****     {
+ 261:hardware.c    ****         bkp10Write(0x0000);// Clear the flag
+ 646              		.loc 1 261 9 is_stmt 1 view .LVU173
+ 647 0024 0020     		movs	r0, #0
+ 648 0026 FFF7FEFF 		bl	bkp10Write
+ 649              	.LVL33:
+ 262:hardware.c    ****         // Disable clocks
+ 263:hardware.c    ****         pRCC->APB1ENR &= ~(RCC_APB1ENR_PWR_CLK | RCC_APB1ENR_BKP_CLK);
+ 650              		.loc 1 263 9 view .LVU174
+ 651              		.loc 1 263 23 is_stmt 0 view .LVU175
+ 652 002a CB69     		ldr	r3, [r1, #28]
+ 653 002c 23F0C053 		bic	r3, r3, #402653184
+ 654 0030 CB61     		str	r3, [r1, #28]
+ 655              	.L43:
+ 264:hardware.c    ****     }
+ 265:hardware.c    **** 
+ 266:hardware.c    **** 
+ 267:hardware.c    **** 
+ 268:hardware.c    ****     return flagSet;
+ 656              		.loc 1 268 5 is_stmt 1 view .LVU176
+ 269:hardware.c    **** }
+ 657              		.loc 1 269 1 is_stmt 0 view .LVU177
+ 658 0032 2046     		mov	r0, r4
+ 659 0034 10BD     		pop	{r4, pc}
+ 660              	.LVL34:
+ 661              	.L44:
+ 249:hardware.c    ****     {
+ 662              		.loc 1 249 5 view .LVU178
+ 663 0036 0124     		movs	r4, #1
+ 664 0038 F4E7     		b	.L42
+ 665              	.L45:
+ 666 003a 0024     		movs	r4, #0
+ 667 003c F9E7     		b	.L43
+ 668              	.L47:
+ 669 003e 00BF     		.align	2
+ 670              	.L46:
+ 671 0040 00100240 		.word	1073876992
+ 672 0044 006C0040 		.word	1073769472
+ 673              		.cfi_endproc
+ 674              	.LFE12:
+ 676              		.section	.text.nvicInit,"ax",%progbits
+ 677              		.align	1
+ 678              		.global	nvicInit
+ 679              		.syntax unified
+ 680              		.thumb
+ 681              		.thumb_func
+ 682              		.fpu softvfp
+ 684              	nvicInit:
+ 685              	.LVL35:
+ 686              	.LFB13:
+ 270:hardware.c    **** 
+ 271:hardware.c    **** 
+ 272:hardware.c    **** 
+ 273:hardware.c    **** void nvicInit(NVIC_InitTypeDef *NVIC_InitStruct) {
+ 687              		.loc 1 273 50 is_stmt 1 view -0
+ 688              		.cfi_startproc
+ 689              		@ args = 0, pretend = 0, frame = 0
+ 690              		@ frame_needed = 0, uses_anonymous_args = 0
+ 274:hardware.c    ****     u32 tmppriority = 0x00;
+ 691              		.loc 1 274 5 view .LVU180
+ 275:hardware.c    ****     u32 tmpreg      = 0x00;
+ 692              		.loc 1 275 5 view .LVU181
+ 276:hardware.c    ****     u32 tmpmask     = 0x00;
+ 693              		.loc 1 276 5 view .LVU182
+ 277:hardware.c    ****     u32 tmppre      = 0;
+ 694              		.loc 1 277 5 view .LVU183
+ 278:hardware.c    ****     u32 tmpsub      = 0x0F;
+ 695              		.loc 1 278 5 view .LVU184
+ 279:hardware.c    **** 
+ 280:hardware.c    ****     SCB_TypeDef *rSCB = (SCB_TypeDef *) SCB_BASE;
+ 696              		.loc 1 280 5 view .LVU185
+ 281:hardware.c    ****     NVIC_TypeDef *rNVIC = (NVIC_TypeDef *) NVIC_BASE;
+ 697              		.loc 1 281 5 view .LVU186
+ 282:hardware.c    **** 
+ 283:hardware.c    **** 
+ 284:hardware.c    ****     /* Compute the Corresponding IRQ Priority --------------------------------*/
+ 285:hardware.c    ****     tmppriority = (0x700 - (rSCB->AIRCR & (u32)0x700)) >> 0x08;
+ 698              		.loc 1 285 5 view .LVU187
+ 699              		.loc 1 285 33 is_stmt 0 view .LVU188
+ 700 0000 184B     		ldr	r3, .L49
+ 273:hardware.c    ****     u32 tmppriority = 0x00;
+ 701              		.loc 1 273 50 view .LVU189
+ 702 0002 30B5     		push	{r4, r5, lr}
+ 703              		.cfi_def_cfa_offset 12
+ 704              		.cfi_offset 4, -12
+ 705              		.cfi_offset 5, -8
+ 706              		.cfi_offset 14, -4
+ 707              		.loc 1 285 33 view .LVU190
+ 708 0004 DA68     		ldr	r2, [r3, #12]
+ 286:hardware.c    ****     tmppre = (0x4 - tmppriority);
+ 287:hardware.c    ****     tmpsub = tmpsub >> tmppriority;
+ 709              		.loc 1 287 12 view .LVU191
+ 710 0006 0F24     		movs	r4, #15
+ 285:hardware.c    ****     tmppre = (0x4 - tmppriority);
+ 711              		.loc 1 285 26 view .LVU192
+ 712 0008 D243     		mvns	r2, r2
+ 285:hardware.c    ****     tmppre = (0x4 - tmppriority);
+ 713              		.loc 1 285 17 view .LVU193
+ 714 000a C2F30222 		ubfx	r2, r2, #8, #3
+ 715              	.LVL36:
+ 286:hardware.c    ****     tmppre = (0x4 - tmppriority);
+ 716              		.loc 1 286 5 is_stmt 1 view .LVU194
+ 286:hardware.c    ****     tmppre = (0x4 - tmppriority);
+ 717              		.loc 1 286 12 is_stmt 0 view .LVU195
+ 718 000e C2F10401 		rsb	r1, r2, #4
+ 719              	.LVL37:
+ 720              		.loc 1 287 5 is_stmt 1 view .LVU196
+ 288:hardware.c    **** 
+ 289:hardware.c    ****     tmppriority = (u32)NVIC_InitStruct->NVIC_IRQChannelPreemptionPriority << tmppre;
+ 721              		.loc 1 289 5 view .LVU197
+ 287:hardware.c    **** 
+ 722              		.loc 1 287 12 is_stmt 0 view .LVU198
+ 723 0012 24FA02F2 		lsr	r2, r4, r2
+ 724              	.LVL38:
+ 290:hardware.c    ****     tmppriority |=  NVIC_InitStruct->NVIC_IRQChannelSubPriority & tmpsub;
+ 291:hardware.c    **** 
+ 292:hardware.c    ****     tmppriority = tmppriority << 0x04;
+ 293:hardware.c    ****     tmppriority = ((u32)tmppriority) << ((NVIC_InitStruct->NVIC_IRQChannel & (u8)0x03) * 0x08);
+ 294:hardware.c    **** 
+ 295:hardware.c    ****     tmpreg = rNVIC->IPR[(NVIC_InitStruct->NVIC_IRQChannel >> 0x02)];
+ 296:hardware.c    ****     tmpmask = (u32)0xFF << ((NVIC_InitStruct->NVIC_IRQChannel & (u8)0x03) * 0x08);
+ 725              		.loc 1 296 13 view .LVU199
+ 726 0016 FF24     		movs	r4, #255
+ 289:hardware.c    ****     tmppriority |=  NVIC_InitStruct->NVIC_IRQChannelSubPriority & tmpsub;
+ 727              		.loc 1 289 19 view .LVU200
+ 728 0018 4378     		ldrb	r3, [r0, #1]	@ zero_extendqisi2
+ 289:hardware.c    ****     tmppriority |=  NVIC_InitStruct->NVIC_IRQChannelSubPriority & tmpsub;
+ 729              		.loc 1 289 17 view .LVU201
+ 730 001a 03FA01F1 		lsl	r1, r3, r1
+ 731              	.LVL39:
+ 290:hardware.c    ****     tmppriority |=  NVIC_InitStruct->NVIC_IRQChannelSubPriority & tmpsub;
+ 732              		.loc 1 290 5 is_stmt 1 view .LVU202
+ 290:hardware.c    ****     tmppriority |=  NVIC_InitStruct->NVIC_IRQChannelSubPriority & tmpsub;
+ 733              		.loc 1 290 36 is_stmt 0 view .LVU203
+ 734 001e 8378     		ldrb	r3, [r0, #2]	@ zero_extendqisi2
+ 290:hardware.c    ****     tmppriority |=  NVIC_InitStruct->NVIC_IRQChannelSubPriority & tmpsub;
+ 735              		.loc 1 290 65 view .LVU204
+ 736 0020 1340     		ands	r3, r3, r2
+ 293:hardware.c    **** 
+ 737              		.loc 1 293 58 view .LVU205
+ 738 0022 0278     		ldrb	r2, [r0]	@ zero_extendqisi2
+ 739              	.LVL40:
+ 290:hardware.c    ****     tmppriority |=  NVIC_InitStruct->NVIC_IRQChannelSubPriority & tmpsub;
+ 740              		.loc 1 290 17 view .LVU206
+ 741 0024 0B43     		orrs	r3, r3, r1
+ 742              	.LVL41:
+ 292:hardware.c    ****     tmppriority = ((u32)tmppriority) << ((NVIC_InitStruct->NVIC_IRQChannel & (u8)0x03) * 0x08);
+ 743              		.loc 1 292 5 is_stmt 1 view .LVU207
+ 744 0026 02F0FC01 		and	r1, r2, #252
+ 745 002a 01F16041 		add	r1, r1, #-536870912
+ 746 002e 01F56141 		add	r1, r1, #57600
+ 293:hardware.c    **** 
+ 747              		.loc 1 293 76 is_stmt 0 view .LVU208
+ 748 0032 02F00300 		and	r0, r2, #3
+ 749              	.LVL42:
+ 295:hardware.c    ****     tmpmask = (u32)0xFF << ((NVIC_InitStruct->NVIC_IRQChannel & (u8)0x03) * 0x08);
+ 750              		.loc 1 295 12 view .LVU209
+ 751 0036 D1F80053 		ldr	r5, [r1, #768]
+ 752              	.LVL43:
+ 293:hardware.c    **** 
+ 753              		.loc 1 293 88 view .LVU210
+ 754 003a C000     		lsls	r0, r0, #3
+ 292:hardware.c    ****     tmppriority = ((u32)tmppriority) << ((NVIC_InitStruct->NVIC_IRQChannel & (u8)0x03) * 0x08);
+ 755              		.loc 1 292 17 view .LVU211
+ 756 003c 1B01     		lsls	r3, r3, #4
+ 757              	.LVL44:
+ 293:hardware.c    **** 
+ 758              		.loc 1 293 5 is_stmt 1 view .LVU212
+ 295:hardware.c    ****     tmpmask = (u32)0xFF << ((NVIC_InitStruct->NVIC_IRQChannel & (u8)0x03) * 0x08);
+ 759              		.loc 1 295 5 view .LVU213
+ 760              		.loc 1 296 5 view .LVU214
+ 297:hardware.c    ****     tmpreg &= ~tmpmask;
+ 761              		.loc 1 297 5 view .LVU215
+ 298:hardware.c    ****     tmppriority &= tmpmask;
+ 762              		.loc 1 298 5 view .LVU216
+ 299:hardware.c    ****     tmpreg |= tmppriority;
+ 763              		.loc 1 299 5 view .LVU217
+ 293:hardware.c    **** 
+ 764              		.loc 1 293 17 is_stmt 0 view .LVU218
+ 765 003e 8340     		lsls	r3, r3, r0
+ 766              	.LVL45:
+ 293:hardware.c    **** 
+ 767              		.loc 1 293 17 view .LVU219
+ 768 0040 6B40     		eors	r3, r3, r5
+ 296:hardware.c    ****     tmpreg &= ~tmpmask;
+ 769              		.loc 1 296 13 view .LVU220
+ 770 0042 04FA00F0 		lsl	r0, r4, r0
+ 771              	.LVL46:
+ 296:hardware.c    ****     tmpreg &= ~tmpmask;
+ 772              		.loc 1 296 13 view .LVU221
+ 773 0046 0340     		ands	r3, r3, r0
+ 774              		.loc 1 299 12 view .LVU222
+ 775 0048 6B40     		eors	r3, r3, r5
+ 776              	.LVL47:
+ 300:hardware.c    **** 
+ 301:hardware.c    ****     rNVIC->IPR[(NVIC_InitStruct->NVIC_IRQChannel >> 0x02)] = tmpreg;
+ 777              		.loc 1 301 5 is_stmt 1 view .LVU223
+ 778              		.loc 1 301 60 is_stmt 0 view .LVU224
+ 779 004a C1F80033 		str	r3, [r1, #768]
+ 302:hardware.c    **** 
+ 303:hardware.c    ****     /* Enable the Selected IRQ Channels --------------------------------------*/
+ 304:hardware.c    ****     rNVIC->ISER[(NVIC_InitStruct->NVIC_IRQChannel >> 0x05)] =
+ 780              		.loc 1 304 5 is_stmt 1 view .LVU225
+ 305:hardware.c    ****         (u32)0x01 << (NVIC_InitStruct->NVIC_IRQChannel & (u8)0x1F);
+ 781              		.loc 1 305 19 is_stmt 0 view .LVU226
+ 782 004e 0123     		movs	r3, #1
+ 783              	.LVL48:
+ 304:hardware.c    ****         (u32)0x01 << (NVIC_InitStruct->NVIC_IRQChannel & (u8)0x1F);
+ 784              		.loc 1 304 51 view .LVU227
+ 785 0050 5109     		lsrs	r1, r2, #5
+ 786              	.LVL49:
+ 787              		.loc 1 305 56 view .LVU228
+ 788 0052 02F01F02 		and	r2, r2, #31
+ 789              	.LVL50:
+ 790              		.loc 1 305 19 view .LVU229
+ 791 0056 03FA02F2 		lsl	r2, r3, r2
+ 304:hardware.c    ****         (u32)0x01 << (NVIC_InitStruct->NVIC_IRQChannel & (u8)0x1F);
+ 792              		.loc 1 304 61 view .LVU230
+ 793 005a 034B     		ldr	r3, .L49+4
+ 794 005c 43F82120 		str	r2, [r3, r1, lsl #2]
+ 306:hardware.c    **** }
+ 795              		.loc 1 306 1 view .LVU231
+ 796 0060 30BD     		pop	{r4, r5, pc}
+ 797              	.L50:
+ 798 0062 00BF     		.align	2
+ 799              	.L49:
+ 800 0064 00ED00E0 		.word	-536810240
+ 801 0068 00E100E0 		.word	-536813312
+ 802              		.cfi_endproc
+ 803              	.LFE13:
+ 805              		.section	.text.nvicDisableInterrupts,"ax",%progbits
+ 806              		.align	1
+ 807              		.global	nvicDisableInterrupts
+ 808              		.syntax unified
+ 809              		.thumb
+ 810              		.thumb_func
+ 811              		.fpu softvfp
+ 813              	nvicDisableInterrupts:
+ 814              	.LFB14:
+ 307:hardware.c    **** 
+ 308:hardware.c    **** void nvicDisableInterrupts() {
+ 815              		.loc 1 308 30 is_stmt 1 view -0
+ 816              		.cfi_startproc
+ 817              		@ args = 0, pretend = 0, frame = 0
+ 818              		@ frame_needed = 0, uses_anonymous_args = 0
+ 819              		@ link register save eliminated.
+ 309:hardware.c    ****     NVIC_TypeDef *rNVIC = (NVIC_TypeDef *) NVIC_BASE;
+ 820              		.loc 1 309 5 view .LVU233
+ 821              	.LVL51:
+ 310:hardware.c    ****     rNVIC->ICER[0] = 0xFFFFFFFF;
+ 822              		.loc 1 310 5 view .LVU234
+ 823              		.loc 1 310 20 is_stmt 0 view .LVU235
+ 824 0000 4FF0FF32 		mov	r2, #-1
+ 825 0004 064B     		ldr	r3, .L52
+ 826 0006 C3F88020 		str	r2, [r3, #128]
+ 311:hardware.c    ****     rNVIC->ICER[1] = 0xFFFFFFFF;
+ 827              		.loc 1 311 5 is_stmt 1 view .LVU236
+ 828              		.loc 1 311 20 is_stmt 0 view .LVU237
+ 829 000a C3F88420 		str	r2, [r3, #132]
+ 312:hardware.c    ****     rNVIC->ICPR[0] = 0xFFFFFFFF;
+ 830              		.loc 1 312 5 is_stmt 1 view .LVU238
+ 831              		.loc 1 312 20 is_stmt 0 view .LVU239
+ 832 000e C3F88021 		str	r2, [r3, #384]
+ 313:hardware.c    ****     rNVIC->ICPR[1] = 0xFFFFFFFF;
+ 833              		.loc 1 313 5 is_stmt 1 view .LVU240
+ 834              		.loc 1 313 20 is_stmt 0 view .LVU241
+ 835 0012 C3F88421 		str	r2, [r3, #388]
+ 314:hardware.c    **** 
+ 315:hardware.c    ****     SET_REG(STK_CTRL, 0x04); /* disable the systick, which operates separately from nvic */
+ 836              		.loc 1 315 5 is_stmt 1 view .LVU242
+ 837              		.loc 1 315 5 view .LVU243
+ 838 0016 4FF0E023 		mov	r3, #-536813568
+ 839 001a 0422     		movs	r2, #4
+ 840 001c 1A61     		str	r2, [r3, #16]
+ 841              		.loc 1 315 5 view .LVU244
+ 316:hardware.c    **** }
+ 842              		.loc 1 316 1 is_stmt 0 view .LVU245
+ 843 001e 7047     		bx	lr
+ 844              	.L53:
+ 845              		.align	2
+ 846              	.L52:
+ 847 0020 00E100E0 		.word	-536813312
+ 848              		.cfi_endproc
+ 849              	.LFE14:
+ 851              		.section	.text.jumpToUser,"ax",%progbits
+ 852              		.align	1
+ 853              		.global	jumpToUser
+ 854              		.syntax unified
+ 855              		.thumb
+ 856              		.thumb_func
+ 857              		.fpu softvfp
+ 859              	jumpToUser:
+ 860              	.LVL52:
+ 861              	.LFB10:
+ 208:hardware.c    **** 
+ 862              		.loc 1 208 30 is_stmt 1 view -0
+ 863              		.cfi_startproc
+ 864              		@ args = 0, pretend = 0, frame = 0
+ 865              		@ frame_needed = 0, uses_anonymous_args = 0
+ 213:hardware.c    ****     usbDsbISR();
+ 866              		.loc 1 213 5 view .LVU247
+ 867              	.LBB5:
+ 868              	.LBI5:
+ 317:hardware.c    **** 
+ 318:hardware.c    **** void systemHardReset(void) {
+ 319:hardware.c    ****     SCB_TypeDef *rSCB = (SCB_TypeDef *) SCB_BASE;
+ 320:hardware.c    **** 
+ 321:hardware.c    ****     /* Reset  */
+ 322:hardware.c    ****     rSCB->AIRCR = (u32)AIRCR_RESET_REQ;
+ 323:hardware.c    **** 
+ 324:hardware.c    ****     /*  should never get here */
+ 325:hardware.c    ****     while (1) {
+ 326:hardware.c    ****         asm volatile("nop");
+ 327:hardware.c    ****     }
+ 328:hardware.c    **** }
+ 329:hardware.c    **** 
+ 330:hardware.c    **** bool flashErasePage(u32 pageAddr) {
+ 331:hardware.c    ****     u32 rwmVal = GET_REG(FLASH_CR);
+ 332:hardware.c    ****     rwmVal = FLASH_CR_PER;
+ 333:hardware.c    ****     SET_REG(FLASH_CR, rwmVal);
+ 334:hardware.c    **** 
+ 335:hardware.c    ****     while (GET_REG(FLASH_SR) & FLASH_SR_BSY) {}
+ 336:hardware.c    ****     SET_REG(FLASH_AR, pageAddr);
+ 337:hardware.c    ****     SET_REG(FLASH_CR, FLASH_CR_START | FLASH_CR_PER);
+ 338:hardware.c    ****     while (GET_REG(FLASH_SR) & FLASH_SR_BSY) {}
+ 339:hardware.c    **** 
+ 340:hardware.c    ****     /* todo: verify the page was erased */
+ 341:hardware.c    **** 
+ 342:hardware.c    ****     rwmVal = 0x00;
+ 343:hardware.c    ****     SET_REG(FLASH_CR, rwmVal);
+ 344:hardware.c    **** 
+ 345:hardware.c    ****     return TRUE;
+ 346:hardware.c    **** }
+ 347:hardware.c    **** bool flashErasePages(u32 pageAddr, u16 n) {
+ 348:hardware.c    ****     while (n-- > 0) {
+ 349:hardware.c    ****         if (!flashErasePage(pageAddr + wTransferSize * n)) {
+ 350:hardware.c    ****             return FALSE;
+ 351:hardware.c    ****         }
+ 352:hardware.c    ****     }
+ 353:hardware.c    **** 
+ 354:hardware.c    ****     return TRUE;
+ 355:hardware.c    **** }
+ 356:hardware.c    **** 
+ 357:hardware.c    **** bool flashWriteWord(u32 addr, u32 word) {
+ 358:hardware.c    ****     vu16 *flashAddr = (vu16 *)addr;
+ 359:hardware.c    ****     vu32 lhWord = (vu32)word & 0x0000FFFF;
+ 360:hardware.c    ****     vu32 hhWord = ((vu32)word & 0xFFFF0000) >> 16;
+ 361:hardware.c    **** 
+ 362:hardware.c    ****     u32 rwmVal = GET_REG(FLASH_CR);
+ 363:hardware.c    ****     SET_REG(FLASH_CR, FLASH_CR_PG);
+ 364:hardware.c    **** 
+ 365:hardware.c    ****     /* apparently we need not write to FLASH_AR and can
+ 366:hardware.c    ****        simply do a native write of a half word */
+ 367:hardware.c    ****     while (GET_REG(FLASH_SR) & FLASH_SR_BSY) {}
+ 368:hardware.c    ****     *(flashAddr + 0x01) = (vu16)hhWord;
+ 369:hardware.c    ****     while (GET_REG(FLASH_SR) & FLASH_SR_BSY) {}
+ 370:hardware.c    ****     *(flashAddr) = (vu16)lhWord;
+ 371:hardware.c    ****     while (GET_REG(FLASH_SR) & FLASH_SR_BSY) {}
+ 372:hardware.c    **** 
+ 373:hardware.c    ****     rwmVal &= 0xFFFFFFFE;
+ 374:hardware.c    ****     SET_REG(FLASH_CR, rwmVal);
+ 375:hardware.c    **** 
+ 376:hardware.c    ****     /* verify the write */
+ 377:hardware.c    ****     if (*(vu32 *)addr != word) {
+ 378:hardware.c    ****         return FALSE;
+ 379:hardware.c    ****     }
+ 380:hardware.c    **** 
+ 381:hardware.c    ****     return TRUE;
+ 382:hardware.c    **** }
+ 383:hardware.c    **** 
+ 384:hardware.c    **** void flashLock() {
+ 869              		.loc 1 384 6 view .LVU248
+ 870              	.LBB6:
+ 385:hardware.c    ****     /* take down the HSI oscillator? it may be in use elsewhere */
+ 386:hardware.c    **** 
+ 387:hardware.c    ****     /* ensure all FPEC functions disabled and lock the FPEC */
+ 388:hardware.c    ****     SET_REG(FLASH_CR, 0x00000080);
+ 871              		.loc 1 388 5 view .LVU249
+ 872              		.loc 1 388 5 view .LVU250
+ 873 0000 8022     		movs	r2, #128
+ 874              	.LBE6:
+ 875              	.LBE5:
+ 208:hardware.c    **** 
+ 876              		.loc 1 208 30 is_stmt 0 view .LVU251
+ 877 0002 10B5     		push	{r4, lr}
+ 878              		.cfi_def_cfa_offset 8
+ 879              		.cfi_offset 4, -8
+ 880              		.cfi_offset 14, -4
+ 208:hardware.c    **** 
+ 881              		.loc 1 208 30 view .LVU252
+ 882 0004 0446     		mov	r4, r0
+ 883              	.LBB8:
+ 884              	.LBB7:
+ 885              		.loc 1 388 5 view .LVU253
+ 886 0006 074B     		ldr	r3, .L55
+ 887 0008 1A61     		str	r2, [r3, #16]
+ 888              		.loc 1 388 5 is_stmt 1 view .LVU254
+ 889              	.LBE7:
+ 890              	.LBE8:
+ 214:hardware.c    ****     nvicDisableInterrupts();
+ 891              		.loc 1 214 5 view .LVU255
+ 892 000a FFF7FEFF 		bl	usbDsbISR
+ 893              	.LVL53:
+ 215:hardware.c    **** 
+ 894              		.loc 1 215 5 view .LVU256
+ 895 000e FFF7FEFF 		bl	nvicDisableInterrupts
+ 896              	.LVL54:
+ 218:hardware.c    **** #endif
+ 897              		.loc 1 218 5 view .LVU257
+ 898 0012 FFF7FEFF 		bl	usbDsbBus
+ 899              	.LVL55:
+ 222:hardware.c    **** 
+ 900              		.loc 1 222 5 view .LVU258
+ 901 0016 FFF7FEFF 		bl	systemReset
+ 902              	.LVL56:
+ 224:hardware.c    **** }
+ 903              		.loc 1 224 5 view .LVU259
+ 904 001a 2046     		mov	r0, r4
+ 225:hardware.c    **** 
+ 905              		.loc 1 225 1 is_stmt 0 view .LVU260
+ 906 001c BDE81040 		pop	{r4, lr}
+ 907              		.cfi_restore 14
+ 908              		.cfi_restore 4
+ 909              		.cfi_def_cfa_offset 0
+ 910              	.LVL57:
+ 224:hardware.c    **** }
+ 911              		.loc 1 224 5 view .LVU261
+ 912 0020 FFF7FEBF 		b	setMspAndJump
+ 913              	.LVL58:
+ 914              	.L56:
+ 224:hardware.c    **** }
+ 915              		.loc 1 224 5 view .LVU262
+ 916              		.align	2
+ 917              	.L55:
+ 918 0024 00200240 		.word	1073881088
+ 919              		.cfi_endproc
+ 920              	.LFE10:
+ 922              		.section	.text.systemHardReset,"ax",%progbits
+ 923              		.align	1
+ 924              		.global	systemHardReset
+ 925              		.syntax unified
+ 926              		.thumb
+ 927              		.thumb_func
+ 928              		.fpu softvfp
+ 930              	systemHardReset:
+ 931              	.LFB15:
+ 318:hardware.c    ****     SCB_TypeDef *rSCB = (SCB_TypeDef *) SCB_BASE;
+ 932              		.loc 1 318 28 is_stmt 1 view -0
+ 933              		.cfi_startproc
+ 934              		@ args = 0, pretend = 0, frame = 0
+ 935              		@ frame_needed = 0, uses_anonymous_args = 0
+ 936              		@ link register save eliminated.
+ 319:hardware.c    **** 
+ 937              		.loc 1 319 5 view .LVU264
+ 938              	.LVL59:
+ 322:hardware.c    **** 
+ 939              		.loc 1 322 5 view .LVU265
+ 322:hardware.c    **** 
+ 940              		.loc 1 322 17 is_stmt 0 view .LVU266
+ 941 0000 024B     		ldr	r3, .L59
+ 942 0002 034A     		ldr	r2, .L59+4
+ 943 0004 DA60     		str	r2, [r3, #12]
+ 944              	.L58:
+ 322:hardware.c    **** 
+ 945              		.loc 1 322 39 is_stmt 1 discriminator 1 view .LVU267
+ 325:hardware.c    ****         asm volatile("nop");
+ 946              		.loc 1 325 5 discriminator 1 view .LVU268
+ 326:hardware.c    ****     }
+ 947              		.loc 1 326 9 discriminator 1 view .LVU269
+ 948              		.syntax unified
+ 949              	@ 326 "hardware.c" 1
+ 950 0006 00BF     		nop
+ 951              	@ 0 "" 2
+ 325:hardware.c    ****         asm volatile("nop");
+ 952              		.loc 1 325 11 discriminator 1 view .LVU270
+ 953              		.thumb
+ 954              		.syntax unified
+ 955 0008 FDE7     		b	.L58
+ 956              	.L60:
+ 957 000a 00BF     		.align	2
+ 958              	.L59:
+ 959 000c 00ED00E0 		.word	-536810240
+ 960 0010 0400FA05 		.word	100270084
+ 961              		.cfi_endproc
+ 962              	.LFE15:
+ 964              		.section	.text.flashErasePage,"ax",%progbits
+ 965              		.align	1
+ 966              		.global	flashErasePage
+ 967              		.syntax unified
+ 968              		.thumb
+ 969              		.thumb_func
+ 970              		.fpu softvfp
+ 972              	flashErasePage:
+ 973              	.LVL60:
+ 974              	.LFB16:
+ 330:hardware.c    ****     u32 rwmVal = GET_REG(FLASH_CR);
+ 975              		.loc 1 330 35 view -0
+ 976              		.cfi_startproc
+ 977              		@ args = 0, pretend = 0, frame = 0
+ 978              		@ frame_needed = 0, uses_anonymous_args = 0
+ 979              		@ link register save eliminated.
+ 331:hardware.c    ****     rwmVal = FLASH_CR_PER;
+ 980              		.loc 1 331 5 view .LVU272
+ 331:hardware.c    ****     rwmVal = FLASH_CR_PER;
+ 981              		.loc 1 331 9 is_stmt 0 view .LVU273
+ 982 0000 084B     		ldr	r3, .L66
+ 983 0002 1A69     		ldr	r2, [r3, #16]
+ 332:hardware.c    ****     SET_REG(FLASH_CR, rwmVal);
+ 984              		.loc 1 332 5 is_stmt 1 view .LVU274
+ 985              	.LVL61:
+ 333:hardware.c    **** 
+ 986              		.loc 1 333 5 view .LVU275
+ 333:hardware.c    **** 
+ 987              		.loc 1 333 5 view .LVU276
+ 988 0004 0222     		movs	r2, #2
+ 989 0006 1A61     		str	r2, [r3, #16]
+ 333:hardware.c    **** 
+ 990              		.loc 1 333 5 view .LVU277
+ 335:hardware.c    ****     SET_REG(FLASH_AR, pageAddr);
+ 991              		.loc 1 335 5 view .LVU278
+ 992              	.L62:
+ 335:hardware.c    ****     SET_REG(FLASH_AR, pageAddr);
+ 993              		.loc 1 335 47 discriminator 1 view .LVU279
+ 335:hardware.c    ****     SET_REG(FLASH_AR, pageAddr);
+ 994              		.loc 1 335 11 discriminator 1 view .LVU280
+ 335:hardware.c    ****     SET_REG(FLASH_AR, pageAddr);
+ 995              		.loc 1 335 12 is_stmt 0 discriminator 1 view .LVU281
+ 996 0008 DA68     		ldr	r2, [r3, #12]
+ 335:hardware.c    ****     SET_REG(FLASH_AR, pageAddr);
+ 997              		.loc 1 335 11 discriminator 1 view .LVU282
+ 998 000a D207     		lsls	r2, r2, #31
+ 999 000c FCD4     		bmi	.L62
+ 336:hardware.c    ****     SET_REG(FLASH_CR, FLASH_CR_START | FLASH_CR_PER);
+ 1000              		.loc 1 336 5 is_stmt 1 view .LVU283
+ 336:hardware.c    ****     SET_REG(FLASH_CR, FLASH_CR_START | FLASH_CR_PER);
+ 1001              		.loc 1 336 5 view .LVU284
+ 337:hardware.c    ****     while (GET_REG(FLASH_SR) & FLASH_SR_BSY) {}
+ 1002              		.loc 1 337 5 is_stmt 0 view .LVU285
+ 1003 000e 4222     		movs	r2, #66
+ 336:hardware.c    ****     SET_REG(FLASH_CR, FLASH_CR_START | FLASH_CR_PER);
+ 1004              		.loc 1 336 5 view .LVU286
+ 1005 0010 5861     		str	r0, [r3, #20]
+ 336:hardware.c    ****     SET_REG(FLASH_CR, FLASH_CR_START | FLASH_CR_PER);
+ 1006              		.loc 1 336 5 is_stmt 1 view .LVU287
+ 337:hardware.c    ****     while (GET_REG(FLASH_SR) & FLASH_SR_BSY) {}
+ 1007              		.loc 1 337 5 view .LVU288
+ 337:hardware.c    ****     while (GET_REG(FLASH_SR) & FLASH_SR_BSY) {}
+ 1008              		.loc 1 337 5 view .LVU289
+ 1009 0012 1A61     		str	r2, [r3, #16]
+ 337:hardware.c    ****     while (GET_REG(FLASH_SR) & FLASH_SR_BSY) {}
+ 1010              		.loc 1 337 5 view .LVU290
+ 338:hardware.c    **** 
+ 1011              		.loc 1 338 5 view .LVU291
+ 338:hardware.c    **** 
+ 1012              		.loc 1 338 12 is_stmt 0 view .LVU292
+ 1013 0014 034A     		ldr	r2, .L66
+ 1014              	.L63:
+ 338:hardware.c    **** 
+ 1015              		.loc 1 338 47 is_stmt 1 discriminator 1 view .LVU293
+ 338:hardware.c    **** 
+ 1016              		.loc 1 338 11 discriminator 1 view .LVU294
+ 338:hardware.c    **** 
+ 1017              		.loc 1 338 12 is_stmt 0 discriminator 1 view .LVU295
+ 1018 0016 D368     		ldr	r3, [r2, #12]
+ 338:hardware.c    **** 
+ 1019              		.loc 1 338 11 discriminator 1 view .LVU296
+ 1020 0018 13F00103 		ands	r3, r3, #1
+ 1021 001c FBD1     		bne	.L63
+ 342:hardware.c    ****     SET_REG(FLASH_CR, rwmVal);
+ 1022              		.loc 1 342 5 is_stmt 1 view .LVU297
+ 1023              	.LVL62:
+ 343:hardware.c    **** 
+ 1024              		.loc 1 343 5 view .LVU298
+ 343:hardware.c    **** 
+ 1025              		.loc 1 343 5 view .LVU299
+ 346:hardware.c    **** bool flashErasePages(u32 pageAddr, u16 n) {
+ 1026              		.loc 1 346 1 is_stmt 0 view .LVU300
+ 1027 001e 0120     		movs	r0, #1
+ 1028              	.LVL63:
+ 343:hardware.c    **** 
+ 1029              		.loc 1 343 5 view .LVU301
+ 1030 0020 1361     		str	r3, [r2, #16]
+ 343:hardware.c    **** 
+ 1031              		.loc 1 343 5 is_stmt 1 view .LVU302
+ 345:hardware.c    **** }
+ 1032              		.loc 1 345 5 view .LVU303
+ 346:hardware.c    **** bool flashErasePages(u32 pageAddr, u16 n) {
+ 1033              		.loc 1 346 1 is_stmt 0 view .LVU304
+ 1034 0022 7047     		bx	lr
+ 1035              	.L67:
+ 1036              		.align	2
+ 1037              	.L66:
+ 1038 0024 00200240 		.word	1073881088
+ 1039              		.cfi_endproc
+ 1040              	.LFE16:
+ 1042              		.section	.text.flashErasePages,"ax",%progbits
+ 1043              		.align	1
+ 1044              		.global	flashErasePages
+ 1045              		.syntax unified
+ 1046              		.thumb
+ 1047              		.thumb_func
+ 1048              		.fpu softvfp
+ 1050              	flashErasePages:
+ 1051              	.LVL64:
+ 1052              	.LFB17:
+ 347:hardware.c    ****     while (n-- > 0) {
+ 1053              		.loc 1 347 43 is_stmt 1 view -0
+ 1054              		.cfi_startproc
+ 1055              		@ args = 0, pretend = 0, frame = 0
+ 1056              		@ frame_needed = 0, uses_anonymous_args = 0
+ 348:hardware.c    ****         if (!flashErasePage(pageAddr + wTransferSize * n)) {
+ 1057              		.loc 1 348 5 view .LVU306
+ 347:hardware.c    ****     while (n-- > 0) {
+ 1058              		.loc 1 347 43 is_stmt 0 view .LVU307
+ 1059 0000 70B5     		push	{r4, r5, r6, lr}
+ 1060              		.cfi_def_cfa_offset 16
+ 1061              		.cfi_offset 4, -16
+ 1062              		.cfi_offset 5, -12
+ 1063              		.cfi_offset 6, -8
+ 1064              		.cfi_offset 14, -4
+ 347:hardware.c    ****     while (n-- > 0) {
+ 1065              		.loc 1 347 43 view .LVU308
+ 1066 0002 0446     		mov	r4, r0
+ 348:hardware.c    ****         if (!flashErasePage(pageAddr + wTransferSize * n)) {
+ 1067              		.loc 1 348 11 view .LVU309
+ 1068 0004 4FF6FF75 		movw	r5, #65535
+ 1069 0008 0139     		subs	r1, r1, #1
+ 1070              	.LVL65:
+ 349:hardware.c    ****             return FALSE;
+ 1071              		.loc 1 349 54 view .LVU310
+ 1072 000a 084E     		ldr	r6, .L75
+ 1073 000c 89B2     		uxth	r1, r1
+ 1074              	.LVL66:
+ 1075              	.L69:
+ 348:hardware.c    ****         if (!flashErasePage(pageAddr + wTransferSize * n)) {
+ 1076              		.loc 1 348 11 is_stmt 1 view .LVU311
+ 348:hardware.c    ****         if (!flashErasePage(pageAddr + wTransferSize * n)) {
+ 1077              		.loc 1 348 11 is_stmt 0 view .LVU312
+ 1078 000e A942     		cmp	r1, r5
+ 1079 0010 01D1     		bne	.L71
+ 354:hardware.c    **** }
+ 1080              		.loc 1 354 12 view .LVU313
+ 1081 0012 0120     		movs	r0, #1
+ 1082 0014 08E0     		b	.L70
+ 1083              	.L71:
+ 349:hardware.c    ****             return FALSE;
+ 1084              		.loc 1 349 9 is_stmt 1 view .LVU314
+ 349:hardware.c    ****             return FALSE;
+ 1085              		.loc 1 349 54 is_stmt 0 view .LVU315
+ 1086 0016 3068     		ldr	r0, [r6]
+ 349:hardware.c    ****             return FALSE;
+ 1087              		.loc 1 349 14 view .LVU316
+ 1088 0018 00FB0140 		mla	r0, r0, r1, r4
+ 1089 001c FFF7FEFF 		bl	flashErasePage
+ 1090              	.LVL67:
+ 349:hardware.c    ****             return FALSE;
+ 1091              		.loc 1 349 12 view .LVU317
+ 1092 0020 0139     		subs	r1, r1, #1
+ 1093              	.LVL68:
+ 349:hardware.c    ****             return FALSE;
+ 1094              		.loc 1 349 12 view .LVU318
+ 1095 0022 89B2     		uxth	r1, r1
+ 1096 0024 0028     		cmp	r0, #0
+ 1097 0026 F2D1     		bne	.L69
+ 1098              	.L70:
+ 355:hardware.c    **** 
+ 1099              		.loc 1 355 1 view .LVU319
+ 1100 0028 70BD     		pop	{r4, r5, r6, pc}
+ 1101              	.LVL69:
+ 1102              	.L76:
+ 355:hardware.c    **** 
+ 1103              		.loc 1 355 1 view .LVU320
+ 1104 002a 00BF     		.align	2
+ 1105              	.L75:
+ 1106 002c 00000000 		.word	wTransferSize
+ 1107              		.cfi_endproc
+ 1108              	.LFE17:
+ 1110              		.section	.text.flashWriteWord,"ax",%progbits
+ 1111              		.align	1
+ 1112              		.global	flashWriteWord
+ 1113              		.syntax unified
+ 1114              		.thumb
+ 1115              		.thumb_func
+ 1116              		.fpu softvfp
+ 1118              	flashWriteWord:
+ 1119              	.LVL70:
+ 1120              	.LFB18:
+ 357:hardware.c    ****     vu16 *flashAddr = (vu16 *)addr;
+ 1121              		.loc 1 357 41 is_stmt 1 view -0
+ 1122              		.cfi_startproc
+ 1123              		@ args = 0, pretend = 0, frame = 8
+ 1124              		@ frame_needed = 0, uses_anonymous_args = 0
+ 358:hardware.c    ****     vu32 lhWord = (vu32)word & 0x0000FFFF;
+ 1125              		.loc 1 358 5 view .LVU322
+ 359:hardware.c    ****     vu32 hhWord = ((vu32)word & 0xFFFF0000) >> 16;
+ 1126              		.loc 1 359 5 view .LVU323
+ 357:hardware.c    ****     vu16 *flashAddr = (vu16 *)addr;
+ 1127              		.loc 1 357 41 is_stmt 0 view .LVU324
+ 1128 0000 13B5     		push	{r0, r1, r4, lr}
+ 1129              		.cfi_def_cfa_offset 16
+ 1130              		.cfi_offset 4, -8
+ 1131              		.cfi_offset 14, -4
+ 363:hardware.c    **** 
+ 1132              		.loc 1 363 5 view .LVU325
+ 1133 0002 0124     		movs	r4, #1
+ 359:hardware.c    ****     vu32 hhWord = ((vu32)word & 0xFFFF0000) >> 16;
+ 1134              		.loc 1 359 30 view .LVU326
+ 1135 0004 8BB2     		uxth	r3, r1
+ 359:hardware.c    ****     vu32 hhWord = ((vu32)word & 0xFFFF0000) >> 16;
+ 1136              		.loc 1 359 10 view .LVU327
+ 1137 0006 0093     		str	r3, [sp]
+ 360:hardware.c    **** 
+ 1138              		.loc 1 360 5 is_stmt 1 view .LVU328
+ 360:hardware.c    **** 
+ 1139              		.loc 1 360 45 is_stmt 0 view .LVU329
+ 1140 0008 0B0C     		lsrs	r3, r1, #16
+ 360:hardware.c    **** 
+ 1141              		.loc 1 360 10 view .LVU330
+ 1142 000a 0193     		str	r3, [sp, #4]
+ 362:hardware.c    ****     SET_REG(FLASH_CR, FLASH_CR_PG);
+ 1143              		.loc 1 362 5 is_stmt 1 view .LVU331
+ 362:hardware.c    ****     SET_REG(FLASH_CR, FLASH_CR_PG);
+ 1144              		.loc 1 362 9 is_stmt 0 view .LVU332
+ 1145 000c 0D4B     		ldr	r3, .L84
+ 1146 000e 1A69     		ldr	r2, [r3, #16]
+ 1147              	.LVL71:
+ 363:hardware.c    **** 
+ 1148              		.loc 1 363 5 is_stmt 1 view .LVU333
+ 363:hardware.c    **** 
+ 1149              		.loc 1 363 5 view .LVU334
+ 1150 0010 1C61     		str	r4, [r3, #16]
+ 363:hardware.c    **** 
+ 1151              		.loc 1 363 5 view .LVU335
+ 367:hardware.c    ****     *(flashAddr + 0x01) = (vu16)hhWord;
+ 1152              		.loc 1 367 5 view .LVU336
+ 1153              	.L78:
+ 367:hardware.c    ****     *(flashAddr + 0x01) = (vu16)hhWord;
+ 1154              		.loc 1 367 47 discriminator 1 view .LVU337
+ 367:hardware.c    ****     *(flashAddr + 0x01) = (vu16)hhWord;
+ 1155              		.loc 1 367 11 discriminator 1 view .LVU338
+ 367:hardware.c    ****     *(flashAddr + 0x01) = (vu16)hhWord;
+ 1156              		.loc 1 367 12 is_stmt 0 discriminator 1 view .LVU339
+ 1157 0012 DC68     		ldr	r4, [r3, #12]
+ 367:hardware.c    ****     *(flashAddr + 0x01) = (vu16)hhWord;
+ 1158              		.loc 1 367 11 discriminator 1 view .LVU340
+ 1159 0014 E407     		lsls	r4, r4, #31
+ 1160 0016 FCD4     		bmi	.L78
+ 368:hardware.c    ****     while (GET_REG(FLASH_SR) & FLASH_SR_BSY) {}
+ 1161              		.loc 1 368 5 is_stmt 1 view .LVU341
+ 368:hardware.c    ****     while (GET_REG(FLASH_SR) & FLASH_SR_BSY) {}
+ 1162              		.loc 1 368 27 is_stmt 0 view .LVU342
+ 1163 0018 019B     		ldr	r3, [sp, #4]
+ 1164 001a 9BB2     		uxth	r3, r3
+ 368:hardware.c    ****     while (GET_REG(FLASH_SR) & FLASH_SR_BSY) {}
+ 1165              		.loc 1 368 25 view .LVU343
+ 1166 001c 4380     		strh	r3, [r0, #2]	@ movhi
+ 369:hardware.c    ****     *(flashAddr) = (vu16)lhWord;
+ 1167              		.loc 1 369 5 is_stmt 1 view .LVU344
+ 369:hardware.c    ****     *(flashAddr) = (vu16)lhWord;
+ 1168              		.loc 1 369 12 is_stmt 0 view .LVU345
+ 1169 001e 094B     		ldr	r3, .L84
+ 1170              	.L79:
+ 369:hardware.c    ****     *(flashAddr) = (vu16)lhWord;
+ 1171              		.loc 1 369 47 is_stmt 1 discriminator 1 view .LVU346
+ 369:hardware.c    ****     *(flashAddr) = (vu16)lhWord;
+ 1172              		.loc 1 369 11 discriminator 1 view .LVU347
+ 369:hardware.c    ****     *(flashAddr) = (vu16)lhWord;
+ 1173              		.loc 1 369 12 is_stmt 0 discriminator 1 view .LVU348
+ 1174 0020 DC68     		ldr	r4, [r3, #12]
+ 369:hardware.c    ****     *(flashAddr) = (vu16)lhWord;
+ 1175              		.loc 1 369 11 discriminator 1 view .LVU349
+ 1176 0022 E407     		lsls	r4, r4, #31
+ 1177 0024 FCD4     		bmi	.L79
+ 370:hardware.c    ****     while (GET_REG(FLASH_SR) & FLASH_SR_BSY) {}
+ 1178              		.loc 1 370 5 is_stmt 1 view .LVU350
+ 370:hardware.c    ****     while (GET_REG(FLASH_SR) & FLASH_SR_BSY) {}
+ 1179              		.loc 1 370 20 is_stmt 0 view .LVU351
+ 1180 0026 009C     		ldr	r4, [sp]
+ 1181 0028 A4B2     		uxth	r4, r4
+ 370:hardware.c    ****     while (GET_REG(FLASH_SR) & FLASH_SR_BSY) {}
+ 1182              		.loc 1 370 18 view .LVU352
+ 1183 002a 0480     		strh	r4, [r0]	@ movhi
+ 371:hardware.c    **** 
+ 1184              		.loc 1 371 5 is_stmt 1 view .LVU353
+ 1185              	.L80:
+ 371:hardware.c    **** 
+ 1186              		.loc 1 371 47 discriminator 1 view .LVU354
+ 371:hardware.c    **** 
+ 1187              		.loc 1 371 11 discriminator 1 view .LVU355
+ 371:hardware.c    **** 
+ 1188              		.loc 1 371 12 is_stmt 0 discriminator 1 view .LVU356
+ 1189 002c DC68     		ldr	r4, [r3, #12]
+ 371:hardware.c    **** 
+ 1190              		.loc 1 371 11 discriminator 1 view .LVU357
+ 1191 002e E407     		lsls	r4, r4, #31
+ 1192 0030 FCD4     		bmi	.L80
+ 373:hardware.c    ****     SET_REG(FLASH_CR, rwmVal);
+ 1193              		.loc 1 373 5 is_stmt 1 view .LVU358
+ 373:hardware.c    ****     SET_REG(FLASH_CR, rwmVal);
+ 1194              		.loc 1 373 12 is_stmt 0 view .LVU359
+ 1195 0032 22F00102 		bic	r2, r2, #1
+ 1196              	.LVL72:
+ 374:hardware.c    **** 
+ 1197              		.loc 1 374 5 is_stmt 1 view .LVU360
+ 374:hardware.c    **** 
+ 1198              		.loc 1 374 5 view .LVU361
+ 1199 0036 1A61     		str	r2, [r3, #16]
+ 374:hardware.c    **** 
+ 1200              		.loc 1 374 5 view .LVU362
+ 377:hardware.c    ****         return FALSE;
+ 1201              		.loc 1 377 5 view .LVU363
+ 377:hardware.c    ****         return FALSE;
+ 1202              		.loc 1 377 9 is_stmt 0 view .LVU364
+ 1203 0038 0068     		ldr	r0, [r0]
+ 1204              	.LVL73:
+ 382:hardware.c    **** 
+ 1205              		.loc 1 382 1 view .LVU365
+ 1206 003a 431A     		subs	r3, r0, r1
+ 1207 003c 5842     		rsbs	r0, r3, #0
+ 1208 003e 5841     		adcs	r0, r0, r3
+ 1209 0040 02B0     		add	sp, sp, #8
+ 1210              		.cfi_def_cfa_offset 8
+ 1211              		@ sp needed
+ 1212 0042 10BD     		pop	{r4, pc}
+ 1213              	.L85:
+ 1214              		.align	2
+ 1215              	.L84:
+ 1216 0044 00200240 		.word	1073881088
+ 1217              		.cfi_endproc
+ 1218              	.LFE18:
+ 1220              		.section	.text.flashLock,"ax",%progbits
+ 1221              		.align	1
+ 1222              		.global	flashLock
+ 1223              		.syntax unified
+ 1224              		.thumb
+ 1225              		.thumb_func
+ 1226              		.fpu softvfp
+ 1228              	flashLock:
+ 1229              	.LFB19:
+ 384:hardware.c    ****     /* take down the HSI oscillator? it may be in use elsewhere */
+ 1230              		.loc 1 384 18 is_stmt 1 view -0
+ 1231              		.cfi_startproc
+ 1232              		@ args = 0, pretend = 0, frame = 0
+ 1233              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1234              		@ link register save eliminated.
+ 1235              		.loc 1 388 5 view .LVU367
+ 1236              		.loc 1 388 5 view .LVU368
+ 1237 0000 8022     		movs	r2, #128
+ 1238 0002 014B     		ldr	r3, .L87
+ 1239 0004 1A61     		str	r2, [r3, #16]
+ 1240              		.loc 1 388 5 view .LVU369
+ 389:hardware.c    **** }
+ 1241              		.loc 1 389 1 is_stmt 0 view .LVU370
+ 1242 0006 7047     		bx	lr
+ 1243              	.L88:
+ 1244              		.align	2
+ 1245              	.L87:
+ 1246 0008 00200240 		.word	1073881088
+ 1247              		.cfi_endproc
+ 1248              	.LFE19:
+ 1250              		.section	.text.flashUnlock,"ax",%progbits
+ 1251              		.align	1
+ 1252              		.global	flashUnlock
+ 1253              		.syntax unified
+ 1254              		.thumb
+ 1255              		.thumb_func
+ 1256              		.fpu softvfp
+ 1258              	flashUnlock:
+ 1259              	.LFB20:
+ 390:hardware.c    **** 
+ 391:hardware.c    **** void flashUnlock() {
+ 1260              		.loc 1 391 20 is_stmt 1 view -0
+ 1261              		.cfi_startproc
+ 1262              		@ args = 0, pretend = 0, frame = 0
+ 1263              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1264              		@ link register save eliminated.
+ 392:hardware.c    ****     /* unlock the flash */
+ 393:hardware.c    ****     SET_REG(FLASH_KEYR, FLASH_KEY1);
+ 1265              		.loc 1 393 5 view .LVU372
+ 1266              		.loc 1 393 5 view .LVU373
+ 1267 0000 034B     		ldr	r3, .L90
+ 1268 0002 044A     		ldr	r2, .L90+4
+ 1269 0004 5A60     		str	r2, [r3, #4]
+ 1270              		.loc 1 393 5 view .LVU374
+ 394:hardware.c    ****     SET_REG(FLASH_KEYR, FLASH_KEY2);
+ 1271              		.loc 1 394 5 view .LVU375
+ 1272              		.loc 1 394 5 view .LVU376
+ 1273 0006 02F18832 		add	r2, r2, #-2004318072
+ 1274 000a 5A60     		str	r2, [r3, #4]
+ 1275              		.loc 1 394 5 view .LVU377
+ 395:hardware.c    **** }
+ 1276              		.loc 1 395 1 is_stmt 0 view .LVU378
+ 1277 000c 7047     		bx	lr
+ 1278              	.L91:
+ 1279 000e 00BF     		.align	2
+ 1280              	.L90:
+ 1281 0010 00200240 		.word	1073881088
+ 1282 0014 23016745 		.word	1164378403
+ 1283              		.cfi_endproc
+ 1284              	.LFE20:
+ 1286              		.section	.text.crMask,"ax",%progbits
+ 1287              		.align	1
+ 1288              		.global	crMask
+ 1289              		.syntax unified
+ 1290              		.thumb
+ 1291              		.thumb_func
+ 1292              		.fpu softvfp
+ 1294              	crMask:
+ 1295              	.LVL74:
+ 1296              	.LFB21:
+ 396:hardware.c    **** 
+ 397:hardware.c    **** 
+ 398:hardware.c    **** // Used to create the control register masking pattern, when setting control register mode.
+ 399:hardware.c    **** unsigned int crMask(int pin)
+ 400:hardware.c    **** {
+ 1297              		.loc 1 400 1 is_stmt 1 view -0
+ 1298              		.cfi_startproc
+ 1299              		@ args = 0, pretend = 0, frame = 0
+ 1300              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1301              		@ link register save eliminated.
+ 401:hardware.c    ****     unsigned int mask;
+ 1302              		.loc 1 401 5 view .LVU380
+ 402:hardware.c    ****     if (pin>=8)
+ 1303              		.loc 1 402 5 view .LVU381
+ 403:hardware.c    ****     {
+ 404:hardware.c    ****         pin-=8;
+ 405:hardware.c    ****     }
+ 406:hardware.c    ****     mask = 0x0F << (pin<<2);
+ 1304              		.loc 1 406 17 is_stmt 0 view .LVU382
+ 1305 0000 0F23     		movs	r3, #15
+ 402:hardware.c    ****     if (pin>=8)
+ 1306              		.loc 1 402 8 view .LVU383
+ 1307 0002 0728     		cmp	r0, #7
+ 404:hardware.c    ****     }
+ 1308              		.loc 1 404 9 is_stmt 1 view .LVU384
+ 404:hardware.c    ****     }
+ 1309              		.loc 1 404 12 is_stmt 0 view .LVU385
+ 1310 0004 C8BF     		it	gt
+ 1311 0006 0838     		subgt	r0, r0, #8
+ 1312              	.LVL75:
+ 1313              		.loc 1 406 5 is_stmt 1 view .LVU386
+ 407:hardware.c    ****     return ~mask;
+ 1314              		.loc 1 407 5 view .LVU387
+ 406:hardware.c    ****     return ~mask;
+ 1315              		.loc 1 406 24 is_stmt 0 view .LVU388
+ 1316 0008 8000     		lsls	r0, r0, #2
+ 1317              	.LVL76:
+ 406:hardware.c    ****     return ~mask;
+ 1318              		.loc 1 406 17 view .LVU389
+ 1319 000a 03FA00F0 		lsl	r0, r3, r0
+ 1320              	.LVL77:
+ 408:hardware.c    **** }
+ 1321              		.loc 1 408 1 view .LVU390
+ 1322 000e C043     		mvns	r0, r0
+ 1323              	.LVL78:
+ 1324              		.loc 1 408 1 view .LVU391
+ 1325 0010 7047     		bx	lr
+ 1326              		.cfi_endproc
+ 1327              	.LFE21:
+ 1329              		.section	.text.getFlashEnd,"ax",%progbits
+ 1330              		.align	1
+ 1331              		.global	getFlashEnd
+ 1332              		.syntax unified
+ 1333              		.thumb
+ 1334              		.thumb_func
+ 1335              		.fpu softvfp
+ 1337              	getFlashEnd:
+ 1338              	.LFB22:
+ 409:hardware.c    **** 
+ 410:hardware.c    **** #define FLASH_SIZE_REG 0x1FFFF7E0
+ 411:hardware.c    **** int getFlashEnd(void)
+ 412:hardware.c    **** {
+ 1339              		.loc 1 412 1 is_stmt 1 view -0
+ 1340              		.cfi_startproc
+ 1341              		@ args = 0, pretend = 0, frame = 0
+ 1342              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1343              		@ link register save eliminated.
+ 413:hardware.c    ****     unsigned short *flashSize = (unsigned short *) (FLASH_SIZE_REG);// Address register
+ 1344              		.loc 1 413 5 view .LVU393
+ 1345              	.LVL79:
+ 414:hardware.c    ****     return ((int)(*flashSize & 0xffff) * 1024) + 0x08000000;
+ 1346              		.loc 1 414 5 view .LVU394
+ 1347              		.loc 1 414 19 is_stmt 0 view .LVU395
+ 1348 0000 034B     		ldr	r3, .L95
+ 1349              		.loc 1 414 13 view .LVU396
+ 1350 0002 B3F8E000 		ldrh	r0, [r3, #224]
+ 1351              		.loc 1 414 48 view .LVU397
+ 1352 0006 00F50030 		add	r0, r0, #131072
+ 415:hardware.c    **** }
+ 1353              		.loc 1 415 1 view .LVU398
+ 1354 000a 8002     		lsls	r0, r0, #10
+ 1355 000c 7047     		bx	lr
+ 1356              	.L96:
+ 1357 000e 00BF     		.align	2
+ 1358              	.L95:
+ 1359 0010 00F7FF1F 		.word	536868608
+ 1360              		.cfi_endproc
+ 1361              	.LFE22:
+ 1363              		.section	.text.getFlashPageSize,"ax",%progbits
+ 1364              		.align	1
+ 1365              		.global	getFlashPageSize
+ 1366              		.syntax unified
+ 1367              		.thumb
+ 1368              		.thumb_func
+ 1369              		.fpu softvfp
+ 1371              	getFlashPageSize:
+ 1372              	.LFB23:
+ 416:hardware.c    **** 
+ 417:hardware.c    **** int getFlashPageSize(void)
+ 418:hardware.c    **** {
+ 1373              		.loc 1 418 1 is_stmt 1 view -0
+ 1374              		.cfi_startproc
+ 1375              		@ args = 0, pretend = 0, frame = 0
+ 1376              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1377              		@ link register save eliminated.
+ 419:hardware.c    **** 
+ 420:hardware.c    ****     unsigned short *flashSize = (unsigned short *) (FLASH_SIZE_REG);// Address register
+ 1378              		.loc 1 420 5 view .LVU400
+ 1379              	.LVL80:
+ 421:hardware.c    ****     if ((*flashSize & 0xffff) > 128)
+ 1380              		.loc 1 421 5 view .LVU401
+ 1381              		.loc 1 421 10 is_stmt 0 view .LVU402
+ 1382 0000 044B     		ldr	r3, .L100
+ 1383              		.loc 1 421 8 view .LVU403
+ 1384 0002 B3F8E030 		ldrh	r3, [r3, #224]
+ 422:hardware.c    ****     {
+ 423:hardware.c    ****         return 0x800;
+ 424:hardware.c    ****     }
+ 425:hardware.c    ****     else
+ 426:hardware.c    ****     {
+ 427:hardware.c    ****         return 0x400;
+ 1385              		.loc 1 427 16 view .LVU404
+ 1386 0006 802B     		cmp	r3, #128
+ 428:hardware.c    ****     }
+ 429:hardware.c    **** }
+ 1387              		.loc 1 429 1 view .LVU405
+ 1388 0008 8CBF     		ite	hi
+ 1389 000a 4FF40060 		movhi	r0, #2048
+ 1390 000e 4FF48060 		movls	r0, #1024
+ 1391 0012 7047     		bx	lr
+ 1392              	.L101:
+ 1393              		.align	2
+ 1394              	.L100:
+ 1395 0014 00F7FF1F 		.word	536868608
+ 1396              		.cfi_endproc
+ 1397              	.LFE23:
+ 1399              		.text
+ 1400              	.Letext0:
+ 1401              		.file 2 "./stm32_lib/stm32f10x_type.h"
+ 1402              		.file 3 "hardware.h"
+ 1403              		.file 4 "usb.h"
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 hardware.c
+D:\QMK_MSYS\tmp\ccJ5fht1.s:16     .text.gpio_write_bit:0000000000000000 $t
+D:\QMK_MSYS\tmp\ccJ5fht1.s:24     .text.gpio_write_bit:0000000000000000 gpio_write_bit
+D:\QMK_MSYS\tmp\ccJ5fht1.s:55     .text.readPin:0000000000000000 $t
+D:\QMK_MSYS\tmp\ccJ5fht1.s:62     .text.readPin:0000000000000000 readPin
+D:\QMK_MSYS\tmp\ccJ5fht1.s:90     .text.readButtonState:0000000000000000 $t
+D:\QMK_MSYS\tmp\ccJ5fht1.s:97     .text.readButtonState:0000000000000000 readButtonState
+D:\QMK_MSYS\tmp\ccJ5fht1.s:114    .text.strobePin:0000000000000000 $t
+D:\QMK_MSYS\tmp\ccJ5fht1.s:121    .text.strobePin:0000000000000000 strobePin
+D:\QMK_MSYS\tmp\ccJ5fht1.s:235    .text.systemReset:0000000000000000 $t
+D:\QMK_MSYS\tmp\ccJ5fht1.s:242    .text.systemReset:0000000000000000 systemReset
+D:\QMK_MSYS\tmp\ccJ5fht1.s:292    .text.systemReset:0000000000000034 $d
+D:\QMK_MSYS\tmp\ccJ5fht1.s:298    .text.setupCLK:0000000000000000 $t
+D:\QMK_MSYS\tmp\ccJ5fht1.s:305    .text.setupCLK:0000000000000000 setupCLK
+D:\QMK_MSYS\tmp\ccJ5fht1.s:389    .text.setupCLK:0000000000000054 $d
+D:\QMK_MSYS\tmp\ccJ5fht1.s:395    .text.setupLEDAndButton:0000000000000000 $t
+D:\QMK_MSYS\tmp\ccJ5fht1.s:402    .text.setupLEDAndButton:0000000000000000 setupLEDAndButton
+D:\QMK_MSYS\tmp\ccJ5fht1.s:415    .text.setupFLASH:0000000000000000 $t
+D:\QMK_MSYS\tmp\ccJ5fht1.s:422    .text.setupFLASH:0000000000000000 setupFLASH
+D:\QMK_MSYS\tmp\ccJ5fht1.s:464    .text.setupFLASH:0000000000000018 $d
+D:\QMK_MSYS\tmp\ccJ5fht1.s:469    .text.checkUserCode:0000000000000000 $t
+D:\QMK_MSYS\tmp\ccJ5fht1.s:476    .text.checkUserCode:0000000000000000 checkUserCode
+D:\QMK_MSYS\tmp\ccJ5fht1.s:504    .text.checkUserCode:0000000000000010 $d
+D:\QMK_MSYS\tmp\ccJ5fht1.s:509    .text.setMspAndJump:0000000000000000 $t
+D:\QMK_MSYS\tmp\ccJ5fht1.s:516    .text.setMspAndJump:0000000000000000 setMspAndJump
+D:\QMK_MSYS\tmp\ccJ5fht1.s:554    .text.bkp10Write:0000000000000000 $t
+D:\QMK_MSYS\tmp\ccJ5fht1.s:561    .text.bkp10Write:0000000000000000 bkp10Write
+D:\QMK_MSYS\tmp\ccJ5fht1.s:595    .text.bkp10Write:0000000000000024 $d
+D:\QMK_MSYS\tmp\ccJ5fht1.s:602    .text.checkAndClearBootloaderFlag:0000000000000000 $t
+D:\QMK_MSYS\tmp\ccJ5fht1.s:609    .text.checkAndClearBootloaderFlag:0000000000000000 checkAndClearBootloaderFlag
+D:\QMK_MSYS\tmp\ccJ5fht1.s:671    .text.checkAndClearBootloaderFlag:0000000000000040 $d
+D:\QMK_MSYS\tmp\ccJ5fht1.s:677    .text.nvicInit:0000000000000000 $t
+D:\QMK_MSYS\tmp\ccJ5fht1.s:684    .text.nvicInit:0000000000000000 nvicInit
+D:\QMK_MSYS\tmp\ccJ5fht1.s:800    .text.nvicInit:0000000000000064 $d
+D:\QMK_MSYS\tmp\ccJ5fht1.s:806    .text.nvicDisableInterrupts:0000000000000000 $t
+D:\QMK_MSYS\tmp\ccJ5fht1.s:813    .text.nvicDisableInterrupts:0000000000000000 nvicDisableInterrupts
+D:\QMK_MSYS\tmp\ccJ5fht1.s:847    .text.nvicDisableInterrupts:0000000000000020 $d
+D:\QMK_MSYS\tmp\ccJ5fht1.s:852    .text.jumpToUser:0000000000000000 $t
+D:\QMK_MSYS\tmp\ccJ5fht1.s:859    .text.jumpToUser:0000000000000000 jumpToUser
+D:\QMK_MSYS\tmp\ccJ5fht1.s:918    .text.jumpToUser:0000000000000024 $d
+D:\QMK_MSYS\tmp\ccJ5fht1.s:923    .text.systemHardReset:0000000000000000 $t
+D:\QMK_MSYS\tmp\ccJ5fht1.s:930    .text.systemHardReset:0000000000000000 systemHardReset
+D:\QMK_MSYS\tmp\ccJ5fht1.s:959    .text.systemHardReset:000000000000000c $d
+D:\QMK_MSYS\tmp\ccJ5fht1.s:965    .text.flashErasePage:0000000000000000 $t
+D:\QMK_MSYS\tmp\ccJ5fht1.s:972    .text.flashErasePage:0000000000000000 flashErasePage
+D:\QMK_MSYS\tmp\ccJ5fht1.s:1038   .text.flashErasePage:0000000000000024 $d
+D:\QMK_MSYS\tmp\ccJ5fht1.s:1043   .text.flashErasePages:0000000000000000 $t
+D:\QMK_MSYS\tmp\ccJ5fht1.s:1050   .text.flashErasePages:0000000000000000 flashErasePages
+D:\QMK_MSYS\tmp\ccJ5fht1.s:1106   .text.flashErasePages:000000000000002c $d
+D:\QMK_MSYS\tmp\ccJ5fht1.s:1111   .text.flashWriteWord:0000000000000000 $t
+D:\QMK_MSYS\tmp\ccJ5fht1.s:1118   .text.flashWriteWord:0000000000000000 flashWriteWord
+D:\QMK_MSYS\tmp\ccJ5fht1.s:1216   .text.flashWriteWord:0000000000000044 $d
+D:\QMK_MSYS\tmp\ccJ5fht1.s:1221   .text.flashLock:0000000000000000 $t
+D:\QMK_MSYS\tmp\ccJ5fht1.s:1228   .text.flashLock:0000000000000000 flashLock
+D:\QMK_MSYS\tmp\ccJ5fht1.s:1246   .text.flashLock:0000000000000008 $d
+D:\QMK_MSYS\tmp\ccJ5fht1.s:1251   .text.flashUnlock:0000000000000000 $t
+D:\QMK_MSYS\tmp\ccJ5fht1.s:1258   .text.flashUnlock:0000000000000000 flashUnlock
+D:\QMK_MSYS\tmp\ccJ5fht1.s:1281   .text.flashUnlock:0000000000000010 $d
+D:\QMK_MSYS\tmp\ccJ5fht1.s:1287   .text.crMask:0000000000000000 $t
+D:\QMK_MSYS\tmp\ccJ5fht1.s:1294   .text.crMask:0000000000000000 crMask
+D:\QMK_MSYS\tmp\ccJ5fht1.s:1330   .text.getFlashEnd:0000000000000000 $t
+D:\QMK_MSYS\tmp\ccJ5fht1.s:1337   .text.getFlashEnd:0000000000000000 getFlashEnd
+D:\QMK_MSYS\tmp\ccJ5fht1.s:1359   .text.getFlashEnd:0000000000000010 $d
+D:\QMK_MSYS\tmp\ccJ5fht1.s:1364   .text.getFlashPageSize:0000000000000000 $t
+D:\QMK_MSYS\tmp\ccJ5fht1.s:1371   .text.getFlashPageSize:0000000000000000 getFlashPageSize
+D:\QMK_MSYS\tmp\ccJ5fht1.s:1395   .text.getFlashPageSize:0000000000000014 $d
+
+UNDEFINED SYMBOLS
+usbDsbISR
+usbDsbBus
+wTransferSize

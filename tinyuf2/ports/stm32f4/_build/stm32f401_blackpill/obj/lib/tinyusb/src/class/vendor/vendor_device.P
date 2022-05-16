@@ -1,0 +1,7 @@
+_build/stm32f401_blackpill/obj/lib/tinyusb/src/class/vendor/vendor_device.o: \
+ D\:/PRJ/KBs/DEV/BL/tinyuf2/lib/tinyusb/src/class/vendor/vendor_device.c \
+ D\:/PRJ/KBs/DEV/BL/tinyuf2/lib/tinyusb/src/tusb_option.h \
+ D\:/PRJ/KBs/DEV/BL/tinyuf2/ports/stm32f4/tusb_config.h
+ D\:/PRJ/KBs/DEV/BL/tinyuf2/lib/tinyusb/src/class/vendor/vendor_device.c :
+ D\:/PRJ/KBs/DEV/BL/tinyuf2/lib/tinyusb/src/tusb_option.h :
+ D\:/PRJ/KBs/DEV/BL/tinyuf2/ports/stm32f4/tusb_config.h :

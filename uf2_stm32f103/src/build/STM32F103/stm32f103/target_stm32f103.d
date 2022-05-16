@@ -1,0 +1,47 @@
+build/STM32F103/./stm32f103/target_stm32f103.o: \
+ stm32f103/target_stm32f103.c \
+ ../libopencm3/include/libopencm3/stm32/rcc.h \
+ ../libopencm3/include/libopencm3/cm3/common.h \
+ d\:\qmk_msys\mingw64\lib\gcc\arm-none-eabi\10.1.0\include\stdint.h \
+ d\:\qmk_msys\mingw64\arm-none-eabi\include\stdint.h \
+ d\:\qmk_msys\mingw64\arm-none-eabi\include\machine\_default_types.h \
+ d\:\qmk_msys\mingw64\arm-none-eabi\include\sys\features.h \
+ d\:\qmk_msys\mingw64\arm-none-eabi\include\_newlib_version.h \
+ d\:\qmk_msys\mingw64\arm-none-eabi\include\sys\_intsup.h \
+ d\:\qmk_msys\mingw64\arm-none-eabi\include\sys\_stdint.h \
+ d\:\qmk_msys\mingw64\lib\gcc\arm-none-eabi\10.1.0\include\stdbool.h \
+ ../libopencm3/include/libopencm3/stm32/memorymap.h \
+ ../libopencm3/include/libopencm3/stm32/f1/memorymap.h \
+ ../libopencm3/include/libopencm3/cm3/memorymap.h \
+ ../libopencm3/include/libopencm3/stm32/f1/rcc.h \
+ ../libopencm3/include/libopencm3/stm32/common/rcc_common_all.h \
+ ../libopencm3/include/libopencm3/stm32/gpio.h \
+ ../libopencm3/include/libopencm3/stm32/f1/gpio.h \
+ ../libopencm3/include/libopencm3/stm32/common/gpio_common_all.h \
+ ../libopencm3/include/libopencm3/stm32/st_usbfs.h \
+ ../libopencm3/include/libopencm3/stm32/f1/st_usbfs.h \
+ ../libopencm3/include/libopencm3/stm32/common/st_usbfs_v1.h \
+ ../libopencm3/include/libopencm3/stm32/common/st_usbfs_common.h \
+ ../libopencm3/include/libopencm3/stm32/tools.h \
+ ../libopencm3/include/libopencm3/stm32/flash.h \
+ ../libopencm3/include/libopencm3/stm32/f1/flash.h \
+ ../libopencm3/include/libopencm3/stm32/common/flash_common_f01.h \
+ ../libopencm3/include/libopencm3/stm32/desig.h \
+ ../libopencm3/include/libopencm3/cm3/scb.h target.h \
+ d\:\qmk_msys\mingw64\arm-none-eabi\include\stdlib.h \
+ d\:\qmk_msys\mingw64\arm-none-eabi\include\machine\ieeefp.h \
+ d\:\qmk_msys\mingw64\arm-none-eabi\include\_ansi.h \
+ d\:\qmk_msys\mingw64\arm-none-eabi\include\newlib.h \
+ d\:\qmk_msys\mingw64\arm-none-eabi\include\sys\config.h \
+ d\:\qmk_msys\mingw64\lib\gcc\arm-none-eabi\10.1.0\include\stddef.h \
+ d\:\qmk_msys\mingw64\arm-none-eabi\include\sys\reent.h \
+ d\:\qmk_msys\mingw64\arm-none-eabi\include\_ansi.h \
+ d\:\qmk_msys\mingw64\arm-none-eabi\include\sys\_types.h \
+ d\:\qmk_msys\mingw64\arm-none-eabi\include\machine\_types.h \
+ d\:\qmk_msys\mingw64\arm-none-eabi\include\sys\lock.h \
+ d\:\qmk_msys\mingw64\arm-none-eabi\include\sys\cdefs.h \
+ d\:\qmk_msys\mingw64\arm-none-eabi\include\machine\stdlib.h \
+ d\:\qmk_msys\mingw64\arm-none-eabi\include\alloca.h \
+ ../libopencm3/include/libopencm3/usb/usbd.h \
+ ../libopencm3/include/libopencm3/usb/usbstd.h stm32f103/generic/config.h \
+ stm32f103/backup.h

@@ -1,0 +1,328 @@
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 4
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"main.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.startup.main,"ax",%progbits
+  16              		.align	1
+  17              		.global	main
+  18              		.arch armv7-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	main:
+  25              	.LFB0:
+  26              		.file 1 "main.c"
+   1:main.c        **** /* *****************************************************************************
+   2:main.c        ****  * The MIT License
+   3:main.c        ****  *
+   4:main.c        ****  * Copyright (c) 2010 LeafLabs LLC.
+   5:main.c        ****  *
+   6:main.c        ****  * Permission is hereby granted, free of charge, to any person obtaining a copy
+   7:main.c        ****  * of this software and associated documentation files (the "Software"), to deal
+   8:main.c        ****  * in the Software without restriction, including without limitation the rights
+   9:main.c        ****  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  10:main.c        ****  * copies of the Software, and to permit persons to whom the Software is
+  11:main.c        ****  * furnished to do so, subject to the following conditions:
+  12:main.c        ****  *
+  13:main.c        ****  * The above copyright notice and this permission notice shall be included in
+  14:main.c        ****  * all copies or substantial portions of the Software.
+  15:main.c        ****  *
+  16:main.c        ****  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  17:main.c        ****  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  18:main.c        ****  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  19:main.c        ****  * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  20:main.c        ****  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  21:main.c        ****  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  22:main.c        ****  * THE SOFTWARE.
+  23:main.c        ****  * ****************************************************************************/
+  24:main.c        **** 
+  25:main.c        **** /**
+  26:main.c        ****  *  @file main.c
+  27:main.c        ****  *
+  28:main.c        ****  *  @brief main loop and calling any hardware init stuff. timing hacks for EEPROM
+  29:main.c        ****  *  writes not to block usb interrupts. logic to handle 2 second timeout then
+  30:main.c        ****  *  jump to user code.
+  31:main.c        ****  *
+  32:main.c        ****  */
+  33:main.c        **** 
+  34:main.c        **** #include "common.h"
+  35:main.c        **** #include "dfu.h"
+  36:main.c        **** extern volatile dfuUploadTypes_t userUploadType;
+  37:main.c        **** 
+  38:main.c        **** int main()
+  39:main.c        **** {
+  27              		.loc 1 39 1 view -0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  40:main.c        ****     bool no_user_jump = FALSE;
+  31              		.loc 1 40 5 view .LVU1
+  32              	.LVL0:
+  41:main.c        ****     bool dont_wait=FALSE;
+  33              		.loc 1 41 5 view .LVU2
+  42:main.c        **** 
+  43:main.c        ****     systemReset(); // peripherals but not PC
+  34              		.loc 1 43 5 view .LVU3
+  39:main.c        ****     bool no_user_jump = FALSE;
+  35              		.loc 1 39 1 is_stmt 0 view .LVU4
+  36 0000 38B5     		push	{r3, r4, r5, lr}
+  37              		.cfi_def_cfa_offset 16
+  38              		.cfi_offset 3, -16
+  39              		.cfi_offset 4, -12
+  40              		.cfi_offset 5, -8
+  41              		.cfi_offset 14, -4
+  42              		.loc 1 43 5 view .LVU5
+  43 0002 FFF7FEFF 		bl	systemReset
+  44              	.LVL1:
+  44:main.c        ****     setupCLK();
+  45              		.loc 1 44 5 is_stmt 1 view .LVU6
+  46 0006 FFF7FEFF 		bl	setupCLK
+  47              	.LVL2:
+  45:main.c        ****     setupLEDAndButton();
+  48              		.loc 1 45 5 view .LVU7
+  49 000a FFF7FEFF 		bl	setupLEDAndButton
+  50              	.LVL3:
+  46:main.c        ****     setupUSB();
+  51              		.loc 1 46 5 view .LVU8
+  52 000e FFF7FEFF 		bl	setupUSB
+  53              	.LVL4:
+  47:main.c        ****     setupFLASH();
+  54              		.loc 1 47 5 view .LVU9
+  55 0012 FFF7FEFF 		bl	setupFLASH
+  56              	.LVL5:
+  48:main.c        **** 
+  49:main.c        ****     switch(checkAndClearBootloaderFlag())
+  57              		.loc 1 49 5 view .LVU10
+  58              		.loc 1 49 12 is_stmt 0 view .LVU11
+  59 0016 FFF7FEFF 		bl	checkAndClearBootloaderFlag
+  60              	.LVL6:
+  61              		.loc 1 49 5 view .LVU12
+  62 001a 0128     		cmp	r0, #1
+  63              		.loc 1 49 12 view .LVU13
+  64 001c 0446     		mov	r4, r0
+  65              		.loc 1 49 5 view .LVU14
+  66 001e 0AD0     		beq	.L2
+  67 0020 0228     		cmp	r0, #2
+  68 0022 0CD0     		beq	.L3
+  50:main.c        ****     {
+  51:main.c        ****         case 0x01:
+  52:main.c        ****             no_user_jump = TRUE;
+  53:main.c        **** #if defined(LED_BANK) && defined(LED_PIN) && defined(LED_ON_STATE)
+  54:main.c        ****             strobePin(LED_BANK, LED_PIN, STARTUP_BLINKS, BLINK_FAST,LED_ON_STATE);
+  55:main.c        **** #endif
+  56:main.c        ****         break;
+  57:main.c        ****         case 0x02:
+  58:main.c        ****             dont_wait=TRUE;
+  59:main.c        ****         break;
+  60:main.c        ****         default:
+  61:main.c        **** 			#ifdef FASTBOOT
+  62:main.c        **** 				dont_wait=TRUE;
+  63:main.c        **** 			#else
+  64:main.c        **** 				#if defined(LED_BANK) && defined(LED_PIN) && defined(LED_ON_STATE)
+  65:main.c        **** 							strobePin(LED_BANK, LED_PIN, STARTUP_BLINKS, BLINK_FAST,LED_ON_STATE);
+  66:main.c        **** 				#endif
+  67:main.c        **** 			#endif            
+  68:main.c        **** 
+  69:main.c        ****             if (!checkUserCode(USER_CODE_FLASH0X8005000) && !checkUserCode(USER_CODE_FLASH0X8002000
+  69              		.loc 1 69 13 is_stmt 1 view .LVU15
+  70              		.loc 1 69 18 is_stmt 0 view .LVU16
+  71 0024 1648     		ldr	r0, .L21
+  72 0026 FFF7FEFF 		bl	checkUserCode
+  73              	.LVL7:
+  74              		.loc 1 69 16 view .LVU17
+  75 002a 88B1     		cbz	r0, .L4
+  76              	.L5:
+  70:main.c        ****             {
+  71:main.c        ****                 no_user_jump = TRUE;
+  72:main.c        ****             }
+  73:main.c        ****             else if (readButtonState())
+  77              		.loc 1 73 18 is_stmt 1 view .LVU18
+  78              		.loc 1 73 22 is_stmt 0 view .LVU19
+  79 002c FFF7FEFF 		bl	readButtonState
+  80              	.LVL8:
+  74:main.c        ****             {
+  75:main.c        **** 				no_user_jump = TRUE;
+  81              		.loc 1 75 18 view .LVU20
+  82 0030 041E     		subs	r4, r0, #0
+  83 0032 18BF     		it	ne
+  84 0034 0124     		movne	r4, #1
+  85              	.L2:
+  86              	.LVL9:
+  71:main.c        ****             }
+  87              		.loc 1 71 30 view .LVU21
+  88 0036 0025     		movs	r5, #0
+  89              	.L7:
+  90              	.LVL10:
+  91              	.LBB2:
+  76:main.c        **** 				#ifdef FASTBOOT
+  77:main.c        **** 					dont_wait=FALSE;
+  78:main.c        **** 				#endif
+  79:main.c        ****             }
+  80:main.c        ****         break;
+  81:main.c        ****     }
+  82:main.c        **** 
+  83:main.c        ****     if (!dont_wait)
+  84:main.c        ****     {
+  85:main.c        ****         int delay_count = 0;
+  86:main.c        **** 
+  87:main.c        ****         while ((delay_count++ < BOOTLOADER_WAIT) || no_user_jump)
+  92              		.loc 1 87 15 is_stmt 1 view .LVU22
+  93              		.loc 1 87 15 is_stmt 0 view .LVU23
+  94 0038 1D2D     		cmp	r5, #29
+  95 003a 10D9     		bls	.L8
+  96              		.loc 1 87 50 discriminator 1 view .LVU24
+  97 003c 7CB9     		cbnz	r4, .L8
+  98              	.LVL11:
+  99              	.L3:
+ 100              		.loc 1 87 50 discriminator 1 view .LVU25
+ 101              	.LBE2:
+  88:main.c        ****         {
+  89:main.c        **** #if defined(LED_BANK) && defined(LED_PIN) && defined(LED_ON_STATE)
+  90:main.c        ****             strobePin(LED_BANK, LED_PIN, 1, BLINK_SLOW,LED_ON_STATE);
+  91:main.c        **** #endif
+  92:main.c        ****             if (dfuUploadStarted())
+  93:main.c        ****             {
+  94:main.c        ****                 dfuFinishUpload(); // systemHardReset from DFU once done
+  95:main.c        ****             }
+  96:main.c        ****         }
+  97:main.c        ****     }
+  98:main.c        **** 
+  99:main.c        ****     if (checkUserCode(USER_CODE_FLASH0X8002000))
+ 102              		.loc 1 99 5 is_stmt 1 view .LVU26
+ 103              		.loc 1 99 9 is_stmt 0 view .LVU27
+ 104 003e 1148     		ldr	r0, .L21+4
+ 105 0040 FFF7FEFF 		bl	checkUserCode
+ 106              	.LVL12:
+ 107              		.loc 1 99 8 view .LVU28
+ 108 0044 90B1     		cbz	r0, .L9
+ 100:main.c        ****     {
+ 101:main.c        ****         jumpToUser(USER_CODE_FLASH0X8002000);
+ 109              		.loc 1 101 9 is_stmt 1 view .LVU29
+ 110 0046 0F48     		ldr	r0, .L21+4
+ 111              	.L20:
+ 102:main.c        ****     }
+ 103:main.c        ****     else
+ 104:main.c        ****     {
+ 105:main.c        ****         if (checkUserCode(USER_CODE_FLASH0X8005000))
+ 106:main.c        ****         {
+ 107:main.c        ****             jumpToUser(USER_CODE_FLASH0X8005000);
+ 112              		.loc 1 107 13 is_stmt 0 view .LVU30
+ 113 0048 FFF7FEFF 		bl	jumpToUser
+ 114              	.LVL13:
+ 115              	.L10:
+ 108:main.c        ****         }
+ 109:main.c        ****         else
+ 110:main.c        ****         {
+ 111:main.c        ****             // Nothing to execute in either Flash or RAM
+ 112:main.c        **** #if defined(LED_BANK) && defined(LED_PIN) && defined(LED_ON_STATE)
+ 113:main.c        ****             strobePin(LED_BANK, LED_PIN, 5, BLINK_FAST,LED_ON_STATE);
+ 114:main.c        **** #endif
+ 115:main.c        ****             systemHardReset();
+ 116:main.c        ****         }
+ 117:main.c        ****     }
+ 118:main.c        **** 
+ 119:main.c        ****     return 0;// Added to please the compiler
+ 116              		.loc 1 119 5 is_stmt 1 view .LVU31
+ 120:main.c        **** }
+ 117              		.loc 1 120 1 is_stmt 0 view .LVU32
+ 118 004c 0020     		movs	r0, #0
+ 119 004e 38BD     		pop	{r3, r4, r5, pc}
+ 120              	.LVL14:
+ 121              	.L4:
+  69:main.c        ****             {
+ 122              		.loc 1 69 62 discriminator 1 view .LVU33
+ 123 0050 0C48     		ldr	r0, .L21+4
+ 124 0052 FFF7FEFF 		bl	checkUserCode
+ 125              	.LVL15:
+  69:main.c        ****             {
+ 126              		.loc 1 69 58 discriminator 1 view .LVU34
+ 127 0056 0028     		cmp	r0, #0
+ 128 0058 E8D1     		bne	.L5
+  71:main.c        ****             }
+ 129              		.loc 1 71 30 view .LVU35
+ 130 005a 0124     		movs	r4, #1
+ 131 005c EBE7     		b	.L2
+ 132              	.LVL16:
+ 133              	.L8:
+ 134              	.LBB3:
+  92:main.c        ****             {
+ 135              		.loc 1 92 13 is_stmt 1 view .LVU36
+  92:main.c        ****             {
+ 136              		.loc 1 92 17 is_stmt 0 view .LVU37
+ 137 005e FFF7FEFF 		bl	dfuUploadStarted
+ 138              	.LVL17:
+  92:main.c        ****             {
+ 139              		.loc 1 92 16 view .LVU38
+ 140 0062 08B1     		cbz	r0, .L6
+  94:main.c        ****             }
+ 141              		.loc 1 94 17 is_stmt 1 view .LVU39
+ 142 0064 FFF7FEFF 		bl	dfuFinishUpload
+ 143              	.LVL18:
+ 144              	.L6:
+ 145 0068 0135     		adds	r5, r5, #1
+ 146 006a E5E7     		b	.L7
+ 147              	.L9:
+ 148              	.LBE3:
+ 105:main.c        ****         {
+ 149              		.loc 1 105 9 view .LVU40
+ 105:main.c        ****         {
+ 150              		.loc 1 105 13 is_stmt 0 view .LVU41
+ 151 006c 0448     		ldr	r0, .L21
+ 152 006e FFF7FEFF 		bl	checkUserCode
+ 153              	.LVL19:
+ 105:main.c        ****         {
+ 154              		.loc 1 105 12 view .LVU42
+ 155 0072 08B1     		cbz	r0, .L11
+ 107:main.c        ****         }
+ 156              		.loc 1 107 13 is_stmt 1 view .LVU43
+ 157 0074 0248     		ldr	r0, .L21
+ 158 0076 E7E7     		b	.L20
+ 159              	.L11:
+ 115:main.c        ****         }
+ 160              		.loc 1 115 13 view .LVU44
+ 161 0078 FFF7FEFF 		bl	systemHardReset
+ 162              	.LVL20:
+ 163 007c E6E7     		b	.L10
+ 164              	.L22:
+ 165 007e 00BF     		.align	2
+ 166              	.L21:
+ 167 0080 00500008 		.word	134238208
+ 168 0084 00200008 		.word	134225920
+ 169              		.cfi_endproc
+ 170              	.LFE0:
+ 172              		.text
+ 173              	.Letext0:
+ 174              		.file 2 "dfu.h"
+ 175              		.file 3 "hardware.h"
+ 176              		.file 4 "usb.h"
+ 177              		.file 5 "./stm32_lib/stm32f10x_type.h"
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 main.c
+D:\QMK_MSYS\tmp\ccpllqAi.s:16     .text.startup.main:0000000000000000 $t
+D:\QMK_MSYS\tmp\ccpllqAi.s:24     .text.startup.main:0000000000000000 main
+D:\QMK_MSYS\tmp\ccpllqAi.s:167    .text.startup.main:0000000000000080 $d
+
+UNDEFINED SYMBOLS
+systemReset
+setupCLK
+setupLEDAndButton
+setupUSB
+setupFLASH
+checkAndClearBootloaderFlag
+checkUserCode
+readButtonState
+jumpToUser
+dfuUploadStarted
+dfuFinishUpload
+systemHardReset

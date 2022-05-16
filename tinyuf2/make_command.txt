@@ -1,0 +1,2 @@
+cd ports/stm32f4
+make BOARD=stm32f401_blackpill all
